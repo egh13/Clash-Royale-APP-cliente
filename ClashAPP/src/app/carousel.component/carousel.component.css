@@ -1,10 +1,13 @@
 /* carousel.component.css */
 .carousel-container {
   position: relative;
-  max-width: 60%;
+  width: 100%;
   margin: auto;
-  height: 40vh;
+  height: 50vh;
   overflow: hidden;
+  display: flex;
+  justify-content: center; /* horizontal */
+  align-items: center;     /* vertical */
 }
 
 .carousel-images img {

@@ -1,0 +1,7 @@
+.index-container{
+    position: relative;
+    margin: auto;
+    max-width: 90%;
+    background: var(--royale-blue);
+    height: 100vh;
+}
