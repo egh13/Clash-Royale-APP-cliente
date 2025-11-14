@@ -1,1 +1,18 @@
+<div class="quiz-container">
+  <h2>Quiz de sonidos</h2>
+
+  <div class="controls">
+    <button (click)="play()">Reproducir sonido</button>
+    <button (click)="newQuestion()">Nueva pregunta</button>
+  </div>
+
+  <div class="choices">
+    <div *ngFor="let c of choices; index as i" class="choice" [class.disabled]="feedback" (click)="select(i)">
+      <img [src]="c.img" [alt]="c.name">
+      <div class="label">{{ c.name }}</div>
+    </div>
+  </div>
+
+  <div class="feedback" *ngIf="feedback">{{ feedback }}</div>
+</div>
 <p>quiz works!</p>
