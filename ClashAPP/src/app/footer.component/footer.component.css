@@ -1,0 +1,39 @@
+.cr-footer {
+  background: linear-gradient(180deg, #0b3c8a, #06285a);
+  padding: 30px 20px;
+  color: #fff;
+  text-align: center;
+  border-top: 4px solid #ffcc00;
+  box-shadow: 0 -5px 15px rgba(0,0,0,0.4);
+  margin-top: 40px;
+  font-family: 'Supercell-Magic', sans-serif;
+}
+
+.cr-logo {
+  width: 120px;
+  margin-bottom: 10px;
+}
+
+.footer-content {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.footer-text {
+  font-size: 14px;
+  opacity: 0.9;
+  margin-bottom: 15px;
+}
+
+.footer-links a {
+  margin: 0 10px;
+  color: #ffdd55;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.2s;
+}
+
+.footer-links a:hover {
+  color: #ffffff;
+  text-shadow: 0 0 5px #ffcc00;
+}
