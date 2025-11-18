@@ -8,11 +8,12 @@ import { LeaderboardService } from '../services/leaderboard.service';
   styleUrl: './leaderboard.component.css',
 })
 export class LeaderboardComponent {
+  constructor(private leaderboardService: LeaderboardService) {};
 
-  datos: any;
-  api = inject(LeaderboardService);
-
-  llamarApi() {
-    console.log(this.api.obtenerDatos());
+  llamarApi(){
+    this.leaderboardService.obtenerLeaderboard().subscribe(leaderData=>{
+      console.log(leaderData);
+    })
   }
 }
+
