@@ -6,7 +6,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-//router para manejar los enpoint
+//router para manejar los enpoint de la developer API Clash Royale
 const apiRouter = require("./routes/api");
 app.use("/api", apiRouter);
 
