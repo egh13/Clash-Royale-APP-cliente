@@ -1,4 +1,30 @@
 <div id="leaderboard-container">
-<button (click)="llamarApi()">API_GET</button>
-</div>
+  <h2>Leaderboard {{countryName()}}</h2>
 
+  <table>
+    <thead>
+      <tr>
+        <th>Posición</th>
+        <th>Nombre</th>
+        <th>Puntos</th>
+        <th>Miembros</th>
+      </tr>
+    </thead>
+    <tbody>
+      @for(item of leaderboardData; track item.rank){
+      <tr>
+        <td>{{ item.rank }}</td>
+        <td>{{ item.name }}</td>
+        <td>{{ item.clanScore }}</td>
+        <td>{{ item.members }}</td>
+      </tr>
+      }
+
+    </tbody>
+  </table>
+
+  @if(leaderboardData.length === 0){
+    <p>Cargando Leaderboard...</p>
+  }
+
+</div>

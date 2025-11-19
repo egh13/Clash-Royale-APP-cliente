@@ -1,0 +1,83 @@
+:root {
+  --primary-color: rgb(27, 27, 27);
+  --royale-blue: rgb(53, 103, 211);
+}
+
+#leaderboard-container {
+  max-width: 100%;
+  margin: 20px auto;
+  padding: 30px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+}
+
+#leaderboard-container h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: var(--primary-color);
+  margin-bottom: 15px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  font-size: 0.9rem;
+  /* More compact font size */
+}
+
+table th,
+table td {
+  padding: 8px 12px;
+  /* Smaller padding to make it more compact */
+  text-align: left;
+  color: var(--primary-color);
+}
+
+table th {
+  background-color: var(--royale-blue);
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+table tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+table tbody tr:hover {
+  background-color: #e6e6e6;
+  cursor: pointer;
+}
+
+table td {
+  word-wrap: break-word;
+}
+
+table td:last-child {
+  word-break: break-word;
+}
+
+p {
+  text-align: center;
+  font-size: 1rem;
+  color: #888;
+  margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+
+  table th,
+  table td {
+    font-size: 0.875rem;
+    /* Adjusting font size for smaller screens */
+    padding: 8px 10px;
+    /* Adjusting padding for smaller screens */
+  }
+
+  table {
+    margin-top: 10px;
+  }
+}

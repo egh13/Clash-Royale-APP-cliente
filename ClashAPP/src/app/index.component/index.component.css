@@ -2,6 +2,10 @@
     position: relative;
     margin: auto;
     max-width: 90%;
-    background: var(--royale-blue);
-    height: 100vh;
+    background: var(--royale-blue-darker);
+}
+#leaderboard{
+  margin-top: 7vh;
+  display: flex;
+  justify-content: space-evenly;
 }
