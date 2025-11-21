@@ -7,10 +7,10 @@ export class AuthService {
 
   constructor(private http: HttpClient) {}
 
-  login(usuario: string, password: string) {
+  login(username: string, password: string) {
     return this.http.post<any>(
       'http://localhost:3000/api/usuarios/login',
-      { usuario, password },
+      { username, password },
       { withCredentials: true }
     );
     //.shareReplay() //almacena en cache la respuesta del observable, evita que se pueda mandar varias veces el POST
