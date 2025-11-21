@@ -8,7 +8,11 @@ app.use(express.json());
 
 //router para manejar los enpoint de la developer API Clash Royale
 const apiRouter = require("./routes/api");
-app.use("/api", apiRouter);
+app.use("/api/developerApi", apiRouter);
+
+//router para manejar los enpoint de autenticacion
+const usuariosRouter = require("./routes/usuarios");
+app.use("/api/usuarios", usuariosRouter);
 
 //inciar servidor en puerto 3000
 app.listen(3000, () => {
