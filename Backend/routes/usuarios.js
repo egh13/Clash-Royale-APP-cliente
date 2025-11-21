@@ -4,6 +4,7 @@ const jwt = require("jsonwebtoken");
 require("dotenv").config();
 
 const router = express.Router();
+router.use(express.json());
 router.use(express.urlencoded({extended: true})); //permite pasar los datos en formato urlecoded
 
 const bdJson = JSON.parse(fs.readFileSync("auth/usuarios.bd.json", "utf8"));
