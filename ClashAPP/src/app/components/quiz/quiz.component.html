@@ -1,0 +1,22 @@
+<div class="quiz-container">
+  <h2>Quiz de sonidos</h2>
+
+  <app-quiz-controls (play)="play()" (next)="newQuestion()"></app-quiz-controls>
+
+  <div class="choices">
+    @for (c of choices; track c.name) {
+      <app-quiz-choice
+        [src]="c.img"
+        [label]="c.name"
+        [disabled]="!!feedback"
+        (choose)="select(choices.indexOf(c))">
+      </app-quiz-choice>
+    } @empty {
+      <div class="no-choices">No hay opciones.</div>
+    }
+  </div>
+
+  @if (feedback) {
+    <div class="feedback">{{ feedback }}</div>
+  }
+</div>
