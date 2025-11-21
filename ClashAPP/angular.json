@@ -23,6 +23,17 @@
                 "glob": "**/*",
                 "input": "public"
               }
+              ,
+              {
+                "glob": "**/*",
+                "input": "src/app/GifRoyale",
+                "output": "."
+              },
+              {
+                "glob": "**/*",
+                "input": "src/app/AudiosRoyale",
+                "output": "."
+              }
             ],
             "styles": [
               "src/styles.css"
@@ -88,5 +99,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "2eea4fd7-334d-4acb-b9c8-7f917e40482c"
   }
 }
