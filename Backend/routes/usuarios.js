@@ -32,11 +32,7 @@ router.post("/login", (req, res) => {
   const result = authenticateUser(username, password);
 
   if (result) {
-    res.cookie("authToken", result.token, {
-      httpOnly: true,
-      maxAge: 60 * 60 * 1000, // Caduca en una hora
-    });
-    res.json({ message: "Autenticación exitosa" });
+    res.json({ message: "Autenticación exitosa" , token: result.token });
   } else {
     res.status(401).json({ message: "Usuario o contraseña incorrectos" });
   }
