@@ -1,0 +1,56 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  align-items: center;        /* Centra TODO horizontalmente */
+  text-align: center;         /* Centra el texto */
+  padding: 20px;
+  background-color: rgb(27, 27, 27);
+  font-family: Arial, sans-serif;
+  width: 100%;
+}
+
+/* Título principal */
+.cabecera {
+  color: white;
+  font-size: 2.2rem;
+  margin-bottom: 25px;
+}
+
+/* Sección de selección de imágenes */
+.image-selector {
+  background: rgb(255, 255, 255);
+  padding: 25px;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 900px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.2);
+  margin-bottom: 35px;
+}
+
+.section-title {
+  color: rgb(53, 103, 211); /* azul principal */
+  font-size: 1.6rem;
+  margin-bottom: 20px;
+}
+
+/* Grid centrado */
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 20px;
+  justify-items: center;   /* Centra las imágenes dentro del grid */
+}
+
+/* Imágenes de las cartas */
+.card-img {
+  width: 120px;
+  height: auto;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card-img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+}
