@@ -2,7 +2,7 @@ import { Routes } from '@angular/router';
 import { IndexComponent } from './components/index/index.component';
 import { Login } from './components/login/login';
 import { MazosComponent } from './components/mazos/mazos.component';
-
+import { QuizComponent } from './components/quiz/quiz.component';
 
 export const routes: Routes = [
   {
@@ -16,5 +16,9 @@ export const routes: Routes = [
   {
     path: 'mazos',
     component: MazosComponent,
-  }
+  },
+  {
+    path: 'quiz',
+    component: QuizComponent,
+  },
 ];
