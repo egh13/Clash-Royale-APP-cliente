@@ -1,7 +1,7 @@
 const Database = require('better-sqlite3');
 
 // crea o abre database.db
-const db = new Database('clashRoyale.db');
+const db = new Database('sqlite/clashRoyale.db');
 
 // crear tabla si no existe
 db.prepare(`

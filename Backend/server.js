@@ -12,7 +12,7 @@ app.use(
 app.use(express.json());
 
 //router para manejar los enpoint de la developer API Clash Royale
-const apiRouter = require("./routes/api");
+const apiRouter = require("./routes/developerApi");
 app.use("/api/developerApi", apiRouter);
 
 //router para manejar los enpoint de autenticacion
