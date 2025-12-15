@@ -11,7 +11,10 @@ import { RouterLink } from '@angular/router';
 export class SidebarComponent {
   sidebarVisible = false;
 
-  toggleSidebar(){
+  toggleSidebar() {
     this.sidebarVisible = !this.sidebarVisible;
+  }
+  closeSidebar() {
+    this.sidebarVisible = false;
   }
 }
