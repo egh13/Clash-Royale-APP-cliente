@@ -1,12 +1,14 @@
 :root {
-  --text-color: rgb(214, 143, 143);
-  --royale-blue: rgb(53, 103, 211);
-  --card-bg: #ffffff;
-  --muted: #7d7d7d;
-  --glass: rgba(240, 214, 214, 0.06);
+  --royale-blue: rgb(93, 129, 247);
+  --card-bg: #1e1f26;
+  /* Fondo del contenedor principal */
+  --muted: #b5b5b5;
+  /* Texto desaturado */
+  --glass: rgba(255, 255, 255, 0.06);
+  /* Transparencia clara */
   --radius: 12px;
-  --shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
-  --accent: linear-gradient(90deg, rgba(53, 103, 211, 1) 0%, rgba(99, 57, 216, 1) 100%);
+  --shadow: 0 8px 20px rgba(0, 0, 0, 0.45);
+  --accent: linear-gradient(90deg, rgba(93, 129, 247, 1) 0%, rgba(142, 92, 255, 1) 100%);
 }
 
 * {
@@ -15,13 +17,15 @@
 
 .profile-container {
   max-width: 1100px;
-  margin: 28px auto;
+  margin-right: auto;
+  margin-left: auto;
   padding: 26px;
   background: var(--card-bg);
   border-radius: var(--radius);
   box-shadow: var(--shadow);
   font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-  color: var(--text-color);
+  color: #e8e8e8;
+  /* Texto principal */
 }
 
 /* Header */
@@ -41,14 +45,15 @@
   justify-content: center;
   font-size: 28px;
   background: var(--glass);
-  border: 1px solid rgba(0, 0, 0, 0.04);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
 .title h1 {
   margin: 0;
   font-size: 1.6rem;
   letter-spacing: -0.5px;
+  color: #ffffff;
 }
 
 .title .tag {
@@ -67,11 +72,12 @@
 }
 
 .info-card {
-  background: linear-gradient(180deg, rgba(250, 250, 250, 1), rgba(245, 245, 245, 1));
+  background: linear-gradient(180deg, #2a2c36, #23242b);
   border-radius: 10px;
   padding: 14px;
-  box-shadow: 0 6px 18px rgba(12, 12, 12, 0.03);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
   text-align: center;
+  color: #f1f1f1;
 }
 
 .info-card h2 {
@@ -84,7 +90,6 @@
   margin: 0;
   font-weight: 700;
   font-size: 1.25rem;
-  color: var(--text-color);
 }
 
 /* Sections */
@@ -95,10 +100,10 @@
 .section h2 {
   font-size: 1.05rem;
   margin: 8px 0 12px 0;
-  color: var(--text-color);
   display: flex;
   gap: 8px;
   align-items: center;
+  color: #ffffff;
 }
 
 /* Stats grid and boxes */
@@ -109,10 +114,12 @@
 }
 
 .stat-box {
-  background: #fbfbfb;
+  background: #272830;
   border-radius: 10px;
   padding: 12px;
-  border: 1px solid rgba(0, 0, 0, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.25);
+  color: #f5f5f5;
 }
 
 .stat-box h3 {
@@ -125,6 +132,7 @@
   margin: 0;
   font-weight: 700;
   font-size: 1.1rem;
+  color: #ffffff;
 }
 
 /* Loading */

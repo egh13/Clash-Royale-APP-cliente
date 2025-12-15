@@ -7,7 +7,7 @@ import { HttpClient } from '@angular/common/http';
 export class UserService {
   constructor(private http: HttpClient) {}
 
-  getUserInfo(userId: string) {
+  getUserInfo(userId: string | null) {
     return this.http.get<any>('http://localhost:3000/api/developerApi/players/' + userId);
   }
 }

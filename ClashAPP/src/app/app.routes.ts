@@ -18,7 +18,7 @@ export const routes: Routes = [
     component: QuizComponent,
   },
   {
-    path: 'user',
+    path: 'user/:id',
     component: User,
   },
 ];

@@ -1,5 +1,6 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { UserService } from '../../services/user-service';
+import { ActivatedRoute } from '@angular/router';
 
 interface UserInterface {
   tag: string;
@@ -29,29 +30,44 @@ interface UserInterface {
 
 @Component({
   selector: 'app-user',
-  imports: [],
   templateUrl: './user.html',
-  styleUrl: './user.css',
+  styleUrls: ['./user.css'],
 })
-export class User {
+export class User implements OnInit {
+
+  userId: string | null = null;
+  user: UserInterface | null = null;
+  mensajeError: string = '';
 
   userService = inject(UserService);
-  private userId = 'Y88YCCCPJ'; //example id
+  route = inject(ActivatedRoute);
 
-  user: UserInterface | null = null;
-
-  getUser() {
-    this.userService.getUserInfo(this.userId).subscribe({
-      next: (data: UserInterface) => {
-        this.user = data;
-      },
-      error: (err) => {
-        console.error('Error obteniendo usuario:', err);
-      },
+  ngOnInit() {
+    // Suscribirse a cambios en el parámetro id
+    this.route.paramMap.subscribe(params => {
+      const tag = params.get('id');
+      if (tag) {
+        this.getUser(tag);
+      }
     });
   }
 
-  public ngOnInit(){
-    this.getUser();
+  getUser(tag: string) {
+    this.user = null;
+    this.mensajeError = '';
+
+    this.userService.getUserInfo(tag).subscribe({
+      next: (data: UserInterface | any) => {
+        if (!("error" in data)) {
+          this.user = data;
+        } else {
+          this.mensajeError = "Usuario no encontrado";
+        }
+      },
+      error: (err) => {
+        console.error('Error obteniendo usuario:', err);
+        this.mensajeError = "Error al obtener usuario";
+      },
+    });
   }
 }
