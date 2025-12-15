@@ -3,7 +3,8 @@ import { IndexComponent } from './components/index/index.component';
 import { Login } from './components/login/login';
 import { QuizComponent } from './components/quiz/quiz.component';
 import { User } from './components/user/user';
-import { CardCatalogComponent } from './components/card-catalog.component/card-catalog.component';
+import { CardCatalogComponent } from './components/card-catalog/card-catalog.component';
+import { Register } from './components/register/register';
 
 export const routes: Routes = [
   {
@@ -13,6 +14,10 @@ export const routes: Routes = [
   {
     path: 'login',
     component: Login,
+  },
+  {
+    path: 'register',
+    component: Register,
   },
   {
     path: 'quiz',
