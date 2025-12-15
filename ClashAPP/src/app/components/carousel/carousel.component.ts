@@ -11,7 +11,7 @@ export class CarouselComponent {
 
   currentIndex: number = 0;
   intervalId: any;
-  
+
   ngOnInit() {
     this.startCarousel();
   }
