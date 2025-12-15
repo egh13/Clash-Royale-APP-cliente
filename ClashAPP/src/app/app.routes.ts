@@ -22,6 +22,5 @@ export const routes: Routes = [
     path: 'user/:id',
     component: User,
   },
-  { path: 'cards',
-    component: CardCatalogComponent },
+  { path: 'cards', component: CardCatalogComponent },
 ];
