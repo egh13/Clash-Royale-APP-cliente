@@ -70,11 +70,10 @@ export class QuizComponent {
     this.question = base;
     this.choices = this.makeChoices(base);
   }
-
   play(): void {
     if (!this.question) return;
-  const audioFile = this.assetsMap[this.question!]?.audio ?? `${this.question}${this.audioExt(this.question)}`;
-  const path = `/AudiosRoyale/${audioFile}`;
+    const audioFile = this.assetsMap[this.question!]?.audio ?? `${this.question}.wav`;
+    const path = `/AudiosRoyale/${audioFile}`;
     fetch(path, { method: 'GET' })
       .then(res => {
         if (!res.ok) throw new Error(`HTTP ${res.status}`);
@@ -94,13 +93,6 @@ export class QuizComponent {
         this.feedback = `No se pudo cargar el audio: ${err.message}`;
       });
   }
-
-  private audioExt(name: string): string {
-    // map known names with mp3 vs wav
-    if (name === 'mimimimi' || name === 'clash-royale-click') return '.mp3';
-    return '.wav';
-  }
-
   stopAudio(): void {
     if (this.audio) {
       try { this.audio.pause(); } catch {}
@@ -109,7 +101,7 @@ export class QuizComponent {
   }
 
   select(i: number): void {
-    if (this.feedback) return; // already answered
+    if (this.feedback) return; 
     if (i === this.correctIndex) {
       this.feedback = '¡Correcto!';
     } else {
