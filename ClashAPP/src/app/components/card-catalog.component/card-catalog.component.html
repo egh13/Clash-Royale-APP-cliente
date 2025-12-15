@@ -1,0 +1,82 @@
+<div class="catalog-container">
+
+  <h2 class="title">📘 Catálogo de Cartas</h2>
+
+  <!-- FILTROS -->
+  <div class="filters">
+
+    <!-- BUSCADOR -->
+    <input
+      type="text"
+      class="search-input"
+      placeholder="🔍 Buscar carta..."
+      [value]="searchTerm()"
+      (input)="onSearch($event)" />
+
+    <button
+      [class.active]="sortField() === 'name'"
+      (click)="setSort('name')">
+      🔤 Nombre
+      <span>{{ sortField() === 'name' ? (sortDir() === 'asc' ? '⬆' : '⬇') : '' }}</span>
+    </button>
+
+    <button
+      [class.active]="sortField() === 'elixir'"
+      (click)="setSort('elixir')">
+      💧 Elixir
+      <span>{{ sortField() === 'elixir' ? (sortDir() === 'asc' ? '⬆' : '⬇') : '' }}</span>
+    </button>
+
+    <button
+      [class.active]="sortField() === 'rarity'"
+      (click)="setSort('rarity')">
+      💎 Rareza
+      <span>{{ sortField() === 'rarity' ? (sortDir() === 'asc' ? '⬆' : '⬇') : '' }}</span>
+    </button>
+  </div>
+
+  <div class="cards-grid" *ngIf="cards().length">
+
+    <div
+      class="card reorder-animate"
+      *ngFor="let card of cards()"
+      [ngClass]="card.rarity.toLowerCase()">
+
+      <!-- ELIXIR -->
+      <div class="elixir-drop">
+        <span>{{ card.elixirCost }}</span>
+      </div>
+
+      <!-- BADGES -->
+      <div class="badges">
+        <span *ngIf="card.hasEvolution" class="badge evo">⚡</span>
+        <span *ngIf="card.hasHero" class="badge hero">👑</span>
+      </div>
+
+      <!-- IMAGE -->
+      <div class="image-wrapper"
+           [class.has-carousel]="card.images.length > 1"
+           [style.--count]="card.images.length">
+
+        <img
+          *ngFor="let img of card.images; let i = index"
+          [src]="img"
+          class="card-image"
+          [style.--i]="i"/>
+      </div>
+
+      <!-- TEXTO -->
+      <h3 class="card-name">{{ card.name }}</h3>
+
+      <div class="stats">
+        <span>⭐ Nivel máx: 16</span>
+        <br/><br/>
+        <span>🆔 {{ card.id }}</span>
+        <br/><br/>
+        <span>🏷️ Rareza: {{ card.rarity }}</span>
+      </div>
+
+    </div>
+
+  </div>
+</div>

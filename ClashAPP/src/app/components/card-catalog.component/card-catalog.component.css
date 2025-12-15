@@ -1,0 +1,309 @@
+/* =========================
+   CONTENEDOR
+========================= */
+.catalog-container {
+  max-width: 1400px;
+  margin: auto;
+  padding: 40px 20px;
+  background: radial-gradient(circle at top, #0f1430, #05070f);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* =========================
+   TITULO
+========================= */
+.title {
+  text-align: center;
+  font-size: 38px;
+  margin-bottom: 40px;
+  color: white;
+}
+
+/* =========================
+   GRID
+========================= */
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 40px;
+  width: 100%;
+  justify-items: center;
+}
+
+/* =========================
+   CARD
+========================= */
+.card {
+  position: relative;
+  width: 220px;
+  padding: 20px 15px 22px;
+  border-radius: 22px;
+  background: linear-gradient(180deg, #1a1f3a, #0b0e1d);
+  text-align: center;
+  color: white;
+  overflow: hidden;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.card:hover {
+  transform: translateY(-12px) scale(1.07);
+  box-shadow: 0 0 45px var(--glow-color);
+}
+
+/* =========================
+   ELIXIR
+========================= */
+.elixir-drop {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  width: 42px;
+  height: 50px;
+  background: radial-gradient(circle at 30% 30%, #ffb3ff, #a000ff);
+  clip-path: polygon(
+    50% 0%, 80% 35%, 90% 60%,
+    50% 100%, 10% 60%, 20% 35%
+  );
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: pulse 1.8s infinite;
+}
+
+.elixir-drop span {
+  font-weight: 900;
+}
+
+/* =========================
+   BADGES
+========================= */
+.badges {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  display: flex;
+  gap: 6px;
+}
+
+.badge {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.badge.evo {
+  background: linear-gradient(135deg, #00ffff, #0077ff);
+}
+
+.badge.hero {
+  background: linear-gradient(135deg, gold, orange);
+}
+
+/* =========================
+   IMAGE CAROUSEL (FIXED)
+========================= */
+.image-wrapper {
+  position: relative;
+  width: 165px;
+  height: 165px;
+  margin: 20px auto 0;
+}
+
+.card-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  opacity: 0;
+  transform: scale(0.96);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+/* Primera imagen visible */
+.image-wrapper .card-image:first-child {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Carrusel adaptativo */
+.card:hover .image-wrapper.has-carousel .card-image {
+  animation-name: fadeCarousel;
+  animation-duration: calc(var(--count) * 1.5s);
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-delay: calc(var(--i) * 1.5s);
+}
+
+/* =========================
+   KEYFRAMES
+========================= */
+@keyframes fadeCarousel {
+  0% {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+  15% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  45% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  60% {
+    opacity: 0;
+    transform: scale(1.04);
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/* =========================
+   TEXTO
+========================= */
+.card-name {
+  margin-top: 12px;
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.stats {
+  font-size: 13px;
+  opacity: 0.85;
+}
+
+/* =========================
+   RAREZAS
+========================= */
+.common { border: 3px solid #b7b7b7; --glow-color: rgba(180,180,180,.6); }
+.rare { border: 3px solid #0095ff; --glow-color: rgba(0,150,255,1); }
+.epic { border: 3px solid #a335ee; --glow-color: rgba(170,60,255,1); }
+.legendary { border: 3px solid #ff8800; --glow-color: rgba(255,140,0,1); }
+.champion { border: 3px solid gold; --glow-color: rgba(255,215,0,1); }
+
+/* =========================
+   ANIMACIONES
+========================= */
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.08); }
+  100% { transform: scale(1); }
+}
+
+/* =========================
+   FILTROS
+========================= */
+.filters {
+  display: flex;
+  gap: 14px;
+  margin-bottom: 30px;
+}
+
+.filters button {
+  background: linear-gradient(180deg, #1a1f3a, #0b0e1d);
+  color: white;
+  border: 2px solid rgba(255,255,255,0.15);
+  border-radius: 14px;
+  padding: 10px 18px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.filters button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 12px rgba(255,255,255,0.25);
+}
+
+/* =========================
+   FILTROS PRO
+========================= */
+.filters {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 35px;
+}
+
+.filters button {
+  background: linear-gradient(180deg, #1f2550, #0c1030);
+  color: white;
+  border: 2px solid rgba(255,255,255,0.15);
+  border-radius: 16px;
+  padding: 12px 20px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow:
+    inset 0 0 10px rgba(255,255,255,0.05),
+    0 0 12px rgba(0,0,0,0.6);
+}
+
+.filters button:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow:
+    0 0 18px rgba(0,200,255,0.6),
+    inset 0 0 12px rgba(255,255,255,0.08);
+}
+
+.filters button.active {
+  border-color: #00e5ff;
+  box-shadow:
+    0 0 25px rgba(0,229,255,0.9),
+    inset 0 0 15px rgba(255,255,255,0.15);
+}
+
+/* =========================
+   ANIMACIÓN REORDENAR
+========================= */
+.reorder-animate {
+  animation: reorderFade 350ms ease;
+}
+
+@keyframes reorderFade {
+  from {
+    opacity: 0.6;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* =========================
+   BUSCADOR
+========================= */
+.search-input {
+  background: linear-gradient(180deg, #1f2550, #0c1030);
+  color: white;
+  border: 2px solid rgba(255,255,255,0.15);
+  border-radius: 16px;
+  padding: 12px 18px;
+  font-weight: 800;
+  outline: none;
+  width: 240px;
+  transition: all 0.3s ease;
+  box-shadow:
+    inset 0 0 10px rgba(255,255,255,0.05),
+    0 0 12px rgba(0,0,0,0.6);
+}
+
+.search-input::placeholder {
+  color: rgba(255,255,255,0.5);
+}
+
+.search-input:focus {
+  border-color: #00e5ff;
+  box-shadow:
+    0 0 22px rgba(0,229,255,0.8),
+    inset 0 0 15px rgba(255,255,255,0.12);
+}
