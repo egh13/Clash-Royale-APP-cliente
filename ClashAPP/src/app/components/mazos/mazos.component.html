@@ -1,44 +1,68 @@
-    <h1 class="cabecera">Creador de mazos online</h1>
+<h1 class="cabecera">Creador de mazos online</h1>
 
-    <section class="image-selector">
-        <h2 class="section-title">Selecciona tus cartas</h2>
-        
-        <div class="image-grid">
-            <img src="slider1.jpg" class="card-img" alt="Carta 1" />
-            <img src="assets/img/2.png" class="card-img" alt="Carta 2" />
-            <img src="assets/img/3.png" class="card-img" alt="Carta 3" />
-            <img src="assets/img/4.png" class="card-img" alt="Carta 4" />
-            <img src="assets/img/5.png" class="card-img" alt="Carta 5" />
-        </div>
+<section class="image-selector">
+  <h2 class="section-title">Selecciona una carta para tu mazo</h2>
 
-    </section>
+  <!-- Grid de cartas -->
+  <div class="image-grid">
+    @for (card of cards; track card.name) {
+    <img
+      [src]="card.image"
+      [alt]="card.name"
+      class="card-img"
+      (click)="selectCard(card)"
+    />
+    } 
+  </div>
+</section>
 
+<section class="siento_suerte">
+  <h2 class="section-title">¿No sabes qué mazo elegir?</h2>
+  <button class="random-button" (click)="selectRandomMazo()">Me siento con suerte</button>
+  <!-- {{ selectedCard.name }} -->  
+  @if (randomMazo) {
+      <div class="selected-card-section">
 
-    <section class="ejemplos">
+    <p>Tu mazo aleatorio es:</p>
+    <h3>{{ randomMazo.name }}</h3>
 
-        <h2 class="section-title">Ejemplos de Mazos</h2>
+    @for (cards of mazos; track cards.name) {  
+      @if (cards.cards[0]==randomMazo.cards[0]) {
+        <p>Elixir promedio: {{ cards.elixir }}</p>
+        <h4>Cartas del mazo:</h4>
+        <ul>
+          @for (cardName of cards.cards; track cardName) {
+        <img [src]="'CartasRoyale/Card_' + cardName + '.png'" [alt]="cardName" class="card-img-in-maze"/>          
+        }
+        </ul>
+      }
+    }
+  </div>
 
-        <div class="deck-list">
-                
-            <div class="deck">
-                <h3 class="deck-title">Mazo 1: Ciclo Rápido</h3>
-                <p class="deck-desc">Un mazo basado en cartas baratas para ciclar rápidamente.</p>
-            </div>
+  }
+</section>
 
-            <div class="deck">
-                <h3 class="deck-title">Mazo 2: Golem Beatdown</h3>
-                <p class="deck-desc">Poderoso mazo de empuje con gran tanqueo.</p>
-            </div>
+<section class="mostrar_mazo">
 
-            <div class="deck">
-                <h3 class="deck-title">Mazo 3: Montapuercos Control</h3>
-                <p class="deck-desc">Muy usado en arenas altas para presionar constantemente.</p>
-            </div>
+  @if (selectedCard) {
+  <div class="selected-card-section">
+  <!-- {{ selectedCard.name }} -->  
+    <p>seleccionado mazo con la carta {{ selectedCard.name }}</p>
+    <img [src]="selectedCard.image" [alt]="selectedCard.name" class="selected-card-img"/>
 
-            <div class="deck">
-                <h3 class="deck-title">Mazo 4: Sabueso de Lava</h3>
-                <p class="deck-desc">Un mazo aéreo muy fuerte para partidas largas.</p>
-            </div>
-
-        </div>
-    </section>
+    @for (cards of mazos; track cards.name) {
+      
+      @if (cards.cards[0]==selectedCard.name) {
+        <h3>Mazo: {{ cards.name }}</h3>
+        <p>Elixir promedio: {{ cards.elixir }}</p>
+        <h4>Cartas del mazo:</h4>
+        <ul>
+          @for (cardName of cards.cards; track cardName) {
+        <img [src]="'CartasRoyale/Card_' + cardName + '.png'" [alt]="cardName" class="card-img-in-maze"/>          
+        }
+        </ul>
+      }
+    }
+  </div>
+  }
+</section>  
