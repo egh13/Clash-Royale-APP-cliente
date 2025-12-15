@@ -3,6 +3,7 @@ import { IndexComponent } from './components/index/index.component';
 import { Login } from './components/login/login';
 import { QuizComponent } from './components/quiz/quiz.component';
 import { User } from './components/user/user';
+import { CardCatalogComponent } from './components/card-catalog.component/card-catalog.component';
 
 export const routes: Routes = [
   {
@@ -21,4 +22,6 @@ export const routes: Routes = [
     path: 'user/:id',
     component: User,
   },
+  { path: 'cards',
+    component: CardCatalogComponent },
 ];
