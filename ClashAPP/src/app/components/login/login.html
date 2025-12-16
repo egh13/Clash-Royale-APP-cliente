@@ -1,11 +1,17 @@
-<form [formGroup]="loginForm"  (ngSubmit)="onLogin()">
-  <label for="usuario">
-  Usuario:
-    <input id="usuario" type="text" formControlName="usuario" />
-  </label>
-  <label for="passwd">
-  Contraseña:
-    <input id="passwd" type="password" formControlName="passwd" />
-  </label>
-  <button type="submit" [disabled]="!loginForm.valid">Submit</button>
-</form>
+<div class="login-container">
+  <h2>Iniciar Sesión</h2>
+  <form [formGroup]="loginForm" (ngSubmit)="onLogin()">
+    <label for="usuario">
+      Usuario
+      <input id="usuario" type="text" formControlName="usuario" placeholder="Ingresa tu usuario" />
+    </label>
+
+    <label for="passwd">
+      Contraseña
+      <input id="passwd" type="password" formControlName="passwd" placeholder="Ingresa tu contraseña" />
+    </label>
+
+    <button type="submit" [disabled]="!loginForm.valid">Entrar</button>
+  </form>
+</div>
+

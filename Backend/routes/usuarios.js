@@ -69,7 +69,7 @@ router.put("/change-password", async (req, res) => {
 // Borrar usuario 
 // TODO: este endpoint solo debe funcionar con la autenticacion indicada
 
-router.delete("/delete", (req, res) => {
+router.post("/delete", (req, res) => {
   const { username } = req.body;
   if (!username) return res.status(400).json({ error: "Faltan datos" });
 
