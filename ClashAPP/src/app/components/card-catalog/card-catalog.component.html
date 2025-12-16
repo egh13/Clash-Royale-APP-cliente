@@ -17,66 +17,90 @@
       [class.active]="sortField() === 'name'"
       (click)="setSort('name')">
       🔤 Nombre
-      <span>{{ sortField() === 'name' ? (sortDir() === 'asc' ? '⬆' : '⬇') : '' }}</span>
+      <span>
+        {{ sortField() === 'name'
+            ? (sortDir() === 'asc' ? '⬆' : '⬇')
+            : '' }}
+      </span>
     </button>
 
     <button
       [class.active]="sortField() === 'elixir'"
       (click)="setSort('elixir')">
       💧 Elixir
-      <span>{{ sortField() === 'elixir' ? (sortDir() === 'asc' ? '⬆' : '⬇') : '' }}</span>
+      <span>
+        {{ sortField() === 'elixir'
+            ? (sortDir() === 'asc' ? '⬆' : '⬇')
+            : '' }}
+      </span>
     </button>
 
     <button
       [class.active]="sortField() === 'rarity'"
       (click)="setSort('rarity')">
       💎 Rareza
-      <span>{{ sortField() === 'rarity' ? (sortDir() === 'asc' ? '⬆' : '⬇') : '' }}</span>
+      <span>
+        {{ sortField() === 'rarity'
+            ? (sortDir() === 'asc' ? '⬆' : '⬇')
+            : '' }}
+      </span>
     </button>
   </div>
 
-  <div class="cards-grid" *ngIf="cards().length">
+  @if (cards().length > 0) {
+    <div class="cards-grid">
 
-    <div
-      class="card reorder-animate"
-      *ngFor="let card of cards()"
-      [ngClass]="card.rarity.toLowerCase()">
+      @for (card of cards(); track card.id) {
+        <div
+          class="card reorder-animate"
+          [class]="card.rarity.toLowerCase()">
 
-      <!-- ELIXIR -->
-      <div class="elixir-drop">
-        <span>{{ card.elixirCost }}</span>
-      </div>
+          <!-- ELIXIR -->
+          <div class="elixir-drop">
+            <span>{{ card.elixirCost }}</span>
+          </div>
 
-      <!-- BADGES -->
-      <div class="badges">
-        <span *ngIf="card.hasEvolution" class="badge evo">⚡</span>
-        <span *ngIf="card.hasHero" class="badge hero">👑</span>
-      </div>
+          <!-- BADGES -->
+          <div class="badges">
+            @if (card.hasEvolution) {
+              <span class="badge evo">⚡</span>
+            }
+            @if (card.hasHero) {
+              <span class="badge hero">👑</span>
+            }
+          </div>
 
-      <!-- IMAGE -->
-      <div class="image-wrapper"
-           [class.has-carousel]="card.images.length > 1"
-           [style.--count]="card.images.length">
+          <!-- IMAGE -->
+          <div
+            class="image-wrapper"
+            [class.has-carousel]="card.images.length > 1"
+            [style.--count]="card.images.length">
 
-        <img
-          *ngFor="let img of card.images; let i = index"
-          [src]="img"
-          class="card-image"
-          [style.--i]="i"/>
-      </div>
+            @for (img of card.images; track img; let i = $index) {
+              <img
+                class="card-image"
+                alt="card-image"
+                [src]="img"
+                [style.--i]="i"
+              />
+            }
+          </div>
 
-      <!-- TEXTO -->
-      <h3 class="card-name">{{ card.name }}</h3>
+          <!-- TEXTO -->
+          <h3 class="card-name">{{ card.name }}</h3>
 
-      <div class="stats">
-        <span>⭐ Nivel máx: 16</span>
-        <br/><br/>
-        <span>🆔 {{ card.id }}</span>
-        <br/><br/>
-        <span>🏷️ Rareza: {{ card.rarity }}</span>
-      </div>
+          <div class="stats">
+            <span>⭐ Nivel máx: 16</span>
+            <br /><br />
+            <span>🆔 {{ card.id }}</span>
+            <br /><br />
+            <span>🏷️ Rareza: {{ card.rarity }}</span>
+          </div>
+
+        </div>
+      }
 
     </div>
+  }
 
-  </div>
 </div>
