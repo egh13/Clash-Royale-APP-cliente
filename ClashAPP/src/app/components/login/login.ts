@@ -24,9 +24,7 @@ export class Login {
     if (values.usuario && values.passwd) {
       this.authService.login(values.usuario, values.passwd).subscribe(
         (response) => {
-          if (response.token) {
-            // Guardar el token en localStorage
-            localStorage.setItem('authToken', response.token);
+          if (response) {
             this.router.navigate(['/']);
           }
         },

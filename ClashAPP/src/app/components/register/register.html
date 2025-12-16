@@ -4,7 +4,7 @@
   <form [formGroup]="registerForm" (ngSubmit)="submit()">
     <div>
       <label>Usuario:</label>
-      <input formControlName="username" type="text" />
+      <input placeholder="Usuario" formControlName="username" type="text" />
       @if (registerForm.get('username')?.invalid && registerForm.get('username')?.touched){
       <div>
         Usuario inválido (mínimo 3 caracteres)
@@ -15,10 +15,10 @@
 
     <div>
       <label>Contraseña:</label>
-      <input formControlName="password" type="password" />
+      <input placeholder="Contraseña" formControlName="password" type="password" />
       @if (registerForm.get('password')?.invalid && registerForm.get('password')?.touched){
       <div>
-        Contraseña inválida (mínimo 6 caracteres)
+        Contraseña inválida (mínimo 4 caracteres)
       </div>
       }
     </div>

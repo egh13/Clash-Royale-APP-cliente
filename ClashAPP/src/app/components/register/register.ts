@@ -15,10 +15,10 @@ export class Register {
   constructor(private fb: FormBuilder, private authService: AuthService) {
     this.registerForm = this.fb.group({
       username: ['', [Validators.required, Validators.minLength(3)]],
-      password: ['', [Validators.required, Validators.minLength(6)]]
+      password: ['', [Validators.required, Validators.minLength(4)]]
     });
   }
-    
+
   submit() {
     if (this.registerForm.invalid) {
       this.message = 'Por favor completa todos los campos correctamente';
