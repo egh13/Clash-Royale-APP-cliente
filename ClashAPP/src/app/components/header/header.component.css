@@ -2,27 +2,94 @@
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  padding: 30px 30px;
+  padding: 15px 30px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  gap: 20px;
+  /* Espacio entre barra de búsqueda y login */
 }
 
-.logo {
-  margin-right: 20px;
+/* Barra de búsqueda */
+.search-bar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  max-width: 400px;
+  /* Tamaño máximo de la barra */
+  background-color: #2a2c36;
+  padding: 6px 10px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
 }
 
-.logo-img {
-  height: 40px;
+.search-bar input {
+  flex: 1;
+  /* Ocupa espacio disponible */
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px solid #444;
+  background-color: #1e1f26;
+  color: #fff;
+  font-size: 14px;
+  transition: border-color 0.2s, box-shadow 0.2s;
 }
 
-.login-btn {
-  padding: 8px 50px;
-  font-size: 16px;
-  background-color: var(--royale-blue);
-  color: white;
+.search-bar input:focus {
+  outline: none;
+  border-color: var(--royale-blue);
+  box-shadow: 0 0 8px var(--royale-blue);
+}
+
+.search-bar .search-btn {
+  padding: 8px 16px;
+  border-radius: 6px;
   border: none;
-  border-radius: 4px;
+  background: var(--accent);
+  color: #fff;
+  font-weight: 600;
   cursor: pointer;
+  transition: background 0.3s, transform 0.1s, box-shadow 0.2s;
+}
+
+.search-bar .search-btn:hover {
+  background: linear-gradient(90deg, rgba(53, 103, 211, 1) 0%, rgba(120, 70, 230, 1) 100%);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+/* Botón de login (igual al search-btn) */
+.login-btn {
+  padding: 8px 16px;
+  border-radius: 6px;
+  border: none;
+  background: var(--accent);
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.1s, box-shadow 0.2s;
 }
 
 .login-btn:hover {
-  background-color: #0056b3;
+  background: linear-gradient(90deg, rgba(53, 103, 211, 1) 0%, rgba(120, 70, 230, 1) 100%);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+/* Logo ocultado o ajustado si no quieres que aparezca */
+.logo {
+  display: none;
+  /* Lo puedes ocultar si tu sidebar ya tiene el logo */
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 10px;
+  }
+
+  .search-bar {
+    max-width: 100%;
+  }
 }

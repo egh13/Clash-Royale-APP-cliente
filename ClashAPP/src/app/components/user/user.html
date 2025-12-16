@@ -1,0 +1,136 @@
+@if(user){
+<!-- user.component.html -->
+<div class="profile-container">
+  <!-- Header con nombre y tag -->
+  <div class="header">
+    <div class="avatar">🎯</div>
+    <div class="title">
+      <h1>{{ user.name }} <span class="crown">👑</span></h1>
+      <span class="tag">Tag: {{ user.tag }}</span>
+    </div>
+  </div>
+
+  <!-- Datos principales -->
+  <div class="main-info">
+    <div class="info-card">
+      <h2>🔋 Nivel</h2>
+      <p>{{ user.expLevel }}</p>
+    </div>
+
+    <div class="info-card">
+      <h2>🏆 Trofeos</h2>
+      <p>{{ user.trophies }}</p>
+    </div>
+
+    <div class="info-card">
+      <h2>🚀 Mejor</h2>
+      <p>{{ user.bestTrophies }}</p>
+    </div>
+
+    <div class="info-card">
+      <h2>🎖️ Rol</h2>
+      <p>{{ user.role }}</p>
+    </div>
+  </div>
+
+  <!-- Estadísticas de batalla -->
+  <div class="section">
+    <h2>⚔️ Estadísticas de Batalla</h2>
+    <div class="stats-grid">
+      <div class="stat-box">
+        <h3>✅ Victorias</h3>
+        <p>{{ user.wins }}</p>
+      </div>
+
+      <div class="stat-box">
+        <h3>❌ Derrotas</h3>
+        <p>{{ user.losses }}</p>
+      </div>
+
+      <div class="stat-box">
+        <h3>🧾 Batallas Totales</h3>
+        <p>{{ user.battleCount }}</p>
+      </div>
+
+      <div class="stat-box">
+        <h3>🏅 3 Coronas</h3>
+        <p>{{ user.threeCrownWins }}</p>
+      </div>
+
+      <div class="stat-box">
+        <h3>🔥 Racha Desafíos</h3>
+        <p>{{ user.challengeMaxWins }}</p>
+      </div>
+
+      <div class="stat-box">
+        <h3>📦 Cartas Ganadas</h3>
+        <p>{{ user.challengeCardsWon }}</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Progreso y puntos -->
+  <div class="section">
+    <h2>📈 Progreso</h2>
+    <div class="stats-grid">
+      <div class="stat-box">
+        <h3>✨ EXP Actual</h3>
+        <p>{{ user.expPoints }}</p>
+      </div>
+
+      <div class="stat-box">
+        <h3>🧾 EXP Total</h3>
+        <p>{{ user.totalExpPoints }}</p>
+      </div>
+
+      <div class="stat-box">
+        <h3>🎁 Donaciones</h3>
+        <p>{{ user.donations }}</p>
+      </div>
+
+      <div class="stat-box">
+        <h3>📬 Donaciones Recibidas</h3>
+        <p>{{ user.donationsReceived }}</p>
+      </div>
+
+      <div class="stat-box">
+        <h3>🤝 Donaciones Totales</h3>
+        <p>{{ user.totalDonations }}</p>
+      </div>
+
+      <div class="stat-box">
+        <h3>⭐ Puntos Estrella</h3>
+        <p>{{ user.starPoints }}</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Historial competitivo -->
+  <div class="section">
+    <h2>🏟️ Historial Competitivo</h2>
+    <div class="stats-grid">
+      <div class="stat-box">
+        <h3>📈 Mejor</h3>
+        <p>{{ user.legacyTrophyRoadHighScore }}</p>
+      </div>
+
+      <div class="stat-box">
+        <h3>🛡️ Batallas Torneo</h3>
+        <p>{{ user.tournamentBattleCount }}</p>
+      </div>
+
+      <div class="stat-box">
+        <h3>🎴 Cartas Torneo</h3>
+        <p>{{ user.tournamentCardsWon }}</p>
+      </div>
+
+      <div class="stat-box">
+        <h3>⚙️ War Day Wins</h3>
+        <p>{{ user.warDayWins }}</p>
+      </div>
+    </div>
+  </div>
+</div>
+} @else {
+  <p>{{ mensajeError }}</p>
+}
