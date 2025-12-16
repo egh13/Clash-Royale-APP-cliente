@@ -3,11 +3,16 @@ const cors = require("cors");
 require("dotenv").config();
 
 const app = express();
-app.use(cors());
+app.use(
+  cors({
+    origin: "http://localhost:4200", // app de Angular
+    credentials: true, // permite cookies
+  })
+);
 app.use(express.json());
 
 //router para manejar los enpoint de la developer API Clash Royale
-const apiRouter = require("./routes/api");
+const apiRouter = require("./routes/developerApi");
 app.use("/api/developerApi", apiRouter);
 
 //router para manejar los enpoint de autenticacion

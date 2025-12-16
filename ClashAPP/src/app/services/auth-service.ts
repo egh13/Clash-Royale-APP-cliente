@@ -1,18 +1,20 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
+
 @Injectable({
   providedIn: 'root',
 })
 export class AuthService {
+  constructor(private http: HttpClient) { }
 
-  constructor(private http: HttpClient) {}
+  private baseUrl = "http://localhost:3000/api/usuarios";
 
-  login(usuario: string, password: string) {
-    return this.http.post<any>(
-      'http://localhost:3000/api/usuarios/login',
-      { usuario, password },
-      { withCredentials: true }
-    );
-    //.shareReplay() //almacena en cache la respuesta del observable, evita que se pueda mandar varias veces el POST
+  login(username: string, password: string) {
+    return this.http.post<any>(`${this.baseUrl}/login`,{ username, password })
+  }
+
+  register(username: string, password: string): Observable<any> {
+    return this.http.post(`${this.baseUrl}/register`,{ username, password });
   }
 }
