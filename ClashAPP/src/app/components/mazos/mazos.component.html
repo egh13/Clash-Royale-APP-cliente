@@ -1,0 +1,68 @@
+<h1 class="cabecera">Creador de mazos online</h1>
+
+<section class="image-selector">
+  <h2 class="section-title">Selecciona una carta para tu mazo</h2>
+
+  <!-- Grid de cartas -->
+  <div class="image-grid">
+    @for (card of cards; track card.name) {
+    <img
+      [src]="card.image"
+      [alt]="card.name"
+      class="card-img"
+      (click)="selectCard(card)"
+    />
+    } 
+  </div>
+</section>
+
+<section class="siento_suerte">
+  <h2 class="section-title">¿No sabes qué mazo elegir?</h2>
+  <button class="random-button" (click)="selectRandomMazo()">Me siento con suerte</button>
+  <!-- {{ selectedCard.name }} -->  
+  @if (randomMazo) {
+      <div class="selected-card-section">
+
+    <p>Tu mazo aleatorio es:</p>
+    <h3>{{ randomMazo.name }}</h3>
+
+    @for (cards of mazos; track cards.name) {  
+      @if (cards.cards[0]==randomMazo.cards[0]) {
+        <p>Elixir promedio: {{ cards.elixir }}</p>
+        <h4>Cartas del mazo:</h4>
+        <ul>
+          @for (cardName of cards.cards; track cardName) {
+        <img [src]="'CartasRoyale/Card_' + cardName + '.png'" [alt]="cardName" class="card-img-in-maze"/>          
+        }
+        </ul>
+      }
+    }
+  </div>
+
+  }
+</section>
+
+<section class="mostrar_mazo">
+
+  @if (selectedCard) {
+  <div class="selected-card-section">
+  <!-- {{ selectedCard.name }} -->  
+    <p>seleccionado mazo con la carta {{ selectedCard.name }}</p>
+    <img [src]="selectedCard.image" [alt]="selectedCard.name" class="selected-card-img"/>
+
+    @for (cards of mazos; track cards.name) {
+      
+      @if (cards.cards[0]==selectedCard.name) {
+        <h3>Mazo: {{ cards.name }}</h3>
+        <p>Elixir promedio: {{ cards.elixir }}</p>
+        <h4>Cartas del mazo:</h4>
+        <ul>
+          @for (cardName of cards.cards; track cardName) {
+        <img [src]="'CartasRoyale/Card_' + cardName + '.png'" [alt]="cardName" class="card-img-in-maze"/>          
+        }
+        </ul>
+      }
+    }
+  </div>
+  }
+</section>  
