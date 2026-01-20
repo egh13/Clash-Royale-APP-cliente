@@ -5,8 +5,15 @@
     <button (click)="buscarUsuario(searchInput.value)" class="search-btn">Search</button>
   </div>
 
+  @if(isLoggedIn$ | async){
+  <div>
+    <button>Personal</button>
+  </div>
+  }@else{
   <div class="login">
     <button routerLink="login" class="login-btn">Login</button>
   </div>
+  }
+
 
 </header>
