@@ -1,29 +1,51 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { Observable, tap } from 'rxjs';
 import { BehaviorSubject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
 })
 export class AuthService {
-  constructor(private http: HttpClient) { }
 
-  private loggedIn$ = new BehaviorSubject<boolean>(false); // se crea con valor inicial false
-  public isLoggedIn$ = this.loggedIn$.asObservable(); // el $ significa que es un observable
+  private readonly BASE_URL = 'http://localhost:3000/api/usuarios';
+  private readonly TOKEN_KEY = 'auth_token';
 
-  private baseUrl = "http://localhost:3000/api/usuarios";
+  private loggedIn$ = new BehaviorSubject<boolean>(this.hasToken());
+  isLoggedIn$ = this.loggedIn$.asObservable();
+
+  constructor(private http: HttpClient) {}
 
   login(username: string, password: string) {
-    this.loggedIn$.next(true);
-    return this.http.post<any>(`${this.baseUrl}/login`,{ username, password })
+    return this.http.post<{ token: string }>(
+      `${this.BASE_URL}/login`,
+      { username, password }
+    ).pipe(
+      tap(response => {
+        localStorage.setItem(this.TOKEN_KEY, response.token);
+        this.loggedIn$.next(true);
+      })
+    );
   }
 
   logout() {
+    localStorage.removeItem(this.TOKEN_KEY);
     this.loggedIn$.next(false);
   }
 
-  register(username: string, password: string): Observable<any> {
-    return this.http.post(`${this.baseUrl}/register`,{ username, password });
+  getToken(): string | null {
+    return localStorage.getItem(this.TOKEN_KEY);
   }
+
+  private hasToken(): boolean {
+    return !!this.getToken();
+  }
+  
+  register(username: string, password: string): Observable<any> {
+  return this.http.post<any>(
+    `${this.BASE_URL}/register`,
+    { username, password }
+  );
+}
+
 }
