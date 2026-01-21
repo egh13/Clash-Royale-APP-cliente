@@ -13,7 +13,7 @@ import { AsyncPipe } from '@angular/common';
 
 export class HeaderComponent {
 
-  auth = inject(AuthService)
+  auth = inject(AuthService);
   isLoggedIn$ = this.auth.isLoggedIn$;
 
   router = inject(Router);
