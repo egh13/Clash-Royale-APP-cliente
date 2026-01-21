@@ -2,7 +2,6 @@ const express = require("express");
 const router = express.Router();
 const db = require("../sqlite/db");
 const bcrypt = require("bcrypt");
-
 const saltRounds = 4;
 
 // Registrar usuario
@@ -42,6 +41,12 @@ router.post("/register", async (req, res) => {
 });
 
 // Login
+// constantes del jwt
+
+const jwt = require("jsonwebtoken");
+const JWT_EXPIRES_IN = "1h";
+const JWT_SECRET = process.env.JWT_SECRET;
+
 router.post("/login", async (req, res) => {
   const { username, password } = req.body;
 
@@ -60,7 +65,26 @@ router.post("/login", async (req, res) => {
         .json({ error: "Usuario o contraseña incorrectas" });
     }
 
-    res.json({ id: user.id, username: user.username, role: user.role });
+    const token = jwt.sign(
+      {
+        id: user.id,
+        username: user.username,
+        role: user.role
+      },
+      JWT_SECRET,
+      { expiresIn: JWT_EXPIRES_IN }
+    );
+
+    // envio respuesta 
+    res.json({
+      token,
+      user: {
+        id: user.id,
+        username: user.username,
+        role: user.role
+      }
+    });
+
   } catch (err) {
     res.status(500).json({ error: "Error del servidor" });
   }
