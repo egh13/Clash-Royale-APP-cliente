@@ -61,7 +61,7 @@ router.post("/login", async (req, res) => {
 
     if (!user || !(await bcrypt.compare(password, user.password))) {
       return res
-        .status(400)
+        .status(401)
         .json({ error: "Usuario o contraseña incorrectas" });
     }
 
