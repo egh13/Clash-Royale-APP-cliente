@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable, tap } from 'rxjs';
+import { Observable, tap, catchError, throwError } from 'rxjs';
 import { BehaviorSubject } from 'rxjs';
 
 @Injectable({
@@ -24,6 +24,11 @@ export class AuthService {
       tap(response => {
         localStorage.setItem(this.TOKEN_KEY, response.token);
         this.loggedIn$.next(true);
+      }),
+      catchError((err) => {
+        // Si el backend devuelve { error: "..." }
+        const errorMessage = err.error?.error || 'Error en la autenticación';
+        return throwError(() => new Error(errorMessage));
       })
     );
   }
@@ -40,12 +45,11 @@ export class AuthService {
   private hasToken(): boolean {
     return !!this.getToken();
   }
-  
-  register(username: string, password: string): Observable<any> {
-  return this.http.post<any>(
-    `${this.BASE_URL}/register`,
-    { username, password }
-  );
-}
 
+  register(username: string, password: string): Observable<any> {
+    return this.http.post<any>(
+      `${this.BASE_URL}/register`,
+      { username, password }
+    );
+  }
 }
