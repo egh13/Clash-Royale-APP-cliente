@@ -6,12 +6,13 @@
   </div>
 
   @if(isLoggedIn$ | async){
-  <div>
-    <button>Personal</button>
+  <div class="login">
+    <button (click)="auth.logout()" class="login-btn">Logout</button>
   </div>
   }@else{
   <div class="login">
     <button routerLink="login" class="login-btn">Login</button>
+    <button routerLink="register" class="login-btn">Register</button>
   </div>
   }
 

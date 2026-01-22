@@ -9,9 +9,11 @@
     <label for="passwd">
       Contraseña
       <input id="passwd" type="password" formControlName="passwd" placeholder="Ingresa tu contraseña" />
-    </label>
+    </label> 
 
     <button type="submit" [disabled]="!loginForm.valid">Entrar</button>
+
+    <p>{{ errorMessage }}</p>
   </form>
 </div>
 
