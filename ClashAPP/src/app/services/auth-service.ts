@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { inject, Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable, tap, catchError, throwError } from 'rxjs';
 import { BehaviorSubject } from 'rxjs';
@@ -6,6 +6,7 @@ import { BehaviorSubject } from 'rxjs';
 @Injectable({
   providedIn: 'root',
 })
+
 export class AuthService {
 
   private readonly BASE_URL = 'http://localhost:3000/api/usuarios';
@@ -14,7 +15,7 @@ export class AuthService {
   private loggedIn$ = new BehaviorSubject<boolean>(this.hasToken());
   isLoggedIn$ = this.loggedIn$.asObservable();
 
-  constructor(private http: HttpClient) {}
+  private http = inject(HttpClient);
 
   login(username: string, password: string) {
     return this.http.post<{ token: string }>(
@@ -33,7 +34,7 @@ export class AuthService {
     );
   }
 
-  logout() {
+  logout(): void {
     localStorage.removeItem(this.TOKEN_KEY);
     this.loggedIn$.next(false);
   }
@@ -46,8 +47,8 @@ export class AuthService {
     return !!this.getToken();
   }
 
-  register(username: string, password: string): Observable<any> {
-    return this.http.post<any>(
+  register(username: string, password: string): Observable<{ id: number }>{
+    return this.http.post<{ id: number}>(
       `${this.BASE_URL}/register`,
       { username, password }
     );
