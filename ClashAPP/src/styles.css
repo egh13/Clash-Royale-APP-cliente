@@ -8,7 +8,7 @@
   --royale-red: rgb(119, 52, 52);
 }
 
-/* 🔑 NECESARIO PARA STICKY FOOTER */
+/*  NECESARIO PARA STICKY FOOTER */
 html, body {
   height: 100%;
   margin: 0;
@@ -33,3 +33,6 @@ app-root > app-sidebar,
 app-root > main {
   flex: 1;
 }
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
