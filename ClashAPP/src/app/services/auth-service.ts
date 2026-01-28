@@ -44,7 +44,7 @@ export class AuthService {
   }
   
   isLoggedIn(): boolean {
-    return !!localStorage.getItem('token');
+    return !!localStorage.getItem(this.TOKEN_KEY);
   }
 
   private hasToken(): boolean {
