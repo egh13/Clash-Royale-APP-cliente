@@ -6,6 +6,8 @@ import { QuizComponent } from './components/quiz/quiz.component';
 import { User } from './components/user/user';
 import { CardCatalogComponent } from './components/card-catalog/card-catalog.component';
 import { Register } from './components/register/register';
+import { authGuard } from './guards/auth-guard';
+
 
 export const routes: Routes = [
   {
@@ -19,6 +21,7 @@ export const routes: Routes = [
   {
     path: 'mazos',
     component: MazosComponent,
+    canActivate: [authGuard]
   },
   {
     path: 'register',
@@ -27,6 +30,7 @@ export const routes: Routes = [
   {
     path: 'quiz',
     component: QuizComponent,
+    canActivate: [authGuard]
   },
   {
     path: 'user/:id',
