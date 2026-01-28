@@ -2,7 +2,9 @@ const express = require("express");
 const router = express.Router();
 const db = require("../sqlite/db");
 const bcrypt = require("bcrypt");
+const authMiddleware = require("../middleware/auth.middleware");
 const saltRounds = 4;
+
 
 // Registrar usuario
 router.post("/register", async (req, res) => {
