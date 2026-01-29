@@ -1,11 +1,11 @@
 # Clash-Royale-APP-cliente
 La mejor app de clash royal creada por los mejores desarroladores de angular instruidos por el maestro surtich
 
-#  Partes de la APP
-1. Cuenta usuario. ver mazo, ver mazos anteriores --> Eric
-2. Ver leaderboards de clanes --> Eric
-3. Juego audio y emoticonos --> Dani Calvo
-4. Recomendador de mazos --> Gaton
+#  TODO
+-> Manejador global de errores
+-> Angular Materials
+-> Pestaña usuario con CRUD
+-> Unificar CSS
 
 # Iniciar APP
 1. **Frontend**
