@@ -14,6 +14,7 @@ import { AsyncPipe } from '@angular/common';
 export class HeaderComponent {
 
   auth = inject(AuthService);
+
   isLoggedIn$ = this.auth.isLoggedIn$;
 
   router = inject(Router);
@@ -25,6 +26,8 @@ export class HeaderComponent {
     }
   }
 
-  
+  onLogout(){
+    this.auth.logout();
+  }
 
 }

@@ -12,8 +12,6 @@ import { ToastService } from '../../services/toast-service';
 })
 export class Login {
 
-  errorMessage: string = '';
-
   private authService = inject(AuthService);
   private router = inject(Router);
   private toast = inject(ToastService);
@@ -31,6 +29,8 @@ export class Login {
         next: (response) => {
           if (response) {
             this.router.navigate(['/']);
+            console.log(response);
+            this.toast.success("Bienvenido \"" + response.user["username"] + "\"");
           }
         },
         error: (error) => {

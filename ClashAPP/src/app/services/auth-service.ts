@@ -18,7 +18,7 @@ export class AuthService {
   private http = inject(HttpClient);
 
   login(username: string, password: string) {
-    return this.http.post<{ token: string }>(
+    return this.http.post<{ token: string, user: {id: number, username: string, role: string} }>(
       `${this.BASE_URL}/login`,
       { username, password }
     ).pipe(
