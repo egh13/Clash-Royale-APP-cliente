@@ -33,8 +33,11 @@ interface UserInterface {
   templateUrl: './user.html',
   styleUrls: ['./user.css'],
 })
+
 export class User implements OnInit {
 
+  // para testing http://localhost:4200/user/Y88YCCCPJ
+  
   userId: string | null = null;
   user: UserInterface | null = null;
   mensajeError: string = '';
@@ -65,7 +68,6 @@ export class User implements OnInit {
         }
       },
       error: (err) => {
-        console.error('Error obteniendo usuario:', err);
         this.mensajeError = "Error al obtener usuario";
       },
     });
