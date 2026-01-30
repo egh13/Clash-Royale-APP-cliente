@@ -29,7 +29,6 @@ export class Login {
         next: (response) => {
           if (response) {
             this.router.navigate(['/']);
-            console.log(response);
             this.toast.success("Bienvenido \"" + response.user["username"] + "\"");
           }
         },

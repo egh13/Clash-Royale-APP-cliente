@@ -140,5 +140,26 @@ router.post(
   }
 );
 
+// Obtener datos del usuario autenticado
+router.get('/me', authMiddleware, (req, res) => {
+  try {
+    const userId = req.user.id; // viene del JWT
+
+    const user = db
+      .prepare('SELECT id, username, role FROM users WHERE id = ?')
+      .get(userId);
+
+    if (!user) {
+      return res.status(404).json({ error: 'Usuario no encontrado' });
+    }
+
+    res.json({
+      user
+    });
+    
+  } catch (err) {
+    res.status(500).json({ error: 'Error del servidor' });
+  }
+});
 
 module.exports = router;
