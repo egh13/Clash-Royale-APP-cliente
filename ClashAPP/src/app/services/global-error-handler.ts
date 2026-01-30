@@ -1,33 +1,54 @@
-import { ErrorHandler, Injectable } from '@angular/core';
+import { ErrorHandler, inject, Injectable } from '@angular/core';
 import { HttpErrorResponse } from '@angular/common/http';
+import { ToastService } from './toast-service';
 
 @Injectable({
   providedIn: 'root',
 })
+
+// utlizado en caso de que no se maneje el error de otra forma
+
 export class GlobalErrorHandler implements ErrorHandler{
 
-  handleError(error: any): void {
-    if (error instanceof HttpErrorResponse) {
-      // Errores HTTP
-      switch (error.status) {
+private toastService = inject(ToastService);
+
+handleError(error: any): void {
+  if (error instanceof HttpErrorResponse) {
+    switch (error.status) {
       case 0:
-        console.error('No se pudo conectar con el servidor', error.message);
+        this.toastService.error(
+          'No se pudo conectar con el servidor. Verifica tu conexión.'
+        );
         break;
+
       case 401:
-        console.warn('No autorizado');
+        this.toastService.info(
+          'Tu sesión ha expirado. Por favor inicia sesión nuevamente.'
+        );
         break;
+
       case 404:
-        console.warn('Recurso no encontrado');
+        this.toastService.info(
+          'El recurso solicitado no fue encontrado.'
+        );
         break;
+
       case 500:
-        console.error('Error de servidor', error.message);
+        this.toastService.error(
+          'Ocurrió un error en el servidor. Intenta más tarde.'
+        );
         break;
+
       default:
-        console.error('Error HTTP desconocido', error.status, error.message);
+        this.toastService.error(
+          `Error inesperado (${error.status}). Intenta nuevamente.`
+        );
+        break;
     }
-    } else {
-        console.error('Error de aplicación:', error);
-    }
+  } else {
+    this.toastService.error(
+      'Ocurrió un error inesperado en la aplicación.'
+    );
   }
-  
+}
 }

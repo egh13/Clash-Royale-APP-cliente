@@ -28,6 +28,7 @@ export class HeaderComponent {
 
   onLogout(){
     this.auth.logout();
+    this.router.navigate(['/']);
   }
 
 }

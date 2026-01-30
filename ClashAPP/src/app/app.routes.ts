@@ -7,6 +7,7 @@ import { User } from './components/user/user';
 import { CardCatalogComponent } from './components/card-catalog/card-catalog.component';
 import { Register } from './components/register/register';
 import { authGuard } from './guards/auth-guard';
+import { Profile } from './components/profile/profile';
 
 
 export const routes: Routes = [
@@ -36,5 +37,21 @@ export const routes: Routes = [
     path: 'user/:id',
     component: User,
   },
-  { path: 'cards', component: CardCatalogComponent },
+  { 
+    path: 'cards', 
+    component: CardCatalogComponent
+   },
+    { 
+  path: 'profile', 
+    component: Profile,
+    canActivate: [authGuard]
+   },
+
+  // redirigir a index, SIEMPRE AL FINAL
+  {
+    path: '**',
+    redirectTo: '',
+    pathMatch: 'full'
+  }
+  
 ];
