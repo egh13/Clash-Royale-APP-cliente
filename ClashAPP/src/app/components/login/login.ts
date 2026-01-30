@@ -2,6 +2,7 @@ import { Component, inject } from '@angular/core';
 import { ReactiveFormsModule, FormControl, FormGroup, Validators } from '@angular/forms';
 import { AuthService } from '../../services/auth-service';
 import { Router } from '@angular/router';
+import { ToastService } from '../../services/toast-service';
 
 @Component({
   selector: 'app-login',
@@ -15,6 +16,7 @@ export class Login {
 
   private authService = inject(AuthService);
   private router = inject(Router);
+  private toast = inject(ToastService);
 
   loginForm = new FormGroup({
     usuario: new FormControl('', Validators.required),
@@ -32,7 +34,7 @@ export class Login {
           }
         },
         error: (error) => {
-          this.errorMessage = error.message;
+          this.toast.info("Ocurrio un error");
         }
       });
     }
