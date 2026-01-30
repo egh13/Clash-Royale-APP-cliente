@@ -19,13 +19,13 @@ export const routes: Routes = [
     component: Login,
   },
   {
+    path: 'register',
+    component: Register,
+  },
+  {
     path: 'mazos',
     component: MazosComponent,
     canActivate: [authGuard]
-  },
-  {
-    path: 'register',
-    component: Register,
   },
   {
     path: 'quiz',
