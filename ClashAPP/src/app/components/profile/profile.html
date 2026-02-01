@@ -1,0 +1,26 @@
+<div class="profile-container">
+  <div class="profile-card">
+
+    <img
+      class="avatar"
+      src="Assets/logo.jpg"
+      alt="Foto de perfil"
+    />
+
+    <h2>{{ user.username }}</h2>
+    <p class="role">Rol: {{ user.role }}</p>
+
+    <!-- Cambiar contraseña -->
+    <div class="form-group">
+      <input
+        placeholder="Nueva contraseña"
+        [(ngModel)]="newPassword"
+      />
+      <button class="btn warning" (click)="changePassword()">Cambiar contraseña</button>
+    </div>
+
+    <!-- Borrar usuario -->
+    <button class="btn danger" (click)="deleteUser()">Borrar usuario</button>
+
+  </div>
+</div>

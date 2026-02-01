@@ -1,0 +1,7 @@
+<div class="toast-container">
+    @for(msg of messages; track $index){
+        <div class="toast" [class]="msg.type">
+            {{ msg.text }}
+        </div>
+    }
+</div>

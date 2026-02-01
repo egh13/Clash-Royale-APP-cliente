@@ -2,6 +2,7 @@ import { Component, inject } from '@angular/core';
 import { ReactiveFormsModule, FormControl, FormGroup, Validators } from '@angular/forms';
 import { AuthService } from '../../services/auth-service';
 import { Router } from '@angular/router';
+import { ToastService } from '../../services/toast-service';
 
 @Component({
   selector: 'app-login',
@@ -11,10 +12,9 @@ import { Router } from '@angular/router';
 })
 export class Login {
 
-  errorMessage: string = '';
-
   private authService = inject(AuthService);
   private router = inject(Router);
+  private toast = inject(ToastService);
 
   loginForm = new FormGroup({
     usuario: new FormControl('', Validators.required),
@@ -29,10 +29,11 @@ export class Login {
         next: (response) => {
           if (response) {
             this.router.navigate(['/']);
+            this.toast.success("Bienvenido \"" + response.user["username"] + "\"");
           }
         },
         error: (error) => {
-          this.errorMessage = error.message;
+          this.toast.info("Usuario o contraseña Incorrectos");
         }
       });
     }
