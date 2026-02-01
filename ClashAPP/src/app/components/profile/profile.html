@@ -1,1 +1,25 @@
-<p>profile works!</p>
+<div class="profile-container">
+  <div class="profile-card">
+    
+    <img 
+      class="avatar"
+      src="https://i.pravatar.cc/150?u={{ user.username }}"
+      alt="Foto de perfil"
+    />
+
+    <h2>{{ user.username }}</h2>
+    <p class="role">Rol: {{ user.role }}</p>
+
+    <div class="actions">
+      <button class="btn warning" (click)="changePassword()">
+        Cambiar contraseña
+      </button>
+
+      <button class="btn danger" (click)="deleteUser()">
+        Borrar usuario
+      </button>
+
+    </div>
+
+  </div>
+</div>

@@ -33,7 +33,7 @@ export class Login {
           }
         },
         error: (error) => {
-          this.toast.info("Ocurrio un error");
+          this.toast.info("Usuario o contraseña Incorrectos");
         }
       });
     }
