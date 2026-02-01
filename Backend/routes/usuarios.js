@@ -2,7 +2,9 @@ const express = require("express");
 const router = express.Router();
 const db = require("../sqlite/db");
 const bcrypt = require("bcrypt");
+const authMiddleware = require("../middleware/auth.middleware");
 const saltRounds = 4;
+
 
 // Registrar usuario
 router.post("/register", async (req, res) => {
@@ -91,41 +93,42 @@ router.post("/login", async (req, res) => {
 });
 
 // Cambiar contraseña
-router.put("/change-password", async (req, res) => {
-  const { username, oldPassword, newPassword } = req.body;
-  if (!username || !oldPassword || !newPassword)
-    return res.status(400).json({ error: "Faltan datos" });
+
+router.put('/change-password', authMiddleware, async (req, res) => {
+  const { newPassword } = req.body;
+  const username = req.user.username; // viene del JWT
+
+  if (!newPassword)
+    return res.status(400).json({ error: 'Faltan datos' });
 
   const user = db
-    .prepare("SELECT * FROM users WHERE username = ?")
+    .prepare('SELECT * FROM users WHERE username = ?')
     .get(username);
-  if (!user) return res.status(400).json({ error: "Usuario no encontrado" });
-
-  const match = await bcrypt.compare(oldPassword, user.password);
-  if (!match)
-    return res.status(400).json({ error: "Contraseña actual incorrecta" });
 
   const hashedNew = await bcrypt.hash(newPassword, saltRounds);
-  db.prepare("UPDATE users SET password = ? WHERE username = ?").run(
+  db.prepare('UPDATE users SET password = ? WHERE username = ?').run(
     hashedNew,
     username
   );
-  res.json({ message: "Contraseña actualizada" });
+
+  res.json({ message: 'Contraseña actualizada' });
 });
+
 
 // Borrar usuario
-// TODO: este endpoint solo debe funcionar con la autenticacion indicada
 
-router.post("/delete", (req, res) => {
-  const { username } = req.body;
-  if (!username) return res.status(400).json({ error: "Faltan datos" });
+router.delete('/me', authMiddleware, (req, res) => {
+  const username = req.user.username; // viene del JWT
 
-  const stmt = db.prepare("DELETE FROM users WHERE username = ?");
+  const stmt = db.prepare('DELETE FROM users WHERE username = ?');
   const info = stmt.run(username);
-  if (info.changes === 0)
-    return res.status(400).json({ error: "Usuario no encontrado" });
 
-  res.json({ message: "Usuario eliminado" });
+  if (info.changes === 0) {
+    return res.status(400).json({ error: 'Usuario no encontrado' });
+  }
+
+  res.json({ message: 'Usuario eliminado' });
 });
+
 
 module.exports = router;

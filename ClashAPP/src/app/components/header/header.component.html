@@ -7,7 +7,8 @@
 
   @if(isLoggedIn$ | async){
   <div class="login">
-    <button (click)="auth.logout()" class="login-btn">Logout</button>
+    <button routerLink="profile" class="login-btn">Mi perfil</button>
+    <button (click)="onLogout()" class="login-btn">Logout</button>
   </div>
   }@else{
   <div class="login">

@@ -2,6 +2,7 @@ import { Component, inject } from '@angular/core';
 import { ReactiveFormsModule, FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { AuthService } from '../../services/auth-service';
 import { Router } from '@angular/router';
+import { ToastService } from '../../services/toast-service';
 
 @Component({
   selector: 'app-register',
@@ -15,7 +16,8 @@ export class Register {
 
   private router = inject(Router);
   private authService = inject(AuthService);
-  
+  private toast = inject(ToastService);
+
   constructor(private fb: FormBuilder) {
     this.registerForm = this.fb.group({
       username: ['', [Validators.required, Validators.minLength(3)]],
@@ -33,9 +35,8 @@ export class Register {
 
     this.authService.register(username, password).subscribe({
       next: (res) => {
-        this.message = `Usuario registrado con ID: ${res.id}`;
-        this.registerForm.reset();
-        this.router.navigate(['/login']);
+        this.router.navigate(['/']);
+        this.toast.success(`Usuario registrado con ID: ${res.id}`);
       },
       error: (err) => {
         this.message = err.error?.error || 'Error al registrar usuario';

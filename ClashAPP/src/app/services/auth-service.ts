@@ -18,7 +18,7 @@ export class AuthService {
   private http = inject(HttpClient);
 
   login(username: string, password: string) {
-    return this.http.post<{ token: string }>(
+    return this.http.post<{ token: string, user: {id: number, username: string, role: string} }>(
       `${this.BASE_URL}/login`,
       { username, password }
     ).pipe(
@@ -42,6 +42,10 @@ export class AuthService {
   getToken(): string | null {
     return localStorage.getItem(this.TOKEN_KEY);
   }
+  
+  isLoggedIn(): boolean {
+    return !!localStorage.getItem(this.TOKEN_KEY);
+  }
 
   private hasToken(): boolean {
     return !!this.getToken();
@@ -53,4 +57,5 @@ export class AuthService {
       { username, password }
     );
   }
+
 }
