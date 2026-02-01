@@ -2,6 +2,9 @@ import { Component, inject, OnInit } from '@angular/core';
 import { AuthService } from '../../services/auth-service';
 import { Router } from '@angular/router';
 import { jwtDecode } from 'jwt-decode';
+import { ProfileService } from '../../services/profile-service';
+import { ToastService } from '../../services/toast-service';
+import { FormsModule } from '@angular/forms';
 
 type JwtPayload = {
   id: number;
@@ -11,7 +14,7 @@ type JwtPayload = {
 
 @Component({
   selector: 'app-profile',
-  imports: [],
+  imports: [FormsModule],
   templateUrl: './profile.html',
   styleUrl: './profile.css',
 })
@@ -20,8 +23,12 @@ export class Profile implements OnInit {
 
   private authService = inject(AuthService);
   private router = inject(Router);
+  private profileService = inject(ProfileService);
+  private toastService = inject(ToastService);
 
   user!: JwtPayload;
+
+  newPassword: string = '';
 
   ngOnInit(): void {
     const token = this.authService.getToken();
@@ -34,22 +41,31 @@ export class Profile implements OnInit {
     this.user = jwtDecode<JwtPayload>(token);
   }
 
-  deleteUser() {
-
-    // TODO aquí iría la llamada al backend
-    const confirmDelete = confirm('¿Seguro que deseas borrar tu cuenta?');
-
-    if (confirmDelete) {
-      console.log('Usuario eliminado:', this.user.id);
-      this.authService.logout();
-      this.router.navigate(['/login']);
+  changePassword(): void {
+    if (!this.newPassword.trim()) {
+      this.toastService.error('La contraseña no puede estar vacía');
+      return;
     }
+
+    this.profileService.changePassword(this.newPassword).subscribe({
+      next: (res: any) => {
+        this.toastService.success(res.message);
+        this.newPassword = ''; // limpiar input
+      },
+      error: (err) => this.toastService.error(err.error?.error || 'Error al cambiar contraseña'),
+    });
   }
 
-  changePassword() {
+  deleteUser(): void {
+    if (!confirm('¿Seguro que deseas borrar tu cuenta?')) return;
 
-    // TODO
-    console.log('Cambiar contraseña para:', this.user.username);
-    this.router.navigate(['/change-password']);
+    this.profileService.deleteUser().subscribe({
+      next: (res: any) => {
+        this.toastService.success(res.message);
+        this.authService.logout();
+        this.router.navigate(['/login']);
+      },
+      error: (err) => this.toastService.error(err.error?.error || 'Error al borrar usuario'),
+    });
   }
 }

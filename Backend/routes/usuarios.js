@@ -95,19 +95,15 @@ router.post("/login", async (req, res) => {
 // Cambiar contraseña
 
 router.put('/change-password', authMiddleware, async (req, res) => {
-  const { oldPassword, newPassword } = req.body;
-  const username = req.user.username; 
+  const { newPassword } = req.body;
+  const username = req.user.username; // viene del JWT
 
-  if (!oldPassword || !newPassword)
+  if (!newPassword)
     return res.status(400).json({ error: 'Faltan datos' });
 
   const user = db
     .prepare('SELECT * FROM users WHERE username = ?')
     .get(username);
-
-  const match = await bcrypt.compare(oldPassword, user.password);
-  if (!match)
-    return res.status(400).json({ error: 'Contraseña actual incorrecta' });
 
   const hashedNew = await bcrypt.hash(newPassword, saltRounds);
   db.prepare('UPDATE users SET password = ? WHERE username = ?').run(
@@ -121,45 +117,18 @@ router.put('/change-password', authMiddleware, async (req, res) => {
 
 // Borrar usuario
 
-router.post(
-  '/delete',
-  authMiddleware,
-  (req, res) => {
-    const { username } = req.body;
+router.delete('/me', authMiddleware, (req, res) => {
+  const username = req.user.username; // viene del JWT
 
-    if (!username)
-      return res.status(400).json({ error: 'Faltan datos' });
+  const stmt = db.prepare('DELETE FROM users WHERE username = ?');
+  const info = stmt.run(username);
 
-    const stmt = db.prepare('DELETE FROM users WHERE username = ?');
-    const info = stmt.run(username);
-
-    if (info.changes === 0)
-      return res.status(400).json({ error: 'Usuario no encontrado' });
-
-    res.json({ message: 'Usuario eliminado' });
+  if (info.changes === 0) {
+    return res.status(400).json({ error: 'Usuario no encontrado' });
   }
-);
 
-// Obtener datos del usuario autenticado
-router.get('/me', authMiddleware, (req, res) => {
-  try {
-    const userId = req.user.id; // viene del JWT
-
-    const user = db
-      .prepare('SELECT id, username, role FROM users WHERE id = ?')
-      .get(userId);
-
-    if (!user) {
-      return res.status(404).json({ error: 'Usuario no encontrado' });
-    }
-
-    res.json({
-      user
-    });
-    
-  } catch (err) {
-    res.status(500).json({ error: 'Error del servidor' });
-  }
+  res.json({ message: 'Usuario eliminado' });
 });
+
 
 module.exports = router;
