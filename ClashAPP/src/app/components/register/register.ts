@@ -42,7 +42,9 @@ export class Register {
     return;
   }
 
-  const { username, password, email, birthDate, userType, newsletter } = this.registerForm.value;
+  // register funcional con username y password, los demas valores solo son para el front
+  
+  const { username, password } = this.registerForm.value;
 
   this.authService.register(username, password).subscribe({
     next: (res) => {
