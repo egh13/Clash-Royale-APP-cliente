@@ -6,13 +6,14 @@ import { ToastService } from '../../services/toast-service';
 
 @Component({
   selector: 'app-register',
+  standalone: true,
   imports: [ReactiveFormsModule],
   templateUrl: './register.html',
-  styleUrl: './register.css',
+  styleUrls: ['./register.css'],
 })
 export class Register {
+
   registerForm: FormGroup;
-  message: string = '';
 
   private router = inject(Router);
   private authService = inject(AuthService);
@@ -21,26 +22,37 @@ export class Register {
   constructor(private fb: FormBuilder) {
     this.registerForm = this.fb.group({
       username: ['', [Validators.required, Validators.minLength(3)]],
-      password: ['', [Validators.required, Validators.minLength(4)]]
-    });
-  }
-  
-  submit() {
-    if (this.registerForm.invalid) {
-      this.message = 'Por favor completa todos los campos correctamente';
-      return;
-    }
-    
-    const { username, password } = this.registerForm.value;
 
-    this.authService.register(username, password).subscribe({
-      next: (res) => {
-        this.router.navigate(['/']);
-        this.toast.success(`Usuario registrado con ID: ${res.id}`);
-      },
-      error: (err) => {
-        this.message = err.error?.error || 'Error al registrar usuario';
-      }
+      email: ['', [Validators.required, Validators.email]],
+
+      birthDate: ['', Validators.required],
+
+      userType: ['', Validators.required], // desplegable
+
+      password: ['', [Validators.required, Validators.minLength(4)]],
+
+      newsletter: [false], // checkbox
     });
   }
+
+  submit() {
+  if (this.registerForm.invalid) {
+    this.registerForm.markAllAsTouched();
+    this.toast.error('Por favor completa todos los campos correctamente');
+    return;
+  }
+
+  const { username, password, email, birthDate, userType, newsletter } = this.registerForm.value;
+
+  this.authService.register(username, password).subscribe({
+    next: (res) => {
+      this.toast.success(`Usuario registrado con ID: ${res.id}`);
+      this.router.navigate(['/']);
+    },
+    error: (err) => {
+      this.toast.error(err.error?.error || 'Error al registrar usuario');
+    }
+  });
+
+}
 }

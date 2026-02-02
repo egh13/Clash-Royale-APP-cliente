@@ -1,7 +1,7 @@
 /* =========================
    CONTENEDOR DEL REGISTRO
 ========================= */
-.register-container {
+.register-form {
   max-width: 450px;
   margin: 60px auto;
   padding: 40px 30px;
@@ -18,7 +18,7 @@
 /* =========================
    TITULO
 ========================= */
-.register-container h2 {
+.register-form h2 {
   font-size: 28px;
   margin-bottom: 30px;
   color: #00e5ff;
@@ -27,22 +27,30 @@
 }
 
 /* =========================
-   LABELS E INPUTS
+   FORM GROUPS
 ========================= */
-.register-container form div {
+.register-form .form-group {
   display: flex;
   flex-direction: column;
   margin-bottom: 20px;
   width: 100%;
 }
 
-.register-container label {
+/* =========================
+   LABELS
+========================= */
+.register-form label {
   font-weight: 600;
   margin-bottom: 8px;
   color: rgba(255, 255, 255, 0.9);
 }
 
-.register-container input {
+/* =========================
+   INPUTS, SELECT, TEXTAREA
+========================= */
+.register-form input,
+.register-form select,
+.register-form textarea {
   padding: 12px 15px;
   border-radius: 14px;
   border: 2px solid rgba(255, 255, 255, 0.15);
@@ -56,11 +64,14 @@
     0 0 8px rgba(0, 0, 0, 0.4);
 }
 
-.register-container input::placeholder {
+.register-form input::placeholder,
+.register-form textarea::placeholder {
   color: rgba(255, 255, 255, 0.5);
 }
 
-.register-container input:focus {
+.register-form input:focus,
+.register-form select:focus,
+.register-form textarea:focus {
   border-color: #00e5ff;
   box-shadow:
     0 0 20px rgba(0, 229, 255, 0.7),
@@ -69,9 +80,22 @@
 }
 
 /* =========================
+   CHECKBOX
+========================= */
+.register-form .checkbox {
+  flex-direction: row;
+  align-items: center;
+}
+
+.register-form .checkbox input {
+  margin-right: 10px;
+  width: auto;
+}
+
+/* =========================
    MENSAJES DE ERROR
 ========================= */
-.register-container div div {
+.register-form small {
   margin-top: 6px;
   font-size: 12px;
   color: #ff4d6d;
@@ -82,7 +106,7 @@
 /* =========================
    BOTÓN
 ========================= */
-.register-container button {
+.register-form button {
   margin-top: 15px;
   padding: 12px 25px;
   font-size: 15px;
@@ -96,26 +120,15 @@
   box-shadow: 0 0 12px rgba(0, 200, 255, 0.5);
 }
 
-.register-container button:hover:not(:disabled) {
+.register-form button:hover:not(:disabled) {
   transform: translateY(-3px) scale(1.05);
   box-shadow: 0 0 22px rgba(0, 200, 255, 0.8);
 }
 
-.register-container button:disabled {
+.register-form button:disabled {
   opacity: 0.5;
   cursor: not-allowed;
   box-shadow: none;
-}
-
-/* =========================
-   MENSAJE GENERAL
-========================= */
-.register-container .message {
-  margin-top: 20px;
-  font-size: 14px;
-  color: #00e5ff;
-  text-align: center;
-  text-shadow: 0 0 6px rgba(0, 229, 255, 0.5);
 }
 
 /* =========================
@@ -125,11 +138,9 @@
   0% {
     box-shadow: 0 0 10px rgba(0, 229, 255, 0.5);
   }
-
   50% {
     box-shadow: 0 0 22px rgba(0, 229, 255, 0.8);
   }
-
   100% {
     box-shadow: 0 0 10px rgba(0, 229, 255, 0.5);
   }

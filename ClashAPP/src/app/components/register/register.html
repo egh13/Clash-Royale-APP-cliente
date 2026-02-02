@@ -1,30 +1,71 @@
-<div class="register-container">
-  <h2>Registro de usuario</h2>
+<form class="register-form" [formGroup]="registerForm" (ngSubmit)="submit()">
 
-  <form [formGroup]="registerForm" (ngSubmit)="submit()">
-    <div>
-      <label>Usuario:</label>
-      <input placeholder="Usuario" formControlName="username" type="text" />
-      @if (registerForm.get('username')?.invalid && registerForm.get('username')?.touched){
-      <div>
-        Usuario inválido (mínimo 3 caracteres)
-      </div>
-      }
+  <h2>Registro</h2>
 
-    </div>
+  <!-- Usuario -->
+  <div class="form-group">
+    <label>Usuario</label>
+    <input type="text" formControlName="username" />
 
-    <div>
-      <label>Contraseña:</label>
-      <input placeholder="Contraseña" formControlName="password" type="password" />
-      @if (registerForm.get('password')?.invalid && registerForm.get('password')?.touched){
-      <div>
-        Contraseña inválida (mínimo 4 caracteres)
-      </div>
-      }
-    </div>
+    @if (registerForm.get('username')?.touched && registerForm.get('username')?.invalid) {
+      <small>Mínimo 3 caracteres</small>
+    }
+  </div>
 
-    <button type="submit">Registrar</button>
-  </form>
+  <!-- Email -->
+  <div class="form-group">
+    <label>Email</label>
+    <input type="email" formControlName="email" />
 
-  <p class="message">{{ message }}</p>
-</div>
+    @if (registerForm.get('email')?.touched && registerForm.get('email')?.invalid) {
+      <small>Email no válido</small>
+    }
+  </div>
+
+  <!-- Fecha de nacimiento -->
+  <div class="form-group">
+    <label>Fecha de nacimiento</label>
+    <input type="date" formControlName="birthDate" />
+
+    @if (registerForm.get('birthDate')?.touched && registerForm.get('birthDate')?.invalid) {
+      <small>La fecha es obligatoria</small>
+    }
+  </div>
+
+  <!-- Tipo de usuario -->
+  <div class="form-group">
+    <label>Tipo de usuario</label>
+    <select formControlName="userType">
+      <option value="">Selecciona uno</option>
+      <option value="aficionado">Aficionado</option>
+      <option value="profesional">Profesional</option>
+    </select>
+
+    @if (registerForm.get('userType')?.touched && registerForm.get('userType')?.invalid) {
+      <small>Selecciona una opción</small>
+    }
+  </div>
+
+  <!-- Contraseña -->
+  <div class="form-group">
+    <label>Contraseña</label>
+    <input type="password" formControlName="password" />
+
+    @if (registerForm.get('password')?.touched && registerForm.get('password')?.invalid) {
+      <small>Mínimo 4 caracteres</small>
+    }
+  </div>
+
+  <!-- Newsletter -->
+  <div class="form-group checkbox">
+    <label>
+      <input type="checkbox" formControlName="newsletter" />
+      Quiero recibir novedades y noticias
+    </label>
+  </div>
+
+  <button type="submit" [disabled]="registerForm.invalid">
+    Registrarse
+  </button>
+
+</form>
