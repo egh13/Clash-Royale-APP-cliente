@@ -1,0 +1,124 @@
+<form class="contact-form" [formGroup]="contactForm" (ngSubmit)="submit()">
+
+  <h2>Contacta con nosotros</h2>
+
+  <!-- Nombre -->
+  <div class="form-group">
+    <label>Nombre completo</label>
+    <input type="text" formControlName="name" />
+
+    @if (contactForm.get('name')?.touched && contactForm.get('name')?.invalid) {
+      <small>
+        El nombre es obligatorio (mín. 3 caracteres)
+      </small>
+    }
+  </div>
+
+  <!-- Email -->
+  <div class="form-group">
+    <label>Email</label>
+    <input type="email" formControlName="email" />
+
+    @if (contactForm.get('email')?.touched && contactForm.get('email')?.invalid) {
+      <small>
+        Email no válido
+      </small>
+    }
+  </div>
+
+  <!-- Teléfono -->
+  <div class="form-group">
+    <label>Teléfono</label>
+    <input type="text" formControlName="phone" />
+
+    @if (contactForm.get('phone')?.touched && contactForm.get('phone')?.invalid) {
+      <small>
+        Debe tener 9 dígitos
+      </small>
+    }
+  </div>
+
+  <!-- Asunto -->
+  <div class="form-group">
+    <label>Asunto</label>
+    <select formControlName="subject">
+      <option value="">Selecciona uno</option>
+      <option value="soporte">Soporte</option>
+      <option value="ventas">Ventas</option>
+      <option value="colaboracion">Colaboración</option>
+    </select>
+
+    @if (contactForm.get('subject')?.touched && contactForm.get('subject')?.invalid) {
+      <small>
+        Debes seleccionar un asunto
+      </small>
+    }
+  </div>
+
+  <!-- Prioridad -->
+  <div class="form-group">
+    <label>Prioridad</label>
+    <div class="radio-group">
+      <label>
+        <input type="radio" value="baja" formControlName="priority" /> Baja
+      </label>
+      <label>
+        <input type="radio" value="normal" formControlName="priority" /> Normal
+      </label>
+      <label>
+        <input type="radio" value="alta" formControlName="priority" /> Alta
+      </label>
+    </div>
+  </div>
+
+  <!-- Intereses -->
+<div class="form-group" formGroupName="interests">
+  <label>Intereses</label>
+
+  <label>
+    <input type="checkbox" formControlName="gaming" />
+    Gaming
+  </label>
+
+  <label>
+    <input type="checkbox" formControlName="desarrollo" />
+    Desarrollo
+  </label>
+
+  <label>
+    <input type="checkbox" formControlName="networking" />
+    Networking
+  </label>
+</div>
+
+  <!-- Mensaje -->
+  <div class="form-group">
+    <label>Mensaje</label>
+    <textarea rows="4" formControlName="message"></textarea>
+
+    @if (contactForm.get('message')?.touched && contactForm.get('message')?.invalid) {
+      <small>
+        El mensaje debe tener al menos 10 caracteres
+      </small>
+    }
+  </div>
+
+  <!-- Términos -->
+  <div class="form-group checkbox">
+    <label>
+      <input type="checkbox" formControlName="acceptTerms" />
+      Acepto los términos y condiciones
+    </label>
+
+    @if (contactForm.get('acceptTerms')?.touched && contactForm.get('acceptTerms')?.invalid) {
+      <small>
+        Debes aceptar los términos
+      </small>
+    }
+  </div>
+
+  <button type="submit" [disabled]="contactForm.invalid">
+    Enviar mensaje
+  </button>
+
+</form>
