@@ -1,10 +1,14 @@
-.index-container{
-    position: relative;
-    margin: auto;
-    max-width: 90%;
-    background: var(--royale-blue-darker);
+.index-container {
+  position: relative;
+  margin: auto;
+  max-width: 90%;
+  background: var(--color-bg-secondary);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-lg);
 }
-#leaderboard{
+
+#leaderboard {
   margin-top: 7vh;
   display: flex;
   justify-content: space-evenly;
