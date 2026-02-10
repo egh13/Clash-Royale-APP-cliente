@@ -1,9 +1,41 @@
 <div class="index-container">
+
   <section id="carousel">
     <app-carousel></app-carousel>
   </section>
-  <section id="leaderboard">
+
+  <section id="main">
+    <!-- Carta de presentación (Angular Materials) -->
+    <mat-card class="intro-card" appearance="outlined">
+      <mat-card-header>
+        <div mat-card-avatar class="example-header-image"></div>
+        <mat-card-title>ClashAPP</mat-card-title>
+        <mat-card-subtitle>Posiblemente la mejor app de Clash Royale</mat-card-subtitle>
+      </mat-card-header>
+
+      <mat-card-content>
+        <p>Bienvenido a <strong>ClashAPP</strong>, una aplicación diseñada para jugadores que quieren llevar su
+          experiencia de juego al siguiente nivel.</p>
+
+        <ul>
+          <li>Integración directa con tu cuenta de Clash Royale para visualizar tu perfil.</li>
+          <li>Consultar estadísticas detalladas de jugadores.</li>
+          <li>Analizar rendimiento y acceder a herramientas que facilitan la toma de decisiones dentro del juego.</li>
+        </ul>
+      </mat-card-content>
+
+
+      <mat-card-actions align="end">
+        <button matButton color="primary">Explorar App</button>
+        <button matButton>Ver Estadísticas</button>
+      </mat-card-actions>
+    </mat-card>
+
+    <!-- Leaderboards -->
     <app-leaderboard></app-leaderboard>
     <app-leaderboard countryCode="57000218" countryName="España"></app-leaderboard>
+
+
   </section>
+
 </div>
