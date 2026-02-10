@@ -1,28 +1,107 @@
 /* You can add global styles to this file, and also import other style files */
 @import url('https://fonts.cdnfonts.com/css/supercell-magic');
 
-:root{
-  --primary-color: rgb(27, 27, 27);
-  --royale-blue: rgb(53, 103, 211);
-  --royale-blue-darker: rgb(44, 71, 129);
-  --royale-red: rgb(119, 52, 52);
+/* =========================
+   PALETA DE COLORES UNIFICADA
+========================= */
+:root {
+  /* COLORES BASE - Tema Oscuro Royale */
+  --color-bg-primary: #0a0e1a;      /* Fondo muy oscuro */
+  --color-bg-secondary: #131820;    /* Fondo secundario */
+  --color-bg-tertiary: #1a2232;     /* Fondo terciario */
+  --color-surface: #232d3d;         /* Superficies interactivas */
+  
+  /* COLORES DE ACENTO - Familia Cyan-Blue */
+  --color-accent-primary: #9dd8ff;  /* Cyan vibrante */
+  --color-accent-secondary: #0099ff; /* Azul */
+  --color-accent-dark: #0077cc;     /* Azul oscuro */
+  
+  /* COLORES NEUTROS */
+  --color-text-primary: #ffffff;    /* Texto principal */
+  --color-text-secondary: #b0b8c1;  /* Texto secundario */
+  --color-text-muted: #7a8593;      /* Texto deshabilitado */
+  
+  /* COLORES FUNCIONALES */
+  --color-success: #2ecc71;
+  --color-warning: #f39c12;
+  --color-danger: #e74c3c;
+  --color-info: #3498db;
+  
+  /* BORDES Y SOMBRAS */
+  --color-border: rgba(255, 255, 255, 0.1);
+  --color-border-light: rgba(255, 255, 255, 0.05);
+  
+  /* GRADIENTES PRINCIPALES */
+  --gradient-primary: linear-gradient(135deg, var(--color-accent-primary), var(--color-accent-secondary));
+  --gradient-bg-dark: linear-gradient(180deg, var(--color-bg-tertiary), var(--color-bg-secondary));
+  
+  /* ESPACIAMIENTOS */
+  --spacing-2xs: 4px;
+  --spacing-xs: 8px;
+  --spacing-sm: 12px;
+  --spacing-md: 16px;
+  --spacing-lg: 20px;
+  --spacing-xl: 30px;
+  --spacing-2xl: 40px;
+  --spacing-3xl: 60px;
+  
+  /* BORDER RADIUS */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 20px;
+  --radius-full: 50%;
+  
+  /* SOMBRAS */
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 12px 32px rgba(0, 0, 0, 0.5);
+  --shadow-glow: 0 0 20px rgba(0, 212, 255, 0.3);
+  --shadow-glow-strong: 0 0 30px rgba(0, 212, 255, 0.5);
+  
+  /* TRANSICIONES */
+  --transition-fast: 0.2s ease;
+  --transition-normal: 0.3s ease;
+  --transition-slow: 0.35s ease;
+  
+  /* TIPOGRAFÍA */
+  --font-primary: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  --font-display: 'Supercell-Magic', sans-serif;
+  --font-form: 'Poppins', sans-serif;
+  
+  /* TAMAÑOS DE FUENTE */
+  --fs-xs: 12px;
+  --fs-sm: 14px;
+  --fs-base: 16px;
+  --fs-lg: 20px;
+  --fs-xl: 28px;
+  --fs-2xl: 38px;
+  
+  /* PESOS DE FUENTE */
+  --fw-normal: 400;
+  --fw-semi: 600;
+  --fw-bold: 700;
+  --fw-black: 900;
 }
 
-/*  NECESARIO PARA STICKY FOOTER */
+/* =========================
+   RESET Y ESTILOS BASE
+========================= */
 html, body {
   height: 100%;
   margin: 0;
 }
 
-body{
-  background-color: var(--primary-color);
-  font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+body {
+  background-color: var(--color-bg-primary);
+  font-family: var(--font-primary);
+  color: var(--color-text-primary);
+  line-height: 1.5;
 }
 
 /* =========================
    STICKY FOOTER SIN CAMBIAR HTML
 ========================= */
-
 app-root {
   min-height: 100vh;
   display: flex;
@@ -34,5 +113,134 @@ app-root > main {
   flex: 1;
 }
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+/* =========================
+   ESTILOS BASE PARA ELEMENTOS
+========================= */
+
+input, select, textarea {
+  font-family: var(--font-primary);
+}
+
+button {
+  font-family: var(--font-primary);
+  cursor: pointer;
+}
+
+/* =========================
+   CLASES UTILIDAD GLOBALES
+========================= */
+
+/* Flexbox */
+.flex {
+  display: flex;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.gap-xs { gap: var(--spacing-xs); }
+.gap-sm { gap: var(--spacing-sm); }
+.gap-md { gap: var(--spacing-md); }
+.gap-lg { gap: var(--spacing-lg); }
+.gap-xl { gap: var(--spacing-xl); }
+
+/* Espaciamientos */
+.p-xs { padding: var(--spacing-xs); }
+.p-sm { padding: var(--spacing-sm); }
+.p-md { padding: var(--spacing-md); }
+.p-lg { padding: var(--spacing-lg); }
+.p-xl { padding: var(--spacing-xl); }
+
+.m-xs { margin: var(--spacing-xs); }
+.m-sm { margin: var(--spacing-sm); }
+.m-md { margin: var(--spacing-md); }
+.m-lg { margin: var(--spacing-lg); }
+.m-xl { margin: var(--spacing-xl); }
+
+/* Contenedores */
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-md);
+}
+
+.container-sm {
+  max-width: 450px;
+  margin: 0 auto;
+}
+
+.container-md {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Texto */
+.text-center { text-align: center; }
+.text-white { color: var(--color-text-primary); }
+.text-accent { color: var(--color-accent-primary); }
+.text-secondary { color: var(--color-text-secondary); }
+.text-muted { color: var(--color-text-muted); }
+
+.font-bold { font-weight: var(--fw-bold); }
+.font-black { font-weight: var(--fw-black); }
+
+/* =========================
+   ANIMACIONES GLOBALES
+========================= */
+
+@keyframes pulseGlow {
+  0% {
+    box-shadow: 0 0 10px rgba(0, 212, 255, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(0, 212, 255, 0.6);
+  }
+  100% {
+    box-shadow: 0 0 10px rgba(0, 212, 255, 0.3);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.08); }
+}
+
+@keyframes fadeCarousel {
+  0% {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+  15% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  45% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  60% {
+    opacity: 0;
+    transform: scale(1.04);
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}

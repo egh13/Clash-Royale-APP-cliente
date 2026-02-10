@@ -1,147 +1,115 @@
 /* =========================
-   CONTENEDOR DEL REGISTRO
+   REGISTER COMPONENT
 ========================= */
+
 .register-form {
   max-width: 450px;
   margin: 60px auto;
-  padding: 40px 30px;
-  background: linear-gradient(180deg, #1a1f3a, #0b0e1d);
-  border-radius: 22px;
-  box-shadow: 0 0 28px rgba(0, 229, 255, 0.4);
+  padding: var(--spacing-2xl) var(--spacing-xl);
+  background: var(--gradient-bg-dark);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-md);
   display: flex;
   flex-direction: column;
   align-items: center;
-  color: white;
-  font-family: 'Poppins', sans-serif;
+  color: var(--color-text-primary);
+  font-family: var(--font-form);
 }
 
-/* =========================
-   TITULO
-========================= */
 .register-form h2 {
-  font-size: 28px;
-  margin-bottom: 30px;
-  color: #00e5ff;
-  text-shadow: 0 0 10px rgba(0, 229, 255, 0.6);
+  font-size: var(--fs-xl);
+  margin-bottom: var(--spacing-xl);
+  color: var(--color-accent-primary);
   text-align: center;
 }
 
-/* =========================
-   FORM GROUPS
-========================= */
 .register-form .form-group {
   display: flex;
   flex-direction: column;
-  margin-bottom: 20px;
+  margin-bottom: var(--spacing-lg);
   width: 100%;
 }
 
-/* =========================
-   LABELS
-========================= */
 .register-form label {
-  font-weight: 600;
-  margin-bottom: 8px;
-  color: rgba(255, 255, 255, 0.9);
+  font-weight: var(--fw-semi);
+  margin-bottom: var(--spacing-sm);
+  color: var(--color-text-secondary);
+  font-size: var(--fs-sm);
 }
 
-/* =========================
-   INPUTS, SELECT, TEXTAREA
-========================= */
 .register-form input,
 .register-form select,
 .register-form textarea {
-  padding: 12px 15px;
-  border-radius: 14px;
-  border: 2px solid rgba(255, 255, 255, 0.15);
-  background: linear-gradient(180deg, #1f2550, #0c1030);
-  color: white;
-  font-size: 14px;
+  padding: var(--spacing-sm) var(--spacing-md);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+  background: var(--color-bg-tertiary);
+  color: var(--color-text-primary);
+  font-size: var(--fs-sm);
   outline: none;
-  transition: all 0.3s ease;
-  box-shadow:
-    inset 0 0 8px rgba(255, 255, 255, 0.05),
-    0 0 8px rgba(0, 0, 0, 0.4);
+  transition: all var(--transition-normal);
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.3);
+  width: 100%;
+  box-sizing: border-box;
+  font-family: var(--font-primary);
 }
 
 .register-form input::placeholder,
 .register-form textarea::placeholder {
-  color: rgba(255, 255, 255, 0.5);
+  color: var(--color-text-muted);
 }
 
 .register-form input:focus,
 .register-form select:focus,
 .register-form textarea:focus {
-  border-color: #00e5ff;
-  box-shadow:
-    0 0 20px rgba(0, 229, 255, 0.7),
-    inset 0 0 12px rgba(255, 255, 255, 0.1);
+  border-color: var(--color-accent-primary);
+  box-shadow: 0 0 12px rgba(0, 212, 255, 0.4), inset 0 2px 4px rgba(0, 0, 0, 0.3);
   animation: pulseGlow 1.8s infinite;
 }
 
-/* =========================
-   CHECKBOX
-========================= */
 .register-form .checkbox {
   flex-direction: row;
   align-items: center;
 }
 
 .register-form .checkbox input {
-  margin-right: 10px;
+  margin-right: var(--spacing-md);
   width: auto;
 }
 
-/* =========================
-   MENSAJES DE ERROR
-========================= */
 .register-form small {
-  margin-top: 6px;
-  font-size: 12px;
-  color: #ff4d6d;
-  font-weight: 600;
-  text-shadow: 0 0 4px rgba(255, 77, 109, 0.6);
+  margin-top: var(--spacing-sm);
+  font-size: var(--fs-xs);
+  color: var(--color-danger);
+  font-weight: var(--fw-semi);
 }
 
-/* =========================
-   BOTÓN
-========================= */
 .register-form button {
-  margin-top: 15px;
-  padding: 12px 25px;
-  font-size: 15px;
-  font-weight: 700;
-  border-radius: 16px;
+  margin-top: var(--spacing-lg);
+  padding: var(--spacing-sm) var(--spacing-lg);
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-bold);
+  border-radius: var(--radius-lg);
   border: none;
-  background: linear-gradient(135deg, #00ffff, #0077ff);
-  color: #0b0e1d;
+  background: var(--gradient-primary);
+  color: var(--color-bg-primary);
   cursor: pointer;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  box-shadow: 0 0 12px rgba(0, 200, 255, 0.5);
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+  box-shadow: var(--shadow-glow);
+  width: 100%;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
 .register-form button:hover:not(:disabled) {
   transform: translateY(-3px) scale(1.05);
-  box-shadow: 0 0 22px rgba(0, 200, 255, 0.8);
+  box-shadow: var(--shadow-glow-strong);
 }
 
 .register-form button:disabled {
   opacity: 0.5;
   cursor: not-allowed;
   box-shadow: none;
-}
-
-/* =========================
-   ANIMACIÓN PULSO
-========================= */
-@keyframes pulseGlow {
-  0% {
-    box-shadow: 0 0 10px rgba(0, 229, 255, 0.5);
-  }
-  50% {
-    box-shadow: 0 0 22px rgba(0, 229, 255, 0.8);
-  }
-  100% {
-    box-shadow: 0 0 10px rgba(0, 229, 255, 0.5);
-  }
+  transform: none;
 }

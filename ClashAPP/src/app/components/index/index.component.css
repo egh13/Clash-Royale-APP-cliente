@@ -1,11 +1,68 @@
-.index-container{
-    position: relative;
-    margin: auto;
-    max-width: 90%;
-    background: var(--royale-blue-darker);
+.index-container {
+  position: relative;
+  margin: auto;
+  max-width: 80%;
+  background: var(--color-bg-secondary);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-lg);
 }
+
 #leaderboard{
-  margin-top: 7vh;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
 }
+
+/* Estilos para la carta de presentación */
+.intro-card {
+  background: var(--gradient-bg-dark) !important;
+  border: 1px solid var(--color-border) !important;
+  border-radius: var(--radius-xl) !important;
+  box-shadow: var(--shadow-md) !important;
+  margin-top: var(--spacing-xl);
+}
+
+.intro-card mat-card-header {
+  background: transparent;
+  border-bottom: 1px solid var(--color-border);
+  padding-bottom: var(--spacing-md);
+}
+
+.intro-card mat-card-title {
+  color: var(--color-text-primary) !important;
+  font-weight: var(--fw-bold) !important;
+  font-size: 1.8rem !important;
+}
+
+.intro-card mat-card-subtitle {
+  margin-top: 1rem;
+  color: var(--color-text-secondary) !important;
+  font-size: 1rem !important;
+}
+
+.intro-card mat-card-content {
+  color: var(--color-text-primary) !important;
+  line-height: 1.6;
+  margin: var(--spacing-lg) 0;
+}
+
+.intro-card mat-card-content p {
+  font-size: 1rem !important;
+}
+
+.intro-card mat-card-content li {
+  margin-bottom: var(--spacing-md);
+  font-size: 1rem !important;
+}
+
+.intro-card mat-card-content strong {
+  color: var(--color-accent-primary);
+}
+
+.intro-card mat-card-actions {
+  padding: var(--spacing-lg) !important;
+  gap: var(--spacing-md);
+  background: var(--color-surface);
+  border-top: 1px solid var(--color-border);
+}
+

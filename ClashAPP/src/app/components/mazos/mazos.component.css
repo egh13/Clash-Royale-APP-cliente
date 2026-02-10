@@ -4,31 +4,32 @@
   align-items: center;        /* Centra TODO horizontalmente */
   text-align: center;         /* Centra el texto */
   padding: 20px;
-  background-color: rgb(27, 27, 27);
+  background-color: var(--color-bg-primary);
   font-family: Arial, sans-serif;
   width: 100%;
 }
 
 /* Título principal */
 .cabecera {
-  color: white;
+  color: var(--color-text-primary);
   font-size: 2.2rem;
   margin-bottom: 25px;
 }
 
 /* Sección de selección de imágenes */
 .image-selector {
-  background: rgb(255, 255, 255);
+  background: var(--color-surface);
   padding: 25px;
-  border-radius: 12px;
+  border-radius: var(--radius-xl);
   width: 90%;
   max-width: 900px;
-  box-shadow: 0 4px 14px rgba(0,0,0,0.2);
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-md);
   margin-bottom: 35px;
 }
 
 .section-title {
-  color: rgb(53, 103, 211); /* azul principal */
+  color: var(--color-accent-secondary); /* azul principal */
   font-size: 1.6rem;
   margin-bottom: 20px;
 }
@@ -51,22 +52,22 @@
 }
 
 .card-img:hover {
-  transform: scale(1.05);
+  transform: svar(--shadow-lg
   box-shadow: 0 6px 18px rgba(0,0,0,0.25);
 }
 
 .selected-card-section {
   margin-top: 40px;
   padding: 24px;
-  background: linear-gradient(180deg, #1f2a44 0%, #162033 100%);
-  border: 3px solid #d4af37;
-  border-radius: 16px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
+  background: var(--gradient-bg-dark);
+  border: 2px solid var(--color-accent-primary);
+  border-radius: var(--radius-2xl);
+  box-shadow: var(--shadow-lg);
   max-width: 900px;
   margin-left: auto;
   margin-right: auto;
   text-align: center;
-  color: #f1f1f1;
+  color: var(--color-text-primary);
   animation: fadeInUp 0.35s ease-out;
 }
 
@@ -83,19 +84,19 @@
 
 .card-img-in-maze {
   width: 70px;
-  border-radius: 8px;
-  border: 2px solid #2f4a8a;
-  background: #0f172a;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+  border-radius: var(--radius-md);
+  border: 2px solid var(--color-accent-secondary);
+  background: var(--color-bg-secondary);
+  box-shadow: var(--shadow-md);
   transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
 }
 
 .card-img-in-maze:hover {
   transform: translateY(-4px) scale(1.05);
-  border-color: #ffd86b;
-  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.7);
+  border-color: var(--color-accent-primary);
+  box-shadow: var(--shadow-glow-strong);
 }
 
 p {
-  color : white;
+  color : var(--color-text-primary);
 }
