@@ -1,17 +1,12 @@
 .cr-footer {
-  background: linear-gradient(180deg, #0b3c8a, #06285a);
-  padding: 30px 20px;
-  color: #fff;
+  background: var(--color-bg-primary);
+  border-top: 2px solid var(--color-accent-secondary);
+  padding: var(--spacing-xl) var(--spacing-lg);
+  color: var(--color-text-secondary);
   text-align: center;
-  border-top: 4px solid #ffcc00;
-  box-shadow: 0 -5px 15px rgba(0,0,0,0.4);
-  margin-top: 40px;
-  font-family: 'Supercell-Magic', sans-serif;
-}
-
-.cr-logo {
-  width: 120px;
-  margin-bottom: 10px;
+  box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.4);
+  margin-top: var(--spacing-2xl);
+  font-family: var(--font-display);
 }
 
 .footer-content {
@@ -20,20 +15,19 @@
 }
 
 .footer-text {
-  font-size: 14px;
-  opacity: 0.9;
-  margin-bottom: 15px;
+  font-size: var(--fs-sm);
+  opacity: 0.85;
+  margin-bottom: var(--spacing-lg);
 }
 
 .footer-links a {
-  margin: 0 10px;
-  color: #ffdd55;
+  margin: 0 var(--spacing-md);
+  color: var(--color-text-secondary);
   text-decoration: none;
-  font-weight: bold;
-  transition: 0.2s;
+  font-weight: var(--fw-bold);
+  transition: var(--transition-fast);
 }
 
 .footer-links a:hover {
-  color: #ffffff;
-  text-shadow: 0 0 5px #ffcc00;
+  color: var(--color-text-primary);
 }

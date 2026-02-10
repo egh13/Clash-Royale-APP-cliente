@@ -1,22 +1,23 @@
 :root {
-  --primary-color: rgb(27, 27, 27);
-  --royale-blue: rgb(53, 103, 211);
+  --primary-color: var(--color-bg-primary);
+  --royale-blue: var(--color-accent-secondary);
 }
 
 #leaderboard-container {
   max-width: 100%;
   margin: 20px auto;
-  padding: 30px;
-  background-color: #fff;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  font-family: Arial, sans-serif;
+  padding: var(--spacing-xl);
+  background-color: var(--color-bg-secondary);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  font-family: var(--font-primary);
 }
 
 #leaderboard-container h2 {
   text-align: center;
   font-size: 2rem;
-  color: var(--primary-color);
+  color: var(--color-text-primary);
   margin-bottom: 15px;
 }
 
@@ -25,31 +26,28 @@ table {
   border-collapse: collapse;
   margin-top: 20px;
   font-size: 0.9rem;
-  /* More compact font size */
 }
 
 table th,
 table td {
   padding: 8px 12px;
-  /* Smaller padding to make it more compact */
   text-align: left;
-  color: var(--primary-color);
+  color: var(--color-text-primary);
+  border-bottom: 1px solid var(--color-border);
 }
 
 table th {
-  background-color: var(--royale-blue);
-  color: white;
-  font-weight: bold;
+  background-color: var(--color-surface);
+  border-bottom: 2px solid var(--color-accent-secondary);
+  color: var(--color-accent-primary);
+  font-weight: var(--fw-bold);
   text-transform: uppercase;
 }
 
-table tbody tr:nth-child(even) {
-  background-color: #f9f9f9;
-}
-
 table tbody tr:hover {
-  background-color: #e6e6e6;
+  background-color: var(--color-bg-tertiary);
   cursor: pointer;
+  transition: background-color var(--transition-fast);
 }
 
 table td {
@@ -63,18 +61,15 @@ table td:last-child {
 p {
   text-align: center;
   font-size: 1rem;
-  color: #888;
+  color: var(--color-text-secondary);
   margin-top: 20px;
 }
 
 @media (max-width: 768px) {
-
   table th,
   table td {
     font-size: 0.875rem;
-    /* Adjusting font size for smaller screens */
     padding: 8px 10px;
-    /* Adjusting padding for smaller screens */
   }
 
   table {

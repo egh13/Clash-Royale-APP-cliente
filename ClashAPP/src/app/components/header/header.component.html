@@ -4,7 +4,7 @@
     <input type="text" placeholder="Player Tag" #searchInput>
     <button (click)="buscarUsuario(searchInput.value)" class="search-btn">Search</button>
   </div>
-
+  
   @if(isLoggedIn$ | async){
   <div class="login">
     <button routerLink="profile" class="login-btn">Mi perfil</button>

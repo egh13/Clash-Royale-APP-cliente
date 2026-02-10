@@ -1,27 +1,29 @@
 /* Botón circular */
 .menu-btn {
   position: fixed;
-  top: 20px;
-  left: 20px;
+  top: var(--spacing-lg);
+  left: var(--spacing-lg);
   width: 50px;
   height: 50px;
-  border-radius: 50%;
+  border-radius: var(--radius-full);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 6px;
+  gap: var(--spacing-xs);
   cursor: pointer;
   transition: transform 0.4s ease;
   z-index: 1001;
+  background: transparent;
+  border: none;
 }
 
 /* Barras del botón */
 .menu-btn .bar {
   width: 25px;
   height: 3px;
-  background: white;
-  border-radius: 3px;
+  background: var(--color-accent-primary);
+  border-radius: var(--radius-sm);
   transition: all 0.4s ease;
 }
 
@@ -47,11 +49,11 @@
   position: fixed;
   top: 0;
   left: -250px;
-  /* escondido por defecto */
   width: 250px;
   height: 100%;
-  background: #131313;
-  color: white;
+  background: var(--color-bg-primary);
+  border-right: 1px solid var(--color-border);
+  color: var(--color-text-primary);
   padding-top: 80px;
   transition: left 0.4s ease;
   box-shadow: 2px 0 5px rgba(0, 0, 0, 0.3);
@@ -71,22 +73,24 @@
 }
 
 .sidebar ul li {
-  margin: 20px 0;
+  margin: var(--spacing-lg) 0;
 }
 
 .sidebar ul li a {
-  color: white;
+  color: var(--color-text-secondary);
   text-decoration: none;
   display: block;
-  padding: 10px 20px;
-  transition: background 0.2s;
+  padding: var(--spacing-sm) var(--spacing-lg);
+  transition: background var(--transition-fast);
 }
 
 .sidebar ul li a:hover {
-  background: rgba(255, 255, 255, 0.1);
+  background: var(--color-surface);
+  color: var(--color-accent-primary);
+  border-left: 3px solid var(--color-accent-primary);
 }
 
-/* Opcional: mover contenido cuando el menú está abierto */
+/* Contenido desplazado */
 .content {
   transition: margin-left 0.4s ease;
 }
