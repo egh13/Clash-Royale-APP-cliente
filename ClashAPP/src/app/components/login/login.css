@@ -22,7 +22,6 @@
   margin-bottom: var(--spacing-xl);
   text-align: center;
   color: var(--color-accent-primary);
-  text-shadow: 0 0 8px rgba(0, 212, 255, 0.4);
 }
 
 .login-container label {

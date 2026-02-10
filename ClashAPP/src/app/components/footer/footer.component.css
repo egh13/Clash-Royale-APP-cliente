@@ -9,11 +9,6 @@
   font-family: var(--font-display);
 }
 
-.cr-logo {
-  width: 120px;
-  margin-bottom: var(--spacing-sm);
-}
-
 .footer-content {
   max-width: 700px;
   margin: 0 auto;
@@ -27,7 +22,7 @@
 
 .footer-links a {
   margin: 0 var(--spacing-md);
-  color: var(--color-accent-primary);
+  color: var(--color-text-secondary);
   text-decoration: none;
   font-weight: var(--fw-bold);
   transition: var(--transition-fast);
@@ -35,5 +30,4 @@
 
 .footer-links a:hover {
   color: var(--color-text-primary);
-  text-shadow: 0 0 8px rgba(0, 212, 255, 0.3);
 }
