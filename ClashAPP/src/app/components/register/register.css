@@ -21,7 +21,6 @@
   font-size: var(--fs-xl);
   margin-bottom: var(--spacing-xl);
   color: var(--color-accent-primary);
-  text-shadow: 0 0 10px rgba(0, 212, 255, 0.4);
   text-align: center;
 }
 
