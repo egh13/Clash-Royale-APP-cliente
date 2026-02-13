@@ -8,7 +8,7 @@
     <input type="text" formControlName="username" />
 
     @if (registerForm.get('username')?.touched && registerForm.get('username')?.invalid) {
-      <small>Mínimo 3 caracteres</small>
+    <small>Mínimo 3 caracteres</small>
     }
   </div>
 
@@ -18,17 +18,24 @@
     <input type="email" formControlName="email" />
 
     @if (registerForm.get('email')?.touched && registerForm.get('email')?.invalid) {
-      <small>Email no válido</small>
+    <small>Email no válido</small>
     }
   </div>
 
   <!-- Fecha de nacimiento -->
   <div class="form-group">
-    <label>Fecha de nacimiento</label>
+    <!-- 
+        <label>Fecha de nacimiento</label>
     <input type="date" formControlName="birthDate" />
+    -->
+
+    <label>Fecha de nacimiento</label>
+    <input matInput [matDatepicker]="picker" formControlName="birthDate">
+    <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
 
     @if (registerForm.get('birthDate')?.touched && registerForm.get('birthDate')?.invalid) {
-      <small>La fecha es obligatoria</small>
+    <small>La fecha es obligatoria</small>
     }
   </div>
 
@@ -42,7 +49,7 @@
     </select>
 
     @if (registerForm.get('userType')?.touched && registerForm.get('userType')?.invalid) {
-      <small>Selecciona una opción</small>
+    <small>Selecciona una opción</small>
     }
   </div>
 
@@ -52,7 +59,7 @@
     <input type="password" formControlName="password" />
 
     @if (registerForm.get('password')?.touched && registerForm.get('password')?.invalid) {
-      <small>Mínimo 4 caracteres</small>
+    <small>Mínimo 4 caracteres</small>
     }
   </div>
 
