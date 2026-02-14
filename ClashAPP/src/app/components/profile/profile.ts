@@ -5,6 +5,7 @@ import { jwtDecode } from 'jwt-decode';
 import { ProfileService } from '../../services/profile-service';
 import { ToastService } from '../../services/toast-service';
 import { FormsModule } from '@angular/forms';
+import { User } from '../user/user';
 
 type JwtPayload = {
   id: number;
@@ -14,7 +15,7 @@ type JwtPayload = {
 
 @Component({
   selector: 'app-profile',
-  imports: [FormsModule],
+  imports: [FormsModule, User],
   templateUrl: './profile.html',
   styleUrl: './profile.css',
 })
