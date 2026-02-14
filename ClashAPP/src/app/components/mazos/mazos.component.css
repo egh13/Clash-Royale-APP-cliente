@@ -52,7 +52,7 @@
 }
 
 .card-img:hover {
-  transform: svar(--shadow-lg
+  transform: var(--shadow-lg);
   box-shadow: 0 6px 18px rgba(0,0,0,0.25);
 }
 

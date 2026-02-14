@@ -29,6 +29,7 @@ export class Profile implements OnInit {
   user!: JwtPayload;
 
   newPassword: string = '';
+  newId: string = '';
 
   ngOnInit(): void {
     const token = this.authService.getToken();
@@ -66,6 +67,24 @@ export class Profile implements OnInit {
         this.router.navigate(['/login']);
       },
       error: (err) => this.toastService.error(err.error?.error || 'Error al borrar usuario'),
+    });
+  }
+
+  setClashRoyaleId(): void {
+    if (!this.newId.trim()) {
+      this.toastService.error('El id no puede estar vacio');
+      return;
+    }else if(this.newId.length !== 9) {
+      this.toastService.error('El id debe tener 9 dígitos');
+      return;
+    }
+
+    this.profileService.setClashRoyaleId(this.newId).subscribe({
+      next: (res: any) => {
+        this.toastService.success(res.message);
+        this.newId = '';
+      },
+      error: (err) => this.toastService.error(err.error?.error || 'Error al establecer id'),
     });
   }
 }

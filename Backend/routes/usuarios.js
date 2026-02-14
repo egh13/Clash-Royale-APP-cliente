@@ -130,5 +130,37 @@ router.delete('/me', authMiddleware, (req, res) => {
   res.json({ message: 'Usuario eliminado' });
 });
 
+// Agregar Clash Royale ID
+router.post('/setClashRoyaleId', authMiddleware, (req, res) => {
+  const username = req.user.username; // viene del JWT
+  const { clashRoyaleId } = req.body;
+
+  // Validaciones
+  if (!clashRoyaleId) {
+    return res.status(400).json({ error: 'Faltan datos' });
+  }
+
+  if (clashRoyaleId.length !== 9) {
+    return res
+      .status(400)
+      .json({ error: 'El Clash Royale ID debe tener exactamente 9 caracteres' });
+  }
+
+  try {
+    const stmt = db.prepare(
+      'UPDATE users SET clashRoyaleId = ? WHERE username = ?'
+    );
+
+    const result = stmt.run(clashRoyaleId, username);
+
+    if (result.changes === 0) {
+      return res.status(404).json({ error: 'Usuario no encontrado' });
+    }
+
+    res.json({ message: 'Clash Royale ID guardado correctamente' });
+  } catch (err) {
+    res.status(500).json({ error: 'Error del servidor', failed: err.message });
+  }
+});
 
 module.exports = router;

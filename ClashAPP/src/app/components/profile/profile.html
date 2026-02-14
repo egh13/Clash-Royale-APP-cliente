@@ -19,6 +19,15 @@
       <button class="btn warning" (click)="changePassword()">Cambiar contraseña</button>
     </div>
 
+    <!-- Establecer Id Clash Royale -->
+    <div class="form-group">
+      <input
+        placeholder="Nuevo Id"
+        [(ngModel)]="newId"
+      />
+      <button class="btn warning" (click)="setClashRoyaleId()">Cambiar Id</button>
+    </div>
+    
     <!-- Borrar usuario -->
     <button class="btn danger" (click)="deleteUser()">Borrar usuario</button>
 
