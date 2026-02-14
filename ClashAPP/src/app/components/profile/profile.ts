@@ -31,6 +31,7 @@ export class Profile implements OnInit {
 
   newPassword: string = '';
   newId: string = '';
+  clashRoyaleId: string = 'Y88YCCCPJ';
 
   ngOnInit(): void {
     const token = this.authService.getToken();
