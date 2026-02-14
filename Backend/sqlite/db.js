@@ -9,7 +9,8 @@ db.prepare(`
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     username TEXT UNIQUE NOT NULL,
     password TEXT NOT NULL,
-    role TEXT NOT NULL CHECK(role IN ('usuario', 'admin'))
+    role TEXT NOT NULL CHECK(role IN ('usuario', 'admin')),
+    clashRoyaleId TEXT
   )
 `).run();
 
