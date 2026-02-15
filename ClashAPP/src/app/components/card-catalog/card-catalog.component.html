@@ -1,0 +1,117 @@
+<div class="catalog-container">
+
+  <h2 class="title">📘 Catálogo de Cartas</h2>
+
+  
+  <div class="filters">
+
+    
+    <input
+      type="text"
+      class="search-input"
+      placeholder="🔍 Buscar carta..."
+      [value]="searchTerm()"
+      (input)="onSearch($event)" />
+
+    <button
+      [class.active]="sortField() === 'name'"
+      (click)="setSort('name')">
+      🔤 Nombre
+      <span>
+        {{ sortField() === 'name'
+            ? (sortDir() === 'asc' ? '⬆' : '⬇')
+            : '' }}
+      </span>
+    </button>
+
+    <button
+      [class.active]="sortField() === 'elixir'"
+      (click)="setSort('elixir')">
+      💧 Elixir
+      <span>
+        {{ sortField() === 'elixir'
+            ? (sortDir() === 'asc' ? '⬆' : '⬇')
+            : '' }}
+      </span>
+    </button>
+
+    <button
+      [class.active]="sortField() === 'rarity'"
+      (click)="setSort('rarity')">
+      💎 Rareza
+      <span>
+        {{ sortField() === 'rarity'
+            ? (sortDir() === 'asc' ? '⬆' : '⬇')
+            : '' }}
+      </span>
+    </button>
+  </div>
+
+  <mat-paginator
+  [length]="length()"
+  [pageSize]="pageSize()"
+  [pageIndex]="pageIndex()"
+  [pageSizeOptions]="pageSizeOptions"
+  [showFirstLastButtons]="true"
+  (page)="onPageChange($event)"
+  aria-label="Paginador del catálogo de cartas">
+</mat-paginator>
+
+
+  @if (cards().length > 0) {
+    <div class="cards-grid">
+
+      @for (card of cards(); track card.id) {
+        <div
+          class="card reorder-animate"
+          [class]="card.rarity.toLowerCase()">
+
+          
+          <div class="elixir-drop">
+            <span>{{ card.elixirCost }}</span>
+          </div>
+
+          
+          <div class="badges">
+            @if (card.hasEvolution) {
+              <span class="badge evo">⚡</span>
+            }
+            @if (card.hasHero) {
+              <span class="badge hero">👑</span>
+            }
+          </div>
+
+          
+          <div
+            class="image-wrapper"
+            [class.has-carousel]="card.images.length > 1"
+            [style.--count]="card.images.length">
+
+            @for (img of card.images; track img; let i = $index) {
+              <img
+                class="card-image"
+                alt="card-image"
+                [src]="img"
+                [style.--i]="i"
+              />
+            }
+          </div>
+
+          
+          <h3 class="card-name">{{ card.name }}</h3>
+
+          <div class="stats">
+            <span>⭐ Nivel máx: 16</span>
+            <br /><br />
+            <span>🆔 {{ card.id }}</span>
+            <br /><br />
+            <span>🏷️ Rareza: {{ card.rarity }}</span>
+          </div>
+
+        </div>
+      }
+
+    </div>
+  }
+
+</div>
