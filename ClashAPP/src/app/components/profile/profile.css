@@ -1,20 +1,39 @@
 .profile-container {
-  height: 100vh;
+  min-height: 100vh;
+  width: 100vw;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
+  justify-content: flex-start;
   background: var(--color-bg-primary);
+  padding: 32px 0 32px 0;
+  box-sizing: border-box;
 }
 
 .profile-card {
   background: var(--gradient-bg-dark);
   border: 1px solid var(--color-border);
-  padding: 2rem;
-  width: 320px;
+  padding: 2rem 2.5rem;
+  width: 100%;
+  max-width: 420px;
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-lg);
   text-align: center;
   color: var(--color-text-primary);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 32px;
+}
+
+.options-container {
+  width: 100%;
+  max-width: 340px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto 18px auto;
+  gap: 18px;
 }
 
 .avatar {
@@ -22,6 +41,8 @@
   height: 120px;
   border-radius: var(--radius-full);
   margin-bottom: 1rem;
+  object-fit: cover;
+  box-shadow: var(--shadow-md);
 }
 
 .role {
@@ -36,11 +57,14 @@
 }
 
 .btn {
-  padding: 0.6rem;
+  padding: 0.6rem 1.2rem;
   border-radius: var(--radius-md);
   border: none;
   cursor: pointer;
   font-weight: var(--fw-semi);
+  margin-top: 0.8rem;
+  font-size: 1rem;
+  transition: background 0.2s, color 0.2s;
 }
 
 .warning {
@@ -51,4 +75,55 @@
 .danger {
   background: var(--color-danger);
   color: var(--color-text-primary);
+}
+
+.profile-card input {
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+  background: var(--color-bg-tertiary);
+  color: var(--color-text-primary);
+  font-size: 1rem;
+  outline: none;
+  transition: all var(--transition-normal);
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.13);
+  box-sizing: border-box;
+  font-family: var(--font-primary);
+  margin-bottom: 0.5rem;
+}
+
+.user-container {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  margin-top: 0;
+}
+
+@media (max-width: 900px) {
+  .profile-card {
+    max-width: 98vw;
+    padding: 1.2rem 0.5rem;
+  }
+  .user-container {
+    max-width: 98vw;
+    padding: 0 0.5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .profile-container {
+    padding: 10px 0;
+  }
+  .profile-card {
+    padding: 0.7rem 0.2rem;
+    max-width: 100vw;
+  }
+  .options-container {
+    max-width: 100vw;
+    padding: 0 0.2rem;
+  }
+  .user-container {
+    max-width: 100vw;
+    padding: 0 0.2rem;
+  }
 }
