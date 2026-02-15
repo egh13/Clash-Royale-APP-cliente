@@ -4,7 +4,7 @@
     <app-carousel></app-carousel>
   </section>
 
-  <section id="main">
+  <section id="presentation">
     <!-- Carta de presentación (Angular Materials) -->
     <mat-card class="intro-card" appearance="outlined">
       <mat-card-header>
@@ -26,16 +26,16 @@
 
 
       <mat-card-actions align="end">
-        <button matButton color="primary">Explorar App</button>
-        <button matButton>Ver Estadísticas</button>
+        <a matButton color="primary" href="#leaderboards">Ver Clasificaciones</a>
+        <button matButton routerLink="/login">Iniciar Sesion</button>
       </mat-card-actions>
     </mat-card>
 
+  </section>
+  <section id="leaderboards">
     <!-- Leaderboards -->
     <app-leaderboard></app-leaderboard>
     <app-leaderboard countryCode="57000218" countryName="España"></app-leaderboard>
-
-
   </section>
 
 </div>

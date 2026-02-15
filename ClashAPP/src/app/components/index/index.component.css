@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 .index-container {
   position: relative;
   margin: auto;
