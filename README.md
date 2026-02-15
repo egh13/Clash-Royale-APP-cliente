@@ -1,11 +1,6 @@
 # Clash-Royale-APP-cliente
 La mejor app de clash royal creada por los mejores desarroladores de angular instruidos por el maestro surtich
 
-#  TODO
--> Angular Materials
--> Pestaña usuario con CRUD
--> Unificar CSS
-
 # Iniciar APP
 1. **Frontend**
     - En la carpeta de ClashAPP 
