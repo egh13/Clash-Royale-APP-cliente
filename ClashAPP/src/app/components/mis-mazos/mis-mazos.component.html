@@ -1,0 +1,285 @@
+<div class="mis-mazos-container">
+  <div class="header">
+    <h1>Mis Mazos</h1>
+    <button 
+      class="btn-primary" 
+      [disabled]="loading" 
+      (click)="toggleForm()"
+      [attr.aria-label]="showForm ? 'Cancelar' : 'Crear nuevo mazo'">
+      {{ showForm ? 'Cancelar' : 'Nuevo Mazo' }}
+    </button>
+  </div>
+
+  <!-- Loading State -->
+  @if (loading && mazos.length === 0) {
+    <div class="loading">
+      <div class="spinner"></div>
+      <p>Cargando mazos...</p>
+    </div>
+  }
+
+  <!-- Formulario -->
+  @if (showForm) {
+    <div class="form-section">
+    <div class="form-card">
+      <h2>{{ getFormTitle() }}</h2>
+      
+      <form [formGroup]="mazoForm" (ngSubmit)="saveMazo()">
+        <!-- Información básica del mazo -->
+        <div class="form-group">
+          <label for="nombre">Nombre del Mazo *</label>
+          <input
+            type="text"
+            id="nombre"
+            formControlName="nombre"
+            placeholder="Ej: Mazo Hog 2.6"
+            [class.error]="mazoForm.get('nombre')?.invalid && mazoForm.get('nombre')?.touched"
+            maxlength="50">
+          
+          @if (mazoForm.get('nombre')?.invalid && mazoForm.get('nombre')?.touched) {
+            <div class="error-message">
+              @if (mazoForm.get('nombre')?.errors?.['required']) {
+                <span>
+                  El nombre es obligatorio
+                </span>
+              }
+              @if (mazoForm.get('nombre')?.errors?.['minlength']) {
+                <span>
+                  El nombre debe tener al menos 3 caracteres
+                </span>
+              }
+              @if (mazoForm.get('nombre')?.errors?.['maxlength']) {
+                <span>
+                  El nombre no puede exceder 50 caracteres
+                </span>
+              }
+            </div>
+          }
+        </div>
+
+        <div class="form-group">
+          <label for="modoJuego">Modo de Juego *</label>
+          <select 
+            id="modoJuego" 
+            formControlName="modoJuego"
+            [class.error]="mazoForm.get('modoJuego')?.invalid && mazoForm.get('modoJuego')?.touched">
+            <option value="">Selecciona un modo</option>
+            <option *ngFor="let modo of modosJuego" [value]="modo">{{ modo }}</option>
+          </select>
+          
+          @if (mazoForm.get('modoJuego')?.invalid && mazoForm.get('modoJuego')?.touched) {
+            <div class="error-message">
+              @if (mazoForm.get('modoJuego')?.errors?.['required']) {
+                <span>
+                  Debes seleccionar un modo de juego
+                </span>
+              }
+            </div>
+          }
+        </div>
+
+        <!-- Selección de cartas -->
+        <div class="cartas-section">
+          <div class="cartas-header">
+            <h3>Seleccionar Cartas ({{ selectedCartas.length }}/8)</h3>
+            @if (selectedCartas.length > 0) {
+              <div class="elixir-info">
+                <span class="elixir-icon">⚡</span>
+                <span class="elixir-cost">{{ getCostePromedioElixir() }}</span>
+              </div>
+            }
+          </div>
+
+          <!-- Cartas seleccionadas -->
+          @if (selectedCartas.length > 0) {
+            <div class="selected-cartas">
+              <h4>Cartas en el mazo:</h4>
+              <div class="cartas-grid selected">
+                <div 
+                  *ngFor="let carta of selectedCartas; trackBy: trackByCartaId"
+                  class="carta-item selected"
+                  (click)="toggleCarta(carta)"
+                  [attr.aria-label]="'Quitar ' + carta.nombre">
+                  <img [src]="carta.imagen" [alt]="carta.nombre" loading="lazy">
+                  <div class="carta-info">
+                    <span class="carta-nombre">{{ carta.nombre }}</span>
+                    <span class="carta-coste">{{ carta.coste }} ⚡</span>
+                  </div>
+                  <div class="remove-indicator">×</div>
+                </div>
+              </div>
+            </div>
+          }
+
+          <!-- Catálogo de cartas disponibles -->
+          <div class="available-cartas">
+            <h4>Cartas disponibles: ({{ filteredCartas.length }} de {{ availableCartas.length }})</h4>
+            
+            <!-- Filtros de cartas -->
+            <div class="filters-section">
+              <div class="filters-row">
+                <div class="filter-group">
+                  <label for="search">Buscar carta:</label>
+                  <input
+                    type="text"
+                    id="search"
+                    placeholder="Nombre de la carta..."
+                    [value]="searchTerm"
+                    (input)="onSearchChange($event)">
+                </div>
+                
+                <div class="filter-group">
+                  <label for="tipo">Tipo:</label>
+                  <select id="tipo" [value]="selectedTipo" (change)="onTipoChange($event)">
+                    <option value="">Todos los tipos</option>
+                    <option *ngFor="let tipo of tiposDisponibles" [value]="tipo">
+                      {{ tipo }}
+                    </option>
+                  </select>
+                </div>
+                
+                <div class="filter-group">
+                  <label for="coste">Coste:</label>
+                  <select id="coste" [value]="selectedCoste" (change)="onCosteChange($event)">
+                    <option value="">Todos los costes</option>
+                    <option *ngFor="let coste of costesDisponibles" [value]="coste">
+                      {{ coste }} ⚡
+                    </option>
+                  </select>
+                </div>
+                
+                <div class="filter-group">
+                  <button type="button" class="btn-secondary small" (click)="clearFilters()">
+                    Limpiar filtros
+                  </button>
+                </div>
+              </div>
+            </div>
+            
+            <div class="cartas-grid">
+              <div 
+                *ngFor="let carta of filteredCartas; trackBy: trackByCartaId"
+                class="carta-item"
+                [class.selected]="isCartaSelected(carta)"
+                [class.disabled]="!isCartaSelected(carta) && selectedCartas.length >= 8"
+                (click)="toggleCarta(carta)"
+                [attr.aria-label]="(isCartaSelected(carta) ? 'Quitar ' : 'Añadir ') + carta.nombre">
+                <img [src]="carta.imagen" [alt]="carta.nombre" loading="lazy">
+                <div class="carta-info">
+                  <span class="carta-nombre">{{ carta.nombre }}</span>
+                  <span class="carta-coste">{{ carta.coste }} ⚡</span>
+                  <span class="carta-tipo">{{ carta.tipo }}</span>
+                </div>
+                @if (isCartaSelected(carta)) {
+                  <div class="selection-indicator">✓</div>
+                }
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Botones del formulario -->
+        <div class="form-actions">
+          <button 
+            type="button" 
+            class="btn-secondary" 
+            (click)="toggleForm()">
+            Cancelar
+          </button>
+          <button 
+            type="submit" 
+            class="btn-primary"
+            [disabled]="mazoForm.invalid || selectedCartas.length !== 8 || loading">
+            @if (loading) {
+              <span class="spinner-small"></span>
+            }
+            {{ getFormButtonText() }}
+          </button>
+        </div>
+      </form>
+    </div>
+    </div>
+  }
+
+  <!-- Lista de mazos existentes -->
+  @if (!showForm) {
+    <div class="mazos-section">
+      @if (mazos.length > 0) {
+        <div class="mazos-grid">
+      <div 
+        *ngFor="let mazo of mazos; trackBy: trackByMazoId"
+        class="mazo-card"
+        >
+        <div class="mazo-header">
+          <h3>{{ mazo.nombre }}</h3>
+          <div class="mazo-actions">
+            <button 
+              class="btn-edit" 
+              (click)="editMazo(mazo)"
+              [disabled]="loading"
+              aria-label="Editar mazo">
+              ✏️
+            </button>
+            <button 
+              class="btn-delete" 
+              (click)="deleteMazo(mazo)"
+              [disabled]="loading"
+              aria-label="Eliminar mazo">
+              🗑️
+            </button>
+          </div>
+        </div>
+
+        <div class="mazo-info">
+          <span class="modo-juego">{{ mazo.modoJuego }}</span>
+          <div class="elixir-info">
+            <span class="elixir-icon">⚡</span>
+            <span class="elixir-cost">{{ getCostePromedioMazo(mazo) }}</span>
+          </div>
+        </div>
+
+        <div class="mazo-cartas">
+          <div 
+            *ngFor="let carta of mazo.cartas; trackBy: trackByCartaId"
+            class="carta-mini"
+            [attr.title]="carta.nombre + ' (' + carta.coste + ' elixir)'">
+            <img [src]="carta.imagen" [alt]="carta.nombre" loading="lazy">
+            <span class="carta-coste-mini">{{ carta.coste }}</span>
+          </div>
+        </div>
+
+        <div class="mazo-footer">
+          @if (mazo.createdAt) {
+            <small class="created-date">
+              Creado: {{ mazo.createdAt | date:'dd/MM/yyyy' }}
+            </small>
+          }
+          @if (mazo.updatedAt) {
+            <small class="updated-date">
+              Modificado: {{ mazo.updatedAt | date:'dd/MM/yyyy' }}
+            </small>
+          }
+        </div>
+      </div>
+    </div>
+      } @else {
+        <!-- Estado vacío -->
+        <div class="empty-state">
+          <div class="empty-icon">🃏</div>
+          <h2>No tienes mazos creados</h2>
+          <p>Crea tu primer mazo para empezar a competir</p>
+          <button class="btn-primary" (click)="toggleForm()">
+            Crear mi primer mazo
+          </button>
+        </div>
+      }
+    </div>
+  }
+
+  <!-- Overlay de loading -->
+  @if (loading && mazos.length > 0) {
+    <div class="loading-overlay">
+      <div class="spinner"></div>
+    </div>
+  }
+</div>
