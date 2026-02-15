@@ -1,7 +1,9 @@
 const Database = require('better-sqlite3');
+const path = require('path');
 
-// crea o abre database.db
-const db = new Database('sqlite/clashRoyale.db');
+// crea o abre database.db con ruta absoluta
+const dbPath = path.join(__dirname, 'clashRoyale.db');
+const db = new Database(dbPath);
 
 // crear tabla si no existe
 db.prepare(`
