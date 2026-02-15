@@ -10,7 +10,7 @@ CREATE TABLE IF NOT EXISTS mazos (
   usuario_id INTEGER NOT NULL,
   created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
   updated_at DATETIME DEFAULT CURRENT_TIMESTAMP,
-  FOREIGN KEY (usuario_id) REFERENCES usuarios(id) ON DELETE CASCADE
+  FOREIGN KEY (usuario_id) REFERENCES users(id) ON DELETE CASCADE
 );
 
 -- Tabla de cartas (si no existe)
@@ -26,16 +26,14 @@ CREATE TABLE IF NOT EXISTS cartas (
 CREATE TABLE IF NOT EXISTS cartas_mazo (
   id INTEGER PRIMARY KEY AUTOINCREMENT,
   mazo_id INTEGER NOT NULL,
-  carta_id VARCHAR(10) NOT NULL,
+  carta_data TEXT NOT NULL,
   posicion INTEGER NOT NULL,
-  FOREIGN KEY (mazo_id) REFERENCES mazos(id) ON DELETE CASCADE,
-  FOREIGN KEY (carta_id) REFERENCES cartas(id) ON DELETE CASCADE
+  FOREIGN KEY (mazo_id) REFERENCES mazos(id) ON DELETE CASCADE
 );
 
 -- Índices para rendimiento
 CREATE INDEX IF NOT EXISTS idx_mazos_usuario ON mazos(usuario_id);
 CREATE INDEX IF NOT EXISTS idx_cartas_mazo_mazo ON cartas_mazo(mazo_id);
-CREATE INDEX IF NOT EXISTS idx_cartas_mazo_carta ON cartas_mazo(carta_id);
 
 -- ===========================================
 -- DATOS DE EJEMPLO - CARTAS CLASH ROYALE
