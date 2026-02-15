@@ -9,6 +9,8 @@ import { Register } from './components/register/register';
 import { authGuard } from './guards/auth-guard';
 import { Profile } from './components/profile/profile';
 import { Contacto } from './components/contacto/contacto';
+import { MisMazosComponent } from './components/mis-mazos/mis-mazos.component';
+
 
 
 export const routes: Routes = [
@@ -51,7 +53,11 @@ export const routes: Routes = [
     path: 'contacto',
     component: Contacto,
   },
-
+  {
+    path: 'mis-mazos',
+    component: MisMazosComponent,
+    canActivate: [authGuard]
+  },
   // redirigir a index, SIEMPRE AL FINAL
   {
     path: '**',
