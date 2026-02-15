@@ -1,4 +1,4 @@
-import { Component, inject, OnInit } from '@angular/core';
+import { Component, inject, OnInit, effect, input } from '@angular/core';
 import { UserService } from '../../services/user-service';
 import { ActivatedRoute } from '@angular/router';
 
@@ -37,15 +37,22 @@ interface UserInterface {
 export class User implements OnInit {
 
   // para testing http://localhost:4200/user/Y88YCCCPJ
-  
+
+  id = input<string>(''); // signal input
+  userService = inject(UserService);
+  route = inject(ActivatedRoute);
+
   userId: string | null = null;
   user: UserInterface | null = null;
   mensajeError: string = '';
 
-  userService = inject(UserService);
-  route = inject(ActivatedRoute);
 
   ngOnInit() {
+
+    if (this.id()) {
+      this.getUser(this.id());
+    }
+
     // Suscribirse a cambios en el parámetro id
     this.route.paramMap.subscribe(params => {
       const tag = params.get('id');

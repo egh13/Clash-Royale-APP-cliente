@@ -5,6 +5,7 @@ import { jwtDecode } from 'jwt-decode';
 import { ProfileService } from '../../services/profile-service';
 import { ToastService } from '../../services/toast-service';
 import { FormsModule } from '@angular/forms';
+import { User } from '../user/user';
 
 type JwtPayload = {
   id: number;
@@ -14,7 +15,7 @@ type JwtPayload = {
 
 @Component({
   selector: 'app-profile',
-  imports: [FormsModule],
+  imports: [FormsModule, User],
   templateUrl: './profile.html',
   styleUrl: './profile.css',
 })
@@ -29,6 +30,8 @@ export class Profile implements OnInit {
   user!: JwtPayload;
 
   newPassword: string = '';
+  newId: string = '';
+  clashRoyaleId: string = 'Y88YCCCPJ';
 
   ngOnInit(): void {
     const token = this.authService.getToken();
@@ -66,6 +69,24 @@ export class Profile implements OnInit {
         this.router.navigate(['/login']);
       },
       error: (err) => this.toastService.error(err.error?.error || 'Error al borrar usuario'),
+    });
+  }
+
+  setClashRoyaleId(): void {
+    if (!this.newId.trim()) {
+      this.toastService.error('El id no puede estar vacio');
+      return;
+    }else if(this.newId.length !== 9) {
+      this.toastService.error('El id debe tener 9 dígitos');
+      return;
+    }
+
+    this.profileService.setClashRoyaleId(this.newId).subscribe({
+      next: (res: any) => {
+        this.toastService.success(res.message);
+        this.newId = '';
+      },
+      error: (err) => this.toastService.error(err.error?.error || 'Error al establecer id'),
     });
   }
 }

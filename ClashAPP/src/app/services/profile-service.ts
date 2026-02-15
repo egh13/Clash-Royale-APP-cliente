@@ -26,4 +26,14 @@ export class ProfileService {
       headers: { Authorization: `Bearer ${token}` }
     });
   }
+
+  setClashRoyaleId(id: string) {
+    const token = this.auth.getToken();
+    return this.http.post(
+      `${this.BASE_URL}/setClashRoyaleId`,
+      { clashRoyaleId: id },
+      { headers: { Authorization: `Bearer ${token}` } }
+    );
+  }
+  
 }
