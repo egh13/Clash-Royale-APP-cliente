@@ -176,7 +176,6 @@
               </div>
             </div>
           </div>
-        </div>
 
         <!-- Botones del formulario -->
         <div class="form-actions">
@@ -198,9 +197,7 @@
         </div>
       </form>
     </div>
-    </div>
   }
-
   <!-- Lista de mazos existentes -->
   @if (!showForm) {
     <div class="mazos-section">
