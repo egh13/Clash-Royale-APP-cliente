@@ -1,7 +1,7 @@
-import { Component, inject, OnInit, OnDestroy } from '@angular/core';
+import { Component, inject, effect, DestroyRef } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule, FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { Subject, takeUntil } from 'rxjs';
+import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 
 import { MazosService } from '../../services/mazos.service';
 import { AuthService } from '../../services/auth-service';
@@ -16,8 +16,7 @@ import { Mazo, Carta, CreateMazoRequest, UpdateMazoRequest } from '../../interfa
   templateUrl: './mis-mazos.component.html',
   styleUrls: ['./mis-mazos.component.css']
 })
-export class MisMazosComponent implements OnInit, OnDestroy {
-  private destroy$ = new Subject<void>();
+export class MisMazosComponent {
   
   private mazosService = inject(MazosService);
   private authService = inject(AuthService);
@@ -63,16 +62,11 @@ export class MisMazosComponent implements OnInit, OnDestroy {
     'Sudden Death'
   ];
 
-  ngOnInit(): void {
+  constructor() {
     this.initForm();
     this.loadCartas();
     this.loadMazos();
     this.subscribeToMazos();
-  }
-
-  ngOnDestroy(): void {
-    this.destroy$.next();
-    this.destroy$.complete();
   }
 
   private initForm(): void {
@@ -89,9 +83,9 @@ export class MisMazosComponent implements OnInit, OnDestroy {
 
   private loadMazos(): void {
     this.mazosService.getMazos().pipe(
-      takeUntil(this.destroy$)
+      takeUntilDestroyed()
     ).subscribe({
-      next: (mazos) => {
+      next: (mazos: Mazo[]) => {
         this.mazos = mazos;
       },
       error: (error) => {
@@ -103,13 +97,13 @@ export class MisMazosComponent implements OnInit, OnDestroy {
 
   private subscribeToMazos(): void {
     this.mazosService.mazos$.pipe(
-      takeUntil(this.destroy$)
+      takeUntilDestroyed()
     ).subscribe(mazos => {
       this.mazos = mazos;
     });
 
     this.mazosService.loading$.pipe(
-      takeUntil(this.destroy$)
+      takeUntilDestroyed()
     ).subscribe(loading => {
       this.loading = loading;
     });
@@ -225,9 +219,9 @@ export class MisMazosComponent implements OnInit, OnDestroy {
     if (this.editingMazo) {
       // Actualizar mazo existente
       this.mazosService.updateMazo(this.editingMazo.id, mazoData).pipe(
-        takeUntil(this.destroy$)
+        takeUntilDestroyed()
       ).subscribe({
-        next: (mazoActualizado) => {
+        next: (mazoActualizado: Mazo) => {
           this.toast.success(`Mazo "${mazoActualizado.nombre}" actualizado exitosamente`);
           this.toggleForm();
         },
@@ -239,9 +233,9 @@ export class MisMazosComponent implements OnInit, OnDestroy {
     } else {
       // Crear nuevo mazo
       this.mazosService.createMazo(mazoData as CreateMazoRequest).pipe(
-        takeUntil(this.destroy$)
+        takeUntilDestroyed()
       ).subscribe({
-        next: (nuevoMazo) => {
+        next: (nuevoMazo: Mazo) => {
           this.toast.success(`Mazo "${nuevoMazo.nombre}" creado exitosamente`);
           this.toggleForm();
         },
@@ -273,7 +267,7 @@ export class MisMazosComponent implements OnInit, OnDestroy {
     if (!confirmDelete) return;
 
     this.mazosService.deleteMazo(mazo.id).pipe(
-      takeUntil(this.destroy$)
+      takeUntilDestroyed()
     ).subscribe({
       next: () => {
         this.toast.success(`Mazo "${mazo.nombre}" eliminado exitosamente`);
