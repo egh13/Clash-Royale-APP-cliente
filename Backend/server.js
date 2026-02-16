@@ -5,8 +5,13 @@ require("dotenv").config();
 const app = express();
 app.use(
   cors({
+<<<<<<< HEAD
     origin: "http://localhost:4200", // app de Angular
     credentials: true, // permite cookies
+=======
+    origin: ["http://localhost:4200"], // app de Angular
+    credentials: true // permite cookies
+>>>>>>> mis-mazos2
   })
 );
 app.use(express.json());
@@ -19,6 +24,13 @@ app.use("/api/developerApi", apiRouter);
 const usuariosRouter = require("./routes/usuarios");
 app.use("/api/usuarios", usuariosRouter);
 
+<<<<<<< HEAD
+=======
+//router para manejar los endpoints de mazos
+const mazosRouter = require("./routes/mazos");
+app.use("/api/mazos", mazosRouter);
+
+>>>>>>> mis-mazos2
 //inciar servidor en puerto 3000
 app.listen(3000, () => {
   console.log("Servidor Express corriendo en http://localhost:3000");
