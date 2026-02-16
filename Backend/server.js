@@ -5,8 +5,8 @@ require("dotenv").config();
 const app = express();
 app.use(
   cors({
-    origin: ["http://localhost:4200", "http://localhost:4201"], // app de Angular
-    credentials: true, // permite cookies
+    origin: ["http://localhost:4200"], // app de Angular
+    credentials: true // permite cookies
   })
 );
 app.use(express.json());

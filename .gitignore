@@ -19,6 +19,7 @@ build/
 *.db
 *.sqlite
 *.sqlite3
+clashRoyale.db
 Backend/sqlite/clashRoyale.db
 Backend/sqlite/*.db
 

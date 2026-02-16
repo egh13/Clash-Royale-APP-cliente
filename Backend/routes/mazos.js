@@ -3,29 +3,6 @@ const router = express.Router();
 const authMiddleware = require('../middleware/auth.middleware');
 const db = require('../sqlite/db');
 
-// Crear tablas si no existen
-db.prepare(`
-  CREATE TABLE IF NOT EXISTS mazos (
-    id INTEGER PRIMARY KEY AUTOINCREMENT,
-    nombre VARCHAR(100) NOT NULL,
-    modo_juego VARCHAR(50) NOT NULL,
-    usuario_id INTEGER NOT NULL,
-    created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
-    updated_at DATETIME DEFAULT CURRENT_TIMESTAMP,
-    FOREIGN KEY (usuario_id) REFERENCES users(id) ON DELETE CASCADE
-  )
-`).run();
-
-db.prepare(`
-  CREATE TABLE IF NOT EXISTS cartas_mazo (
-    id INTEGER PRIMARY KEY AUTOINCREMENT,
-    mazo_id INTEGER NOT NULL,
-    carta_data TEXT NOT NULL,
-    posicion INTEGER NOT NULL,
-    FOREIGN KEY (mazo_id) REFERENCES mazos(id) ON DELETE CASCADE
-  )
-`).run();
-
 // GET /api/mazos - Obtener mazos del usuario
 router.get('/', authMiddleware, (req, res) => {
   try {
@@ -95,7 +72,7 @@ router.post('/', authMiddleware, (req, res) => {
         INSERT INTO mazos (nombre, modo_juego, usuario_id, created_at, updated_at)
         VALUES (?, ?, ?, datetime('now'), datetime('now'))
       `);
-      
+
       const result = insertMazo.run(nombre, modoJuego, usuarioId);
       const mazoId = result.lastInsertRowid;
 
@@ -186,7 +163,7 @@ router.put('/:id', authMiddleware, (req, res) => {
       if (nombre || modoJuego) {
         const updates = [];
         const values = [];
-        
+
         if (nombre) {
           updates.push('nombre = ?');
           values.push(nombre);
@@ -195,8 +172,8 @@ router.put('/:id', authMiddleware, (req, res) => {
           updates.push('modo_juego = ?');
           values.push(modoJuego);
         }
-        
-        updates.push('updated_at = datetime("now")');
+
+        updates.push("updated_at = datetime('now')");
         values.push(mazoId);
 
         const updateQuery = `UPDATE mazos SET ${updates.join(', ')} WHERE id = ?`;
@@ -207,7 +184,7 @@ router.put('/:id', authMiddleware, (req, res) => {
       if (cartas) {
         // Eliminar cartas existentes
         db.prepare('DELETE FROM cartas_mazo WHERE mazo_id = ?').run(mazoId);
-        
+
         // Insertar nuevas cartas
         const insertCarta = db.prepare(`
           INSERT INTO cartas_mazo (mazo_id, carta_data, posicion)
@@ -283,7 +260,7 @@ router.delete('/:id', authMiddleware, (req, res) => {
     const transaction = db.transaction(() => {
       // Eliminar cartas del mazo
       db.prepare('DELETE FROM cartas_mazo WHERE mazo_id = ?').run(mazoId);
-      
+
       // Eliminar mazo
       db.prepare('DELETE FROM mazos WHERE id = ?').run(mazoId);
     });

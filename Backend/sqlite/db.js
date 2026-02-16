@@ -16,4 +16,26 @@ db.prepare(`
   )
 `).run();
 
+db.prepare(`
+  CREATE TABLE IF NOT EXISTS mazos (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    nombre VARCHAR(100) NOT NULL,
+    modo_juego VARCHAR(50) NOT NULL,
+    usuario_id INTEGER NOT NULL,
+    created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+    updated_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (usuario_id) REFERENCES users(id) ON DELETE CASCADE
+  )
+`).run();
+
+db.prepare(`
+  CREATE TABLE IF NOT EXISTS cartas_mazo (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    mazo_id INTEGER NOT NULL,
+    carta_data TEXT NOT NULL,
+    posicion INTEGER NOT NULL,
+    FOREIGN KEY (mazo_id) REFERENCES mazos(id) ON DELETE CASCADE
+  )
+`).run();
+
 module.exports = db;
