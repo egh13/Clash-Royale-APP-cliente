@@ -166,4 +166,23 @@ router.post('/setClashRoyaleId', authMiddleware, (req, res) => {
   }
 });
 
+// Obtener perfil del usuario autenticado (para frontend JwtPayload)
+router.get('/me', authMiddleware, (req, res) => {
+  const username = req.user.username;
+  try {
+    const user = db.prepare('SELECT id, username, role, clashRoyaleId FROM users WHERE username = ?').get(username);
+    if (!user) {
+      return res.status(404).json({ error: 'Usuario no encontrado' });
+    }
+    res.json({
+      id: user.id,
+      username: user.username,
+      role: user.role,
+      clashRoyaleId: user.clashRoyaleId || ''
+    });
+  } catch (err) {
+    res.status(500).json({ error: 'Error del servidor', failed: err.message });
+  }
+});
+
 module.exports = router;

@@ -46,7 +46,15 @@ export class User implements OnInit {
   user: UserInterface | null = null;
   mensajeError: string = '';
 
+  constructor() {
+  effect(() => {
+    const currentId = this.id();
 
+    if (currentId) {
+      this.getUser(currentId);
+    }
+  });
+}
   ngOnInit() {
 
     if (this.id()) {

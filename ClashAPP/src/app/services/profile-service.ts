@@ -26,5 +26,8 @@ export class ProfileService {
       { clashRoyaleId: id },
     );
   }
-  
+
+  getProfile() {
+    return this.http.get<any>(`${this.BASE_URL}/me`);
+  }
 }

@@ -31,19 +31,28 @@ export class Profile implements OnInit {
 
   newPassword: string = '';
   newId: string = '';
-  clashRoyaleId: string = 'Y88YCCCPJ';
+  clashRoyaleId: string = '';
 
   ngOnInit(): void {
+    // redirigir si no hay token
     const token = this.authService.getToken();
-
     if (!token) {
       this.router.navigate(['/login']);
       return;
     }
-
     this.user = jwtDecode<JwtPayload>(token);
-  }
 
+    // cargar clashRoyaleId real desde la base de datos
+    this.profileService.getProfile().subscribe({
+      next: (res: any) => {
+        this.clashRoyaleId = res.clashRoyaleId || '';
+      },
+      error: () => {
+        this.clashRoyaleId = '';
+      }
+    });
+  }
+  
   changePassword(): void {
     if (!this.newPassword.trim()) {
       this.toastService.error('La contraseña no puede estar vacía');
@@ -84,7 +93,7 @@ export class Profile implements OnInit {
     this.profileService.setClashRoyaleId(this.newId).subscribe({
       next: (res: any) => {
         this.toastService.success(res.message);
-        this.newId = '';
+        this.clashRoyaleId = this.newId;
       },
       error: (err) => this.toastService.error(err.error?.error || 'Error al establecer id'),
     });
