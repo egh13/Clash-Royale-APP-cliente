@@ -41,8 +41,6 @@ Una aplicación web moderna para gestionar mazos y cartas de Clash Royale con fu
 - **Angular 20.3.0** - Framework de aplicación web
 - **TypeScript 5.9.2** - Lenguaje de programación
 - **Angular Material 20.2.14** - Componentes UI
-- **RxJS 7.8.0** - Programación reactiva
-- **JWT Decode** - Decodificación de tokens
 
 ### Backend
 - **Node.js + Express 5.1.0** - Servidor web
@@ -98,6 +96,7 @@ npm install
 Crear archivo `.env` en la carpeta `Backend`:
 
 ```env
+API_KEY=tu_clave_de_clash_royale_proxy_api
 JWT_SECRET=tu_clave_secreta_aqui
 NODE_ENV=development
 ```
@@ -175,29 +174,6 @@ Clash-Royale-APP-cliente/
         └── node_modules/
 ```
 
----
-
-## ⚙️ Configuración
-
-### Variable de Entorno (Backend)
-
-Crear `.env` en `Backend/`:
-
-```env
-JWT_SECRET=tu_clave_super_secreta_123
-PORT=3000
-NODE_ENV=development
-```
-
-### Base de Datos
-
-La base de datos SQLite se crea automáticamente en:
-- `Backend/sqlite/clashRoyale.db`
-
-No se versionan archivos `.db` en Git (configurado en `.gitignore`).
-
----
-
 ## 💻 Uso
 
 ### Iniciar la Aplicación (Desarrollo)
@@ -212,24 +188,9 @@ El servidor estará disponible en `http://localhost:3000`
 #### Terminal 2 - Frontend
 ```bash
 cd ClashAPP
-npm start
+ng serve
 ```
 La aplicación estará disponible en `http://localhost:4200`
-
-### Compilar para Producción
-
-```bash
-# Frontend
-cd ClashAPP
-npm run build
-# Los archivos compilados estarán en ClashAPP/dist/
-
-# Backend
-# El backend ya está listo para producción
-node server.js
-```
-
----
 
 ## 🔌 API Endpoints
 
@@ -264,106 +225,3 @@ node server.js
 | Método | Endpoint | Descripción |
 |--------|----------|-------------|
 | GET | `/api/leaderboard` | Obtener ranking de usuarios |
-
----
-
-## 🗄️ Bases de Datos
-
-### Esquema SQLite
-
-#### Tabla `users`
-```sql
-CREATE TABLE users (
-  id INTEGER PRIMARY KEY AUTOINCREMENT,
-  username TEXT UNIQUE NOT NULL,
-  password TEXT NOT NULL,
-  email TEXT UNIQUE NOT NULL,
-  birth_date TEXT,
-  user_type TEXT,
-  newsletter INTEGER DEFAULT 0,
-  role TEXT NOT NULL CHECK(role IN ('usuario', 'admin')),
-  clashRoyaleId TEXT,
-  created_at DATETIME DEFAULT CURRENT_TIMESTAMP
-);
-```
-
-#### Tabla `mazos`
-```sql
-CREATE TABLE mazos (
-  id INTEGER PRIMARY KEY AUTOINCREMENT,
-  nombre VARCHAR(100) NOT NULL,
-  modo_juego VARCHAR(50) NOT NULL,
-  usuario_id INTEGER NOT NULL,
-  created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
-  updated_at DATETIME DEFAULT CURRENT_TIMESTAMP,
-  FOREIGN KEY (usuario_id) REFERENCES users(id) ON DELETE CASCADE
-);
-```
-
-#### Tabla `cartas_mazo`
-```sql
-CREATE TABLE cartas_mazo (
-  id INTEGER PRIMARY KEY AUTOINCREMENT,
-  mazo_id INTEGER NOT NULL,
-  carta_data TEXT NOT NULL,
-  posicion INTEGER NOT NULL,
-  FOREIGN KEY (mazo_id) REFERENCES mazos(id) ON DELETE CASCADE
-);
-```
-
----
-
-## 🔐 Seguridad
-
-- Las contraseñas se hashean con **BCrypt** (salt rounds: 4)
-- Autenticación mediante **JWT** con expiración de 1 hora
-- Tokens se almacenan en `localStorage`
-- Todas las rutas protegidas requieren middleware de autenticación
-- CORS configurado para desarrollo local
-
----
-
-## 🧪 Testing
-
-```bash
-# Frontend
-cd ClashAPP
-npm test
-
-# Backend
-# Configurar y ejecutar según necesidad
-```
-
----
-
-## 📝 Notas Importantes
-
-- El archivo `clashRoyale.db` no se versionará en Git
-- Las credenciales y secrets deben guardarse en `.env` nunca en el código
-- La API está configurada para CORS local (puerto 3000 y 4200)
-- El JWT expira cada 1 hora, requiere renovación para sesiones prolongadas
-
----
-
-## 🤝 Contribuidores
-
-| Rol | Nombre |
-|-----|--------|
-| Instrucción | Maestro Surtich |
-| Desarrollo | Los mejores desarrolladores de Angular |
-
----
-
-## 📞 Soporte
-
-Para problemas o sugerencias, contacta a través del formulario de contacto en la aplicación o crea un issue en el repositorio.
-
----
-
-**Versión:** 1.0.0  
-**Última actualización:** Febrero 2026  
-**Licencia:** ISC
-    Crear el archivo .env con API_KEY={api_key}
-    `npm install`
-    `npm run devStart`
- 
