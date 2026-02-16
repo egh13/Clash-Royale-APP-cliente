@@ -13,11 +13,8 @@ Una aplicación web moderna para gestionar mazos y cartas de Clash Royale con fu
 - [Requisitos Previos](#requisitos-previos)
 - [Instalación](#instalación)
 - [Estructura del Proyecto](#estructura-del-proyecto)
-- [Configuración](#configuración)
 - [Uso](#uso)
 - [API Endpoints](#api-endpoints)
-- [Bases de Datos](#bases-de-datos)
-- [Contribuidores](#contribuidores)
 
 ---
 
