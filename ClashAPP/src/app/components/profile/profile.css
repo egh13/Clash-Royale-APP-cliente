@@ -99,6 +99,10 @@
   margin-top: 0;
 }
 
+h3{
+  text-align: center;
+}
+
 @media (max-width: 900px) {
   .profile-card {
     max-width: 98vw;
