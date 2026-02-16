@@ -2,10 +2,10 @@
 
   <h2 class="title">📘 Catálogo de Cartas</h2>
 
-  <!-- FILTROS -->
+  
   <div class="filters">
 
-    <!-- BUSCADOR -->
+    
     <input
       type="text"
       class="search-input"
@@ -47,6 +47,17 @@
     </button>
   </div>
 
+  <mat-paginator
+  [length]="length()"
+  [pageSize]="pageSize()"
+  [pageIndex]="pageIndex()"
+  [pageSizeOptions]="pageSizeOptions"
+  [showFirstLastButtons]="true"
+  (page)="onPageChange($event)"
+  aria-label="Paginador del catálogo de cartas">
+</mat-paginator>
+
+
   @if (cards().length > 0) {
     <div class="cards-grid">
 
@@ -55,12 +66,12 @@
           class="card reorder-animate"
           [class]="card.rarity.toLowerCase()">
 
-          <!-- ELIXIR -->
+          
           <div class="elixir-drop">
             <span>{{ card.elixirCost }}</span>
           </div>
 
-          <!-- BADGES -->
+          
           <div class="badges">
             @if (card.hasEvolution) {
               <span class="badge evo">⚡</span>
@@ -70,7 +81,7 @@
             }
           </div>
 
-          <!-- IMAGE -->
+          
           <div
             class="image-wrapper"
             [class.has-carousel]="card.images.length > 1"
@@ -86,7 +97,7 @@
             }
           </div>
 
-          <!-- TEXTO -->
+          
           <h3 class="card-name">{{ card.name }}</h3>
 
           <div class="stats">
@@ -95,6 +106,18 @@
             <span>🆔 {{ card.id }}</span>
             <br /><br />
             <span>🏷️ Rareza: {{ card.rarity }}</span>
+          </div>
+
+          <!-- Botón de información detallada -->
+          <div class="card-actions">
+            <button 
+              mat-icon-button 
+              class="info-button"
+              (click)="openCardDetails(card)"
+              [attr.aria-label]="'Ver detalles de ' + card.name"
+              matTooltip="Ver estadísticas detalladas">
+              <mat-icon>info</mat-icon>
+            </button>
           </div>
 
         </div>

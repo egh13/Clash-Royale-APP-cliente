@@ -197,7 +197,7 @@
 .filters {
   display: flex;
   gap: var(--spacing-md);
-  margin-bottom: var(--spacing-2xl);
+  margin-bottom: 12px;
   flex-wrap: wrap;
   justify-content: center;
 }
@@ -271,4 +271,56 @@
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+mat-paginator {
+   margin: 0 auto var(--spacing-xl);
+  padding: 6px 16px;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  width: fit-content;
+  font-size: 0.85rem;
+}
+
+/* =========================
+   CARD ACTIONS
+========================= */
+.card-actions {
+  position: absolute;
+  bottom: var(--spacing-sm);
+  right: var(--spacing-sm);
+  display: flex;
+  gap: var(--spacing-xs);
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all var(--transition-fast);
+}
+
+.card:hover .card-actions {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.info-button {
+  width: 36px;
+  height: 36px;
+  background: rgba(0, 212, 255, 0.9);
+  color: white;
+  border-radius: 50%;
+  transition: all var(--transition-fast);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(0, 212, 255, 0.3);
+}
+
+.info-button:hover {
+  background: rgba(0, 212, 255, 1);
+  transform: scale(1.1);
+  box-shadow: 0 4px 12px rgba(0, 212, 255, 0.4);
+}
+
+.info-button mat-icon {
+  font-size: 18px;
+  width: 18px;
+  height: 18px;
 }

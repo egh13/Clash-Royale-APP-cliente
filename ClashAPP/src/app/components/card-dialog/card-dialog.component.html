@@ -1,0 +1,304 @@
+<div class="card-dialog">
+  
+  <!-- Header del diálogo -->
+  <div class="dialog-header" [class]="getRarityClass()">
+    <button 
+      mat-icon-button 
+      class="close-button" 
+      (click)="onClose()"
+      aria-label="Cerrar diálogo">
+      <mat-icon>close</mat-icon>
+    </button>
+    <h2 mat-dialog-title>{{ data.name }}</h2>
+  </div>
+
+  <!-- Contenido del diálogo -->
+  <mat-dialog-content class="dialog-content">
+    
+    @if (loading()) {
+      <div class="loading-container">
+        <mat-spinner diameter="40"></mat-spinner>
+        <p>Cargando estadísticas...</p>
+      </div>
+    } @else {
+      
+      <!-- Parte superior: Información básica (siempre se muestra) -->
+      <div class="card-info">
+        
+        <!-- Imagen y badges -->
+        <div class="image-section">
+          <div class="elixir-drop" [class]="getRarityClass()">
+            <span>{{ data.elixirCost }}</span>
+          </div>
+          
+          <div class="badges">
+            @if (data.hasEvolution) {
+              <span class="badge evo">⚡</span>
+            }
+            @if (data.hasHero) {
+              <span class="badge hero">👑</span>
+            }
+          </div>
+
+          <div class="image-wrapper">
+            @if (data.images && data.images.length > 0) {
+              <img 
+                [src]="data.images[0]" 
+                [alt]="data.name"
+                class="card-image">
+            }
+          </div>
+        </div>
+
+        <!-- Información básica -->
+        <div class="info-section">
+          <div class="rarity-badge" [class]="getRarityClass()">
+            {{ data.rarity }}
+          </div>
+          
+          <div class="basic-card-info">
+            <div class="stat-item">
+              <mat-icon>star</mat-icon>
+              <span><strong>ID:</strong> {{ data.id }}</span>
+            </div>
+            <div class="stat-item">
+              <mat-icon>flash_on</mat-icon>
+              <span><strong>Elixir:</strong> {{ data.elixirCost }}</span>
+            </div>
+            <div class="stat-item">
+              <mat-icon>diamond</mat-icon>
+              <span><strong>Rareza:</strong> {{ data.rarity }}</span>
+            </div>
+            @if (data.hasEvolution) {
+              <div class="stat-item">
+                <mat-icon>bolt</mat-icon>
+                <span><strong>Evolución:</strong> Disponible</span>
+              </div>
+            }
+            @if (data.hasHero) {
+              <div class="stat-item">
+                <mat-icon>military_tech</mat-icon>
+                <span><strong>Héroe:</strong> Disponible</span>
+              </div>
+            }
+          </div>
+          
+          @if (cardStats()) {
+            <div class="detailed-stats">
+              <h4>📊 Estadísticas Detalladas - {{ getCardTypeIcon() }} {{ getCardTypeName() }}</h4>
+              
+              <!-- Stats para TROPAS -->
+              @if (cardType() === 'troop') {
+                @if (cardStats()!.hit_speed; as hitSpeed) {
+                  <div class="stat-item">
+                    <mat-icon>speed</mat-icon>
+                    <span><strong>Vel. ataque:</strong> {{ hitSpeed }}s</span>
+                  </div>
+                }
+                @if (cardStats()!.range; as range) {
+                  <div class="stat-item">
+                    <mat-icon>straighten</mat-icon>
+                    <span><strong>Alcance:</strong> {{ range }}</span>
+                  </div>
+                }
+                @if (cardStats()!.count; as count) {
+                  @if (count > 1) {
+                    <div class="stat-item">
+                      <mat-icon>groups</mat-icon>
+                      <span><strong>Cantidad:</strong> {{ count }}</span>
+                    </div>
+                  }
+                }
+              }
+              
+              <!-- Stats para HECHIZOS -->
+              @if (cardType() === 'spell') {
+                @if (cardStats()!.radius) {
+                  <div class="stat-item">
+                    <mat-icon>radio_button_unchecked</mat-icon>
+                    <span><strong>Radio:</strong> {{ cardStats()!.radius }}</span>
+                  </div>
+                }
+                @if (cardStats()!.width) {
+                  <div class="stat-item">
+                    <mat-icon>straighten</mat-icon>
+                    <span><strong>Ancho:</strong> {{ cardStats()!.width }}</span>
+                  </div>
+                }
+                @if (cardStats()!.range) {
+                  <div class="stat-item">
+                    <mat-icon>straighten</mat-icon>
+                    <span><strong>Alcance:</strong> {{ cardStats()!.range }}</span>
+                  </div>
+                }
+              }
+              
+              <!-- Stats para ESTRUCTURAS -->
+              @if (cardType() === 'building') {
+                @if (cardStats()!.hit_speed) {
+                  <div class="stat-item">
+                    <mat-icon>speed</mat-icon>
+                    <span><strong>Vel. ataque:</strong> {{ cardStats()!.hit_speed }}s</span>
+                  </div>
+                }
+                @if (cardStats()!.range) {
+                  <div class="stat-item">
+                    <mat-icon>straighten</mat-icon>
+                    <span><strong>Alcance:</strong> {{ cardStats()!.range }}</span>
+                  </div>
+                }
+                @if (cardStats()!.lifetime) {
+                  <div class="stat-item">
+                    <mat-icon>timer</mat-icon>
+                    <span><strong>Duración:</strong> {{ cardStats()!.lifetime }}s</span>
+                  </div>
+                }
+                @if (cardStats()!.spawn_speed) {
+                  <div class="stat-item">
+                    <mat-icon>autorenew</mat-icon>
+                    <span><strong>Spawn:</strong> {{ cardStats()!.spawn_speed }}s</span>
+                  </div>
+                }
+              }
+              
+              <!-- Target (común para todos) -->
+              @if (cardStats()!.target) {
+                <div class="stat-item">
+                  <mat-icon>my_location</mat-icon>
+                  <span><strong>Objetivo:</strong> {{ cardStats()!.target }}</span>
+                </div>
+              }
+            </div>
+          }
+        </div>
+      </div>
+
+      @if (cardStats()) {
+        <!-- Selector de nivel -->
+        <div class="level-selector">
+          <h3>
+            <mat-icon>trending_up</mat-icon>
+            Seleccionar Nivel
+          </h3>
+          
+          <mat-select 
+            [value]="selectedLevel()"
+            (selectionChange)="onLevelChange($event.value)"
+            class="level-select">
+            @for (level of availableLevels(); track level) {
+              <mat-option [value]="level">
+                Nivel {{ level }}
+              </mat-option>
+            }
+          </mat-select>
+        </div>
+
+        <!-- Estadísticas destacadas del nivel actual -->
+        <div class="current-stats" [class]="getRarityClass()">
+          <h3>
+            <mat-icon>bar_chart</mat-icon>
+            Stats Nivel {{ selectedLevel() }}
+          </h3>
+          
+          @if (currentStats(); as stats) {
+            <div class="stats-grid">
+              <!-- VIDA (solo para tropas y estructuras) -->
+              @if ((cardType() === 'troop' || cardType() === 'building') && stats.hitpoints !== undefined) {
+                <div class="stat-card hitpoints">
+                  <mat-icon>favorite</mat-icon>
+                  <div class="stat-content">
+                    <span class="stat-label">Vida</span>
+                    <span class="stat-value">{{ stats.hitpoints }}</span>
+                  </div>
+                </div>
+              }
+
+              <!-- DAÑO (para todos los tipos) -->
+              <div class="stat-card damage">
+                <mat-icon>flash_on</mat-icon>
+                <div class="stat-content">
+                  <span class="stat-label">
+                    @if (cardType() === 'spell') {
+                      Daño por área
+                    } @else {
+                      Daño
+                    }
+                  </span>
+                  <span class="stat-value">{{ stats.damage }}</span>
+                </div>
+              </div>
+
+              <!-- Mostrar otras propiedades dinámicamente -->
+              @for (prop of getExtraProps(stats); track prop) {
+                <div class="stat-card extra">
+                  <mat-icon>info</mat-icon>
+                  <div class="stat-content">
+                    <span class="stat-label">{{ formatColumnName(prop) }}</span>
+                    <span class="stat-value">{{ stats[prop] }}</span>
+                  </div>
+                </div>
+              }
+            </div>
+          }
+        </div>
+
+        <!-- Tabla expandible con todos los niveles -->
+        <mat-expansion-panel class="levels-table-panel">
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              <mat-icon>table_chart</mat-icon>
+              Ver todos los niveles
+            </mat-panel-title>
+            <mat-panel-description>
+              Comparar estadísticas de todos los niveles
+            </mat-panel-description>
+          </mat-expansion-panel-header>
+
+          <div class="table-container">
+            <table mat-table [dataSource]="dataSource" matSort>
+              
+              @for (column of displayedColumns; track column) {
+                <ng-container [matColumnDef]="column">
+                  <th mat-header-cell *matHeaderCellDef mat-sort-header>
+                    {{ formatColumnName(column) }}
+                  </th>
+                  <td mat-cell *matCellDef="let element">
+                    {{ element[column] }}
+                  </td>
+                </ng-container>
+              }
+
+              <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+              <tr 
+                mat-row 
+                *matRowDef="let row; columns: displayedColumns;"
+                [class.selected-level]="row.level === selectedLevel()"
+                (click)="onLevelChange(row.level)">
+              </tr>
+            </table>
+          </div>
+        </mat-expansion-panel>
+      } @else {
+        <!-- Mensaje cuando no hay estadísticas -->
+        <div class="no-stats-message">
+          <mat-icon>warning</mat-icon>
+          <h3>Estadísticas no disponibles</h3>
+          <p>No se pudieron cargar las estadísticas detalladas para esta carta.</p>
+          <p><strong>Carta buscada:</strong> "{{ data.name }}"</p>
+        </div>
+      }
+    }
+
+  </mat-dialog-content>
+
+  <!-- Acciones del diálogo -->
+  <mat-dialog-actions align="end">
+    <button 
+      mat-button 
+      (click)="onClose()"
+      color="primary">
+      Cerrar
+    </button>
+  </mat-dialog-actions>
+
+</div>

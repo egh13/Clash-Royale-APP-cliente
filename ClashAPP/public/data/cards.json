@@ -1,0 +1,7307 @@
+[
+  {
+    "name": "Archers",
+    "hit_speed": 0.9,
+    "range": 5,
+    "count": 2,
+    "target": "Air&Ground",
+    "levels": [
+      {
+        "level": 1,
+        "hitpoints": 119,
+        "damage": 44
+      },
+      {
+        "level": 2,
+        "hitpoints": 130,
+        "damage": 48
+      },
+      {
+        "level": 3,
+        "hitpoints": 143,
+        "damage": 53
+      },
+      {
+        "level": 4,
+        "hitpoints": 158,
+        "damage": 58
+      },
+      {
+        "level": 5,
+        "hitpoints": 173,
+        "damage": 64
+      },
+      {
+        "level": 6,
+        "hitpoints": 190,
+        "damage": 70
+      },
+      {
+        "level": 7,
+        "hitpoints": 209,
+        "damage": 77
+      },
+      {
+        "level": 8,
+        "hitpoints": 229,
+        "damage": 84
+      },
+      {
+        "level": 9,
+        "hitpoints": 252,
+        "damage": 93
+      },
+      {
+        "level": 10,
+        "hitpoints": 277,
+        "damage": 102
+      },
+      {
+        "level": 11,
+        "hitpoints": 304,
+        "damage": 112
+      },
+      {
+        "level": 12,
+        "hitpoints": 334,
+        "damage": 123
+      },
+      {
+        "level": 13,
+        "hitpoints": 367,
+        "damage": 135
+      },
+      {
+        "level": 14,
+        "hitpoints": 403,
+        "damage": 149
+      },
+      {
+        "level": 15,
+        "hitpoints": 442,
+        "damage": 163
+      },
+      {
+        "level": 16,
+        "hitpoints": 486,
+        "damage": 179
+      }
+    ]
+  },
+  {
+    "name": "Archer Queen",
+    "hit_speed": 1.2,
+    "range": 5,
+    "count": 1,
+    "target": "Air&Ground",
+    "levels": [
+      {
+        "level": 11,
+        "hitpoints": 1000,
+        "damage": 225
+      },
+      {
+        "level": 12,
+        "hitpoints": 1098,
+        "damage": 247
+      },
+      {
+        "level": 13,
+        "hitpoints": 1208,
+        "damage": 271
+      },
+      {
+        "level": 14,
+        "hitpoints": 1325,
+        "damage": 298
+      },
+      {
+        "level": 15,
+        "hitpoints": 1454,
+        "damage": 327
+      },
+      {
+        "level": 16,
+        "hitpoints": 1599,
+        "damage": 359
+      }
+    ]
+  },
+  {
+    "name": "Baby Dragon",
+    "hit_speed": 0.3,
+    "range": 3.5,
+    "count": 1,
+    "target": "Air&Ground",
+    "levels": [
+      {
+        "level": 6,
+        "hitpoints": 720,
+        "damage": 100
+      },
+      {
+        "level": 7,
+        "hitpoints": 792,
+        "damage": 110
+      },
+      {
+        "level": 8,
+        "hitpoints": 868,
+        "damage": 121
+      },
+      {
+        "level": 9,
+        "hitpoints": 954,
+        "damage": 133
+      },
+      {
+        "level": 10,
+        "hitpoints": 1048,
+        "damage": 146
+      },
+      {
+        "level": 11,
+        "hitpoints": 1152,
+        "damage": 161
+      },
+      {
+        "level": 12,
+        "hitpoints": 1264,
+        "damage": 177
+      },
+      {
+        "level": 13,
+        "hitpoints": 1390,
+        "damage": 194
+      },
+      {
+        "level": 14,
+        "hitpoints": 1525,
+        "damage": 213
+      },
+      {
+        "level": 15,
+        "hitpoints": 1674,
+        "damage": 234
+      },
+      {
+        "level": 16,
+        "hitpoints": 1840,
+        "damage": 257
+      }
+    ]
+  },
+  {
+    "name": "Balloon",
+    "hit_speed": 2,
+    "range": 0.1,
+    "count": 1,
+    "target": "Air",
+    "levels": [
+      {
+        "level": 6,
+        "hitpoints": 1049,
+        "damage": 400
+      },
+      {
+        "level": 7,
+        "hitpoints": 1154,
+        "damage": 440
+      },
+      {
+        "level": 8,
+        "hitpoints": 1266,
+        "damage": 482
+      },
+      {
+        "level": 9,
+        "hitpoints": 1390,
+        "damage": 530
+      },
+      {
+        "level": 10,
+        "hitpoints": 1528,
+        "damage": 582
+      },
+      {
+        "level": 11,
+        "hitpoints": 1679,
+        "damage": 640
+      },
+      {
+        "level": 12,
+        "hitpoints": 1843,
+        "damage": 702
+      },
+      {
+        "level": 13,
+        "hitpoints": 2027,
+        "damage": 772
+      },
+      {
+        "level": 14,
+        "hitpoints": 2223,
+        "damage": 847
+      },
+      {
+        "level": 15,
+        "hitpoints": 2440,
+        "damage": 930
+      },
+      {
+        "level": 16,
+        "hitpoints": 2683,
+        "damage": 1022
+      }
+    ]
+  },
+  {
+    "name": "Bandit",
+    "hit_speed": 1,
+    "range": 0.75,
+    "count": 1,
+    "target": "Ground",
+    "levels": [
+      {
+        "level": 9,
+        "hitpoints": 750,
+        "damage": 161
+      },
+      {
+        "level": 10,
+        "hitpoints": 824,
+        "damage": 176
+      },
+      {
+        "level": 11,
+        "hitpoints": 906,
+        "damage": 194
+      },
+      {
+        "level": 12,
+        "hitpoints": 994,
+        "damage": 213
+      },
+      {
+        "level": 13,
+        "hitpoints": 1093,
+        "damage": 234
+      },
+      {
+        "level": 14,
+        "hitpoints": 1200,
+        "damage": 257
+      },
+      {
+        "level": 15,
+        "hitpoints": 1316,
+        "damage": 282
+      }
+    ]
+  },
+  {
+    "name": "Barbarians",
+    "hit_speed": 1.3,
+    "range": 0.7,
+    "count": 5,
+    "target": "Ground",
+    "levels": [
+      {
+        "level": 1,
+        "hitpoints": 262,
+        "damage": 75
+      },
+      {
+        "level": 2,
+        "hitpoints": 288,
+        "damage": 82
+      },
+      {
+        "level": 3,
+        "hitpoints": 317,
+        "damage": 90
+      },
+      {
+        "level": 4,
+        "hitpoints": 348,
+        "damage": 99
+      },
+      {
+        "level": 5,
+        "hitpoints": 382,
+        "damage": 109
+      },
+      {
+        "level": 6,
+        "hitpoints": 419,
+        "damage": 120
+      },
+      {
+        "level": 7,
+        "hitpoints": 461,
+        "damage": 132
+      },
+      {
+        "level": 8,
+        "hitpoints": 505,
+        "damage": 144
+      },
+      {
+        "level": 9,
+        "hitpoints": 555,
+        "damage": 159
+      },
+      {
+        "level": 10,
+        "hitpoints": 610,
+        "damage": 174
+      },
+      {
+        "level": 11,
+        "hitpoints": 670,
+        "damage": 192
+      },
+      {
+        "level": 12,
+        "hitpoints": 736,
+        "damage": 210
+      },
+      {
+        "level": 13,
+        "hitpoints": 809,
+        "damage": 231
+      },
+      {
+        "level": 14,
+        "hitpoints": 888,
+        "damage": 254
+      },
+      {
+        "level": 15,
+        "hitpoints": 974,
+        "damage": 279
+      },
+      {
+        "level": 16,
+        "hitpoints": 1071,
+        "damage": 306
+      }
+    ]
+  },
+  {
+    "name": "Bats",
+    "hit_speed": 1.3,
+    "range": 1.2,
+    "count": 5,
+    "target": "Air",
+    "levels": [
+      {
+        "level": 1,
+        "hitpoints": 32,
+        "damage": 32
+      },
+      {
+        "level": 2,
+        "hitpoints": 35,
+        "damage": 35
+      },
+      {
+        "level": 3,
+        "hitpoints": 38,
+        "damage": 38
+      },
+      {
+        "level": 4,
+        "hitpoints": 42,
+        "damage": 42
+      },
+      {
+        "level": 5,
+        "hitpoints": 46,
+        "damage": 46
+      },
+      {
+        "level": 6,
+        "hitpoints": 51,
+        "damage": 51
+      },
+      {
+        "level": 7,
+        "hitpoints": 56,
+        "damage": 56
+      },
+      {
+        "level": 8,
+        "hitpoints": 61,
+        "damage": 61
+      },
+      {
+        "level": 9,
+        "hitpoints": 67,
+        "damage": 67
+      },
+      {
+        "level": 10,
+        "hitpoints": 74,
+        "damage": 74
+      },
+      {
+        "level": 11,
+        "hitpoints": 81,
+        "damage": 81
+      },
+      {
+        "level": 12,
+        "hitpoints": 89,
+        "damage": 89
+      },
+      {
+        "level": 13,
+        "hitpoints": 98,
+        "damage": 98
+      },
+      {
+        "level": 14,
+        "hitpoints": 108,
+        "damage": 108
+      },
+      {
+        "level": 15,
+        "hitpoints": 119,
+        "damage": 119
+      },
+      {
+        "level": 16,
+        "hitpoints": 130,
+        "damage": 130
+      }
+    ]
+  },
+  {
+    "name": "Battle Healer",
+    "hit_speed": 1.5,
+    "range": 1.6,
+    "count": 1,
+    "target": "Ground",
+    "levels": [
+      {
+        "level": 3,
+        "hitpoints": 811,
+        "damage": 70
+      },
+      {
+        "level": 4,
+        "hitpoints": 892,
+        "damage": 77
+      },
+      {
+        "level": 5,
+        "hitpoints": 979,
+        "damage": 84
+      },
+      {
+        "level": 6,
+        "hitpoints": 1073,
+        "damage": 92
+      },
+      {
+        "level": 7,
+        "hitpoints": 1180,
+        "damage": 102
+      },
+      {
+        "level": 8,
+        "hitpoints": 1295,
+        "damage": 111
+      },
+      {
+        "level": 9,
+        "hitpoints": 1422,
+        "damage": 122
+      },
+      {
+        "level": 10,
+        "hitpoints": 1563,
+        "damage": 135
+      },
+      {
+        "level": 11,
+        "hitpoints": 1717,
+        "damage": 148
+      },
+      {
+        "level": 12,
+        "hitpoints": 1885,
+        "damage": 162
+      },
+      {
+        "level": 13,
+        "hitpoints": 2073,
+        "damage": 179
+      },
+      {
+        "level": 14,
+        "hitpoints": 2274,
+        "damage": 196
+      },
+      {
+        "level": 15,
+        "hitpoints": 2496,
+        "damage": 215
+      },
+      {
+        "level": 16,
+        "hitpoints": 2744,
+        "damage": 237
+      }
+    ]
+  },
+  {
+    "name": "Battle Ram",
+    "hit_speed": 0.5,
+    "range": 0.5,
+    "count": 1,
+    "target": "Ground",
+    "levels": [
+      {
+        "level": 6,
+        "hitpoints": 967,
+        "damage": 286
+      },
+      {
+        "level": 7,
+        "hitpoints": 967,
+        "damage": 286
+      },
+      {
+        "level": 8,
+        "hitpoints": 967,
+        "damage": 286
+      },
+      {
+        "level": 9,
+        "hitpoints": 967,
+        "damage": 286 
+      },
+      {
+        "level": 10,
+        "hitpoints": 967,
+        "damage": 286
+      },
+      {
+        "level": 11,
+        "hitpoints": 967,
+        "damage": 286
+      },
+      {
+        "level": 12,
+        "hitpoints": 967,
+        "damage": 286
+      },
+      {
+        "level": 13,
+        "hitpoints": 967,
+        "damage": 286
+      },
+      {
+        "level": 14,
+        "hitpoints": 967,
+        "damage": 286
+      },
+      {
+        "level": 15,
+        "hitpoints": 967,
+        "damage": 286
+      },
+      {
+        "level": 16,
+        "hitpoints": 967,
+        "damage": 286
+      }
+    ]
+  },
+  {
+    "name": "Berserker",
+    "hit_speed": 0.6,
+    "range": 0.8,
+    "count": 1,
+    "target": "Ground",
+    "levels": [
+      {
+        "level": 1,
+        "hitpoints": 350,
+        "damage": 40
+      },
+      {
+        "level": 2,
+        "hitpoints": 385,
+        "damage": 44
+      },
+      {
+        "level": 3,
+        "hitpoints": 423,
+        "damage": 48
+      },
+      {
+        "level": 4,
+        "hitpoints": 465,
+        "damage": 53
+      },
+      {
+        "level": 5,
+        "hitpoints": 511,
+        "damage": 58
+      },
+      {
+        "level": 6,
+        "hitpoints": 560,
+        "damage": 64
+      },
+      {
+        "level": 7,
+        "hitpoints": 616,
+        "damage": 70
+      },
+      {
+        "level": 8,
+        "hitpoints": 675,
+        "damage": 77
+      },
+      {
+        "level": 9,
+        "hitpoints": 742,
+        "damage": 85
+      },
+      {
+        "level": 10,
+        "hitpoints": 815,
+        "damage": 93
+      },
+      {
+        "level": 11,
+        "hitpoints": 896,
+        "damage": 102
+      },
+      {
+        "level": 12,
+        "hitpoints": 983,
+        "damage": 112
+      },
+      {
+        "level": 13,
+        "hitpoints": 1081,
+        "damage": 123
+      },
+      {
+        "level": 14,
+        "hitpoints": 1186,
+        "damage": 135
+      },
+      {
+        "level": 15,
+        "hitpoints": 1302,
+        "damage": 148
+      },
+      {
+        "level": 16,
+        "hitpoints": 1431,
+        "damage": 198
+      }
+    ]
+  },
+  {
+    "name": "Bomber",
+    "hit_speed": 1.8,
+    "range": 4.5,
+    "count": 1,
+    "target": "Ground",
+    "levels": [
+      {
+        "level": 1,
+        "hitpoints": 119,
+        "damage": 88
+      },
+      {
+        "level": 2,
+        "hitpoints": 130,
+        "damage": 96
+      },
+      {
+        "level": 3,
+        "hitpoints": 143,
+        "damage": 106
+      },
+      {
+        "level": 4,
+        "hitpoints": 158,
+        "damage": 117
+      },
+      {
+        "level": 5,
+        "hitpoints": 173,
+        "damage": 128
+      },
+      {
+        "level": 6,
+        "hitpoints": 190,
+        "damage": 140
+      },
+      {
+        "level": 7,
+        "hitpoints": 209,
+        "damage": 154
+      },
+      {
+        "level": 8,
+        "hitpoints": 229,
+        "damage": 169
+      },
+      {
+        "level": 9,
+        "hitpoints": 252,
+        "damage": 186
+      },
+      {
+        "level": 10,
+        "hitpoints": 277,
+        "damage": 205
+      },
+      {
+        "level": 11,
+        "hitpoints": 304,
+        "damage": 225
+      },
+      {
+        "level": 12,
+        "hitpoints": 334,
+        "damage": 247
+      },
+      {
+        "level": 13,
+        "hitpoints": 367,
+        "damage": 271
+      },
+      {
+        "level": 14,
+        "hitpoints": 403,
+        "damage": 298
+      },
+      {
+        "level": 15,
+        "hitpoints": 442,
+        "damage": 327
+      },
+      {
+        "level": 16,
+        "hitpoints": 486,
+        "damage": 359
+      }
+    ]
+  },
+  {
+    "name": "Boss Bandit",
+    "hit_speed": 1.1,
+    "range": 0.8,
+    "count": 1,
+    "target": "Ground",
+    "levels": [
+      {
+        "level": 11,
+        "hitpoints": 2624,
+        "damage": 268
+      },
+      {
+        "level": 12,
+        "hitpoints": 2880,
+        "damage": 295
+      },
+      {
+        "level": 13,
+        "hitpoints": 3167,
+        "damage": 324
+      },
+      {
+        "level": 14,
+        "hitpoints": 3474,
+        "damage": 355
+      },
+      {
+        "level": 15,
+        "hitpoints": 3813,
+        "damage": 390
+      }
+    ]
+  },
+  {
+    "name": "Bowler",
+    "hit_speed":1.8,
+    "range":5,
+    "count":1,
+    "target":"Ground",
+    "levels": [
+      {
+        "level": 6,
+        "hitpoints": 1300,
+        "damage": 180
+      },
+      {
+        "level": 7,
+        "hitpoints": 1430,
+        "damage": 198
+      },
+      {
+        "level": 8,
+        "hitpoints": 1569,
+        "damage": 218
+      },
+      {
+        "level": 9,
+        "hitpoints": 1723,
+        "damage": 239
+      },
+      {
+        "level": 10,
+        "hitpoints": 1894,
+        "damage": 263
+      },
+      {
+        "level": 11,
+        "hitpoints": 2081,
+        "damage": 289
+      },
+      {
+        "level": 12,
+        "hitpoints": 2284,
+        "damage": 317
+      },
+      {
+        "level": 13,
+        "hitpoints": 2512,
+        "damage": 349
+      },
+      {
+        "level": 14,
+        "hitpoints": 2756,
+        "damage": 383
+      },
+      {
+        "level": 15,
+        "hitpoints": 3024,
+        "damage": 420
+      }
+    ]
+  },
+  {
+    "name": "Cannon Cart",
+    "hit_speed": 1.5,
+    "range": 5,
+    "count": 1,
+    "target": "Ground",
+    "levels": [
+      {
+        "level": 6,
+        "hitpoints": 1131,
+        "damage": 132
+      },
+      {
+        "level": 7,
+        "hitpoints": 1244,
+        "damage": 146
+      },
+      {
+        "level": 8,
+        "hitpoints": 1364,
+        "damage": 160
+      },
+      {
+        "level": 9,
+        "hitpoints": 1498,
+        "damage": 175
+      },
+      {
+        "level": 10,
+        "hitpoints": 1647,
+        "damage": 193
+      },
+      {
+        "level": 11,
+        "hitpoints": 1809,
+        "damage": 212
+      },
+      {
+        "level": 12,
+        "hitpoints": 1986,
+        "damage": 233
+      },
+      {
+        "level": 13,
+        "hitpoints": 2184,
+        "damage": 256
+      },
+      {
+        "level": 14,
+        "hitpoints": 2396,
+        "damage": 281
+      },
+      {
+        "level": 15,
+        "hitpoints": 2630,
+        "damage": 308
+      }
+    ]
+  },
+  {
+    "name": "Dark Prince",
+    "hit_speed": 1.5,
+    "range": 0.8,
+    "count": 1,
+    "target": "Ground",
+    "levels": [
+      {
+        "level": 6,
+        "hitpoints": 750,
+        "damage": 150
+      },
+      {
+        "level": 7,
+        "hitpoints": 825,
+        "damage": 165
+      },
+      {
+        "level": 8,
+        "hitpoints": 905,
+        "damage": 181
+      },
+      {
+        "level": 9,
+        "hitpoints": 994,
+        "damage": 199
+      },
+      {
+        "level": 10,
+        "hitpoints": 1092,
+        "damage": 219
+      },
+      {
+        "level": 11,
+        "hitpoints": 1200,
+        "damage": 240
+      },
+      {
+        "level": 12,
+        "hitpoints": 1317,
+        "damage": 264
+      },
+      {
+        "level": 13,
+        "hitpoints": 1449,
+        "damage": 290
+      },
+      {
+        "level": 14,
+        "hitpoints": 1589,
+        "damage": 318
+      },
+      {
+        "level": 15,
+        "hitpoints": 1744,
+        "damage": 349
+      }
+    ]
+  },
+  {
+    "name": "Dart Goblin",
+    "hit_speed": 1.5,
+    "range": 6,
+    "count": 1,
+    "target": "Air&Ground",
+    "levels": [
+      {
+        "level": 3,
+        "hitpoints": 123,
+        "damage": 67
+      },
+      {
+        "level": 4,
+        "hitpoints": 135,
+        "damage": 75
+      },
+      {
+        "level": 5,
+        "hitpoints": 148,
+        "damage": 83
+      },
+      {
+        "level": 6,
+        "hitpoints": 163,
+        "damage": 92
+      },
+      {
+        "level": 7,
+        "hitpoints": 179,
+        "damage": 102
+      },
+      {
+        "level": 8,
+        "hitpoints": 196,
+        "damage": 114
+      },
+      {
+        "level": 9,
+        "hitpoints": 216,
+        "damage": 126
+      },
+      {
+        "level": 10,
+        "hitpoints": 237,
+        "damage": 140
+      },
+      {
+        "level": 11,
+        "hitpoints": 261,
+        "damage": 156
+      },
+      {
+        "level": 12,
+        "hitpoints": 286,
+        "damage": 172
+      },
+      {
+        "level": 13,
+        "hitpoints": 315,
+        "damage": 189
+      },
+      {
+        "level": 14,
+        "hitpoints": 345,
+        "damage": 208
+      },
+      {
+        "level": 15,
+        "hitpoints": 379,
+        "damage": 228
+      }
+    ]
+  },
+  {
+    "name": "Goblin demolisher",
+    "hit_speed": 1.5,
+    "range": 5,
+    "count": 1,
+    "target": "Ground",
+    "levels": [
+      {
+        "level": 3,
+        "hitpoints": 614,
+        "damage": 88
+      },
+      {
+        "level": 4,
+        "hitpoints": 675,
+        "damage": 97
+      },
+      {
+        "level": 5,
+        "hitpoints": 741,
+        "damage": 107
+      },
+      {
+        "level": 6,
+        "hitpoints": 814,
+        "damage": 118
+      },
+      {
+        "level": 7,
+        "hitpoints": 894,
+        "damage": 130
+      },
+      {
+        "level": 8,
+        "hitpoints": 982,
+        "damage": 143
+      },
+      {
+        "level": 9,
+        "hitpoints": 1078,
+        "damage": 157
+      },
+      {
+        "level": 10,
+        "hitpoints": 1183,
+        "damage": 173
+      },
+      {
+        "level": 11,
+        "hitpoints": 1297,
+        "damage": 190
+      },
+      {
+        "level": 12,
+        "hitpoints": 1422,
+        "damage": 209
+      },
+      {
+        "level": 13,
+        "hitpoints": 1556,
+        "damage": 229
+      },
+      {
+        "level": 14,
+        "hitpoints": 1701,
+        "damage": 252
+      },
+      {
+        "level": 15,
+        "hitpoints": 1857,
+        "damage": 276
+      }
+    ]
+  },
+  {
+    "name": "Electro Dragon",
+    "hit_speed": 1.8,
+    "range": 5,
+    "count": 1,
+    "target": "Air&Ground",
+    "levels": [
+      {
+        "level": 6,
+        "hitpoints": 593,
+        "damage": 120
+      },
+      {
+        "level": 7,
+        "hitpoints": 652,
+        "damage": 132
+      },
+      {
+        "level": 8,
+        "hitpoints": 716,
+        "damage": 144
+      },
+      {
+        "level": 9,
+        "hitpoints": 786,
+        "damage": 159
+      },
+      {
+        "level": 10,
+        "hitpoints": 864,
+        "damage": 174
+      },
+      {
+        "level": 11,
+        "hitpoints": 949,
+        "damage": 192
+      },
+      {
+        "level": 12,
+        "hitpoints": 1042,
+        "damage": 210
+      },
+      {
+        "level": 13,
+        "hitpoints": 1146,
+        "damage": 231
+      },
+      {
+        "level": 14,
+        "hitpoints": 1257,
+        "damage": 254
+      },
+      {
+        "level": 15,
+        "hitpoints": 1380,
+        "damage": 279
+      },
+      {
+        "level": 16,
+        "hitpoints": 1517,
+        "damage": 306
+      }
+    ]
+  },
+  {
+    "name": "Electro Giant",
+    "hit_speed": 1.5,
+    "range": 0.8,
+    "count": 1,
+    "target": "Buildings",
+    "levels": [
+      {
+        "level": 6,
+        "hitpoints": 2409,
+        "damage": 102
+      },
+      {
+        "level": 7,
+        "hitpoints": 2650,
+        "damage": 112
+      },
+      {
+        "level": 8,
+        "hitpoints": 2906,
+        "damage": 123
+      },
+      {
+        "level": 9,
+        "hitpoints": 3192,
+        "damage": 135
+      },
+      {
+        "level": 10,
+        "hitpoints": 3508,
+        "damage": 149
+      },
+      {
+        "level": 11,
+        "hitpoints": 3855,
+        "damage": 163
+      },
+      {
+        "level": 12,
+        "hitpoints": 4231,
+        "damage": 179
+      },
+      {
+        "level": 13,
+        "hitpoints": 4653,
+        "damage": 197
+      },
+      {
+        "level": 14,
+        "hitpoints": 5105,
+        "damage": 216
+      },
+      {
+        "level": 15,
+        "hitpoints": 5602,
+        "damage": 238
+      },
+      {
+        "level": 16,
+        "hitpoints": 6159,
+        "damage": 261
+      }
+    ]
+  },
+  {
+    "name": "Electro Spirit",
+    "hit_speed": 1,
+    "range": 3,
+    "count": 1,
+    "target": "Air&Ground",
+    "levels": [
+      {
+        "level": 1,
+        "hitpoints": 90,
+        "damage": 39
+      },
+      {
+        "level": 2,
+        "hitpoints": 99,
+        "damage": 42
+      },
+      {
+        "level": 3,
+        "hitpoints": 108,
+        "damage": 47
+      },
+      {
+        "level": 4,
+        "hitpoints": 119,
+        "damage": 51
+      },
+      {
+        "level": 5,
+        "hitpoints": 131,
+        "damage": 56
+      },
+      {
+        "level": 6,
+        "hitpoints": 144,
+        "damage": 62
+      },
+      {
+        "level": 7,
+        "hitpoints": 158,
+        "damage": 68
+      },
+      {
+        "level": 8,
+        "hitpoints": 173,
+        "damage": 75
+      },
+      {
+        "level": 9,
+        "hitpoints": 190,
+        "damage": 82
+      },
+      {
+        "level": 10,
+        "hitpoints": 209,
+        "damage": 90
+      },
+      {
+        "level": 11,
+        "hitpoints": 230,
+        "damage": 99
+      },
+      {
+        "level": 12,
+        "hitpoints": 252,
+        "damage": 109
+      },
+      {
+        "level": 13,
+        "hitpoints": 278,
+        "damage": 120
+      },
+      {
+        "level": 14,
+        "hitpoints": 305,
+        "damage": 132
+      },
+      {
+        "level": 15,
+        "hitpoints": 334,
+        "damage": 145
+      },
+      {
+        "level": 16,
+        "hitpoints": 368,
+        "damage": 159
+      }
+    ]
+  },
+  {
+    "name": "Electro Wizard",
+    "hit_speed": 1.7,
+    "range": 5,
+    "count": 1,
+    "target": "Air&Ground",
+    "levels": [
+      {
+        "level": 9,
+        "hitpoints": 591,
+        "damage": 95
+      },
+      {
+        "level": 10,
+        "hitpoints": 650,
+        "damage": 104
+      },
+      {
+        "level": 11,
+        "hitpoints": 714,
+        "damage": 115
+      },
+      {
+        "level": 12,
+        "hitpoints": 783,
+        "damage": 126
+      },
+      {
+        "level": 13,
+        "hitpoints": 862,
+        "damage": 139
+      },
+      {
+        "level": 14,
+        "hitpoints": 945,
+        "damage": 152
+      },
+      {
+        "level": 15,
+        "hitpoints": 1037,
+        "damage": 167
+      }
+    ]
+  },
+  {
+    "name": "Elite Barbarians",
+    "hit_speed": 1.1,
+    "range": 0.7,
+    "count": 2,
+    "target": "Ground",
+    "levels": [
+      {
+        "level": 1,
+        "hitpoints": 524,
+        "damage": 150
+      },
+      {
+        "level": 2,
+        "hitpoints": 576,
+        "damage": 165
+      },
+      {
+        "level": 3,
+        "hitpoints": 634,
+        "damage": 181
+      },
+      {
+        "level": 4,
+        "hitpoints": 696,
+        "damage": 199
+      },
+      {
+        "level": 5,
+        "hitpoints": 765,
+        "damage": 219
+      },
+      {
+        "level": 6,
+        "hitpoints": 838,
+        "damage": 240
+      },
+      {
+        "level": 7,
+        "hitpoints": 922,
+        "damage": 264
+      },
+      {
+        "level": 8,
+        "hitpoints": 1011,
+        "damage": 289
+      },
+      {
+        "level": 9,
+        "hitpoints": 1110,
+        "damage": 318
+      },
+      {
+        "level": 10,
+        "hitpoints": 1220,
+        "damage": 349
+      },
+      {
+        "level": 11,
+        "hitpoints": 1341,
+        "damage": 384
+      },
+      {
+        "level": 12,
+        "hitpoints": 1472,
+        "damage": 421
+      },
+      {
+        "level": 13,
+        "hitpoints": 1619,
+        "damage": 463
+      },
+      {
+        "level": 14,
+        "hitpoints": 1776,
+        "damage": 508
+      },
+      {
+        "level": 15,
+        "hitpoints": 1949,
+        "damage": 558
+      },
+      {
+        "level": 16,
+        "hitpoints": 2143,
+        "damage": 613
+      }
+    ]
+  },
+  {
+    "name": "Elixir Golem",
+    "hit_speed": 1.2,
+    "range": 1.2,
+    "count": 1,
+    "target": "Buildings",
+    "levels": [
+      {
+        "level": 3,
+        "hitpoints": 741,
+        "damage": 119
+      },
+      {
+        "level": 4,
+        "hitpoints": 815,
+        "damage": 131
+      },
+      {
+        "level": 5,
+        "hitpoints": 896,
+        "damage": 144
+      },
+      {
+        "level": 6,
+        "hitpoints": 985,
+        "damage": 158
+      },
+      {
+        "level": 7,
+        "hitpoints": 1081,
+        "damage": 173
+      },
+      {
+        "level": 8,
+        "hitpoints": 1186,
+        "damage": 189
+      },
+      {
+        "level": 9,
+        "hitpoints": 1302,
+        "damage": 207
+      },
+      {
+        "level": 10,
+        "hitpoints": 1431,
+        "damage": 227
+      },
+      {
+        "level": 11,
+        "hitpoints": 1569,
+        "damage": 249
+      },
+      {
+        "level": 12,
+        "hitpoints": 1717,
+        "damage": 274
+      },
+      {
+        "level": 13,
+        "hitpoints": 1885,
+        "damage": 301
+      },
+      {
+        "level": 14,
+        "hitpoints": 2073,
+        "damage": 331
+      },
+      {
+        "level": 15,
+        "hitpoints": 2274,
+        "damage": 364
+      },
+      {
+        "level": 16,
+        "hitpoints": 2496,
+        "damage": 400
+      }
+    ]
+  },
+  {
+    "name": "Executioner",
+    "hit_speed": 1.1,
+    "range": 0.7,
+    "count": 1,
+    "target": "Air&Ground",
+    "levels": [
+      {
+        "level": 6,
+        "hitpoints": 800,
+        "damage": 105
+      },
+      {
+        "level": 7,
+        "hitpoints": 880,
+        "damage": 116
+      },
+      {
+        "level": 8,
+        "hitpoints": 965,
+        "damage": 127
+      },
+      {
+        "level": 9,
+        "hitpoints": 1060,
+        "damage": 139
+      },
+      {
+        "level": 10,
+        "hitpoints": 1165,
+        "damage": 153
+      },
+      {
+        "level": 11,
+        "hitpoints": 1280,
+        "damage": 168
+      },
+      {
+        "level": 12,
+        "hitpoints": 1405,
+        "damage": 185
+      },
+      {
+        "level": 13,
+        "hitpoints": 1545,
+        "damage": 203
+      },
+      {
+        "level": 14,
+        "hitpoints": 1695,
+        "damage": 223
+      },
+      {
+        "level": 15,
+        "hitpoints": 1860,
+        "damage": 245
+      }
+    ]
+  },
+  {
+    "name": "Firecracker",
+    "hit_speed": 1.1,
+    "range": 0.7,
+    "count": 1,
+    "target": "Air&Ground",
+    "levels": [
+      {
+        "level": 1,
+        "hitpoints": 119,
+        "damage": 25
+      },
+      {
+        "level": 2,
+        "hitpoints": 130,
+        "damage": 27
+      },
+      {
+        "level": 3,
+        "hitpoints": 143,
+        "damage": 30
+      },
+      {
+        "level": 4,
+        "hitpoints": 158,
+        "damage": 33
+      },
+      {
+        "level": 5,
+        "hitpoints": 173,
+        "damage": 36
+      },
+      {
+        "level": 6,
+        "hitpoints": 190,
+        "damage": 40
+      },
+      {
+        "level": 7,
+        "hitpoints": 209,
+        "damage": 44
+      },
+      {
+        "level": 8,
+        "hitpoints": 229,
+        "damage": 48
+      },
+      {
+        "level": 9,
+        "hitpoints": 252,
+        "damage": 53
+      },
+      {
+        "level": 10,
+        "hitpoints": 277,
+        "damage": 58
+      },
+      {
+        "level": 11,
+        "hitpoints": 304,
+        "damage": 64
+      },
+      {
+        "level": 12,
+        "hitpoints": 334,
+        "damage": 70
+      },
+      {
+        "level": 13,
+        "hitpoints": 367,
+        "damage": 77
+      },
+      {
+        "level": 14,
+        "hitpoints": 403,
+        "damage": 84
+      },
+      {
+        "level": 15,
+        "hitpoints": 442,
+        "damage": 93
+      },
+      {
+        "level": 16,
+        "hitpoints": 486,
+        "damage": 102
+      }
+    ]
+  },
+  {
+    "name": "Fire Spirit",
+    "hit_speed": 1,
+    "range": 3,
+    "count": 1,
+    "target": "Air&Ground",
+    "levels": [
+      {
+        "level": 1,
+        "hitpoints": 90,
+        "damage": 81
+      },
+      {
+        "level": 2,
+        "hitpoints": 99,
+        "damage": 89
+      },
+      {
+        "level": 3,
+        "hitpoints": 108,
+        "damage": 98
+      },
+      {
+        "level": 4,
+        "hitpoints": 119,
+        "damage": 107
+      },
+      {
+        "level": 5,
+        "hitpoints": 131,
+        "damage": 118
+      },
+      {
+        "level": 6,
+        "hitpoints": 144,
+        "damage": 129
+      },
+      {
+        "level": 7,
+        "hitpoints": 158,
+        "damage": 142
+      },
+      {
+        "level": 8,
+        "hitpoints": 173,
+        "damage": 156
+      },
+      {
+        "level": 9,
+        "hitpoints": 190,
+        "damage": 171
+      },
+      {
+        "level": 10,
+        "hitpoints": 209,
+        "damage": 188
+      },
+      {
+        "level": 11,
+        "hitpoints": 230,
+        "damage": 207
+      },
+      {
+        "level": 12,
+        "hitpoints": 252,
+        "damage": 227
+      },
+      {
+        "level": 13,
+        "hitpoints": 278,
+        "damage": 250
+      },
+      {
+        "level": 14,
+        "hitpoints": 305,
+        "damage": 274
+      },
+      {
+        "level": 15,
+        "hitpoints": 334,
+        "damage": 301
+      },
+      {
+        "level": 16,
+        "hitpoints": 368,
+        "damage": 331
+      }
+    ]
+  },
+  {
+    "name": "Fisherman",
+    "hit_speed": 1.1,
+    "range": 0.7,
+    "count": 1,
+    "target": "Ground",
+    "levels": [
+      {
+        "level": 9,
+        "hitpoints": 720,
+        "damage": 161
+      },
+      {
+        "level": 10,
+        "hitpoints": 792,
+        "damage": 176
+      },
+      {
+        "level": 11,
+        "hitpoints": 870,
+        "damage": 194
+      },
+      {
+        "level": 12,
+        "hitpoints": 955,
+        "damage": 213
+      },
+      {
+        "level": 13,
+        "hitpoints": 1050,
+        "damage": 234
+      },
+      {
+        "level": 14,
+        "hitpoints": 1152,
+        "damage": 257
+      },
+      {
+        "level": 15,
+        "hitpoints": 1264,
+        "damage": 282
+      },
+      {
+        "level": 16,
+        "hitpoints": 1390,
+        "damage": 310
+      }
+    ]
+  },
+  {
+    "name": "Flying Machine",
+    "hit_speed": 2,
+    "range": 0.7,
+    "count": 1,
+    "target": "Air&Ground",
+    "levels": [
+      {
+        "level": 3,
+        "hitpoints": 290,
+        "damage": 81
+      },
+      {
+        "level": 4,
+        "hitpoints": 319,
+        "damage": 89
+      },
+      {
+        "level": 5,
+        "hitpoints": 350,
+        "damage": 97
+      },
+      {
+        "level": 6,
+        "hitpoints": 384,
+        "damage": 107
+      },
+      {
+        "level": 7,
+        "hitpoints": 422,
+        "damage": 117
+      },
+      {
+        "level": 8,
+        "hitpoints": 463,
+        "damage": 129
+      },
+      {
+        "level": 9,
+        "hitpoints": 508,
+        "damage": 142
+      },
+      {
+        "level": 10,
+        "hitpoints": 559,
+        "damage": 156
+      },
+      {
+        "level": 11,
+        "hitpoints": 614,
+        "damage": 171
+      },
+      {
+        "level": 12,
+        "hitpoints": 674,
+        "damage": 188
+      },
+      {
+        "level": 13,
+        "hitpoints": 741,
+        "damage": 207
+      },
+      {
+        "level": 14,
+        "hitpoints": 813,
+        "damage": 227
+      },
+      {
+        "level": 15,
+        "hitpoints": 892,
+        "damage": 249
+      },
+      {
+        "level": 16,
+        "hitpoints": 981,
+        "damage": 274
+      }
+    ]
+  },
+  {
+    "name": "Furnace",
+    "hit_speed": 1.1,
+    "range": 0.7,
+    "count": 1,
+    "target": "Air&Ground",
+    "levels": []
+  },
+  {
+    "name": "Giant",
+    "hit_speed": 1.1,
+    "range": 0.7,
+    "count": 1,
+    "target": "Buildings",
+    "levels": [
+      {
+        "level": 3,
+        "hitpoints": 1933,
+        "damage": 119
+      },
+      {
+        "level": 4,
+        "hitpoints": 2125,
+        "damage": 131
+      },
+      {
+        "level": 5,
+        "hitpoints": 2333,
+        "damage": 144
+      },
+      {
+        "level": 6,
+        "hitpoints": 2556,
+        "damage": 158
+      },
+      {
+        "level": 7,
+        "hitpoints": 2812,
+        "damage": 174
+      },
+      {
+        "level": 8,
+        "hitpoints": 3084,
+        "damage": 191
+      },
+      {
+        "level": 9,
+        "hitpoints": 3387,
+        "damage": 209
+      },
+      {
+        "level": 10,
+        "hitpoints": 3723,
+        "damage": 230
+      },
+      {
+        "level": 11,
+        "hitpoints": 4090,
+        "damage": 253
+      },
+      {
+        "level": 12,
+        "hitpoints": 4490,
+        "damage": 278
+      },
+      {
+        "level": 13,
+        "hitpoints": 4937,
+        "damage": 305
+      },
+      {
+        "level": 14,
+        "hitpoints": 5417,
+        "damage": 335
+      },
+      {
+        "level": 15,
+        "hitpoints": 5944,
+        "damage": 368
+      },
+      {
+        "level": 16,
+        "hitpoints": 6535,
+        "damage": 404
+      }
+    ]
+  },
+  {
+    "name": "Giant Skeleton",
+    "hit_speed": 1.1,
+    "range": 0.7,
+    "count": 1,
+    "target": "Ground",
+    "levels": [
+      {
+        "level": 6,
+        "hitpoints": 2260,
+        "damage": 172
+      },
+      {
+        "level": 7,
+        "hitpoints": 2486,
+        "damage": 190
+      },
+      {
+        "level": 8,
+        "hitpoints": 2727,
+        "damage": 208
+      },
+      {
+        "level": 9,
+        "hitpoints": 2995,
+        "damage": 228
+      },
+      {
+        "level": 10,
+        "hitpoints": 3292,
+        "damage": 251
+      },
+      {
+        "level": 11,
+        "hitpoints": 3617,
+        "damage": 276
+      },
+      {
+        "level": 12,
+        "hitpoints": 3970,
+        "damage": 303
+      },
+      {
+        "level": 13,
+        "hitpoints": 4366,
+        "damage": 333
+      },
+      {
+        "level": 14,
+        "hitpoints": 4790,
+        "damage": 366
+      },
+      {
+        "level": 15,
+        "hitpoints": 5256,
+        "damage": 401
+      }
+    ]
+  },
+  {
+    "name": "Goblin Gang",
+    "hit_speed": 1.1,
+    "range": 0.7,
+    "count": 6,
+    "target": "Air&Ground",
+    "levels": [
+      {
+        "level": 1,
+        "hitpoints": 79,
+        "damage": 47
+      },
+      {
+        "level": 2,
+        "hitpoints": 86,
+        "damage": 51
+      },
+      {
+        "level": 3,
+        "hitpoints": 95,
+        "damage": 56
+      },
+      {
+        "level": 4,
+        "hitpoints": 105,
+        "damage": 62
+      },
+      {
+        "level": 5,
+        "hitpoints": 115,
+        "damage": 68
+      },
+      {
+        "level": 6,
+        "hitpoints": 126,
+        "damage": 75
+      },
+      {
+        "level": 7,
+        "hitpoints": 139,
+        "damage": 82
+      },
+      {
+        "level": 8,
+        "hitpoints": 152,
+        "damage": 90
+      },
+      {
+        "level": 9,
+        "hitpoints": 167,
+        "damage": 99
+      },
+      {
+        "level": 10,
+        "hitpoints": 184,
+        "damage": 109
+      },
+      {
+        "level": 11,
+        "hitpoints": 202,
+        "damage": 120
+      },
+      {
+        "level": 12,
+        "hitpoints": 221,
+        "damage": 132
+      },
+      {
+        "level": 13,
+        "hitpoints": 244,
+        "damage": 145
+      },
+      {
+        "level": 14,
+        "hitpoints": 267,
+        "damage": 159
+      },
+      {
+        "level": 15,
+        "hitpoints": 293,
+        "damage": 175
+      },
+      {
+        "level": 16,
+        "hitpoints": 323,
+        "damage": 182
+      }
+    ]
+  },
+  {
+    "name": "Goblin Giant",
+    "hit_speed": 1.2,
+    "range": 1.2,
+    "count": 1,
+    "target": "Buildings",
+    "levels": [
+      {
+        "level": 9,
+        "hitpoints": 1780,
+        "damage": 175
+      },
+      {
+        "level": 10,
+        "hitpoints": 1957,
+        "damage": 193
+      },
+      {
+        "level": 11,
+        "hitpoints": 2150,
+        "damage": 212
+      },
+      {
+        "level": 12,
+        "hitpoints": 2360,
+        "damage": 233
+      },
+      {
+        "level": 13,
+        "hitpoints": 2595,
+        "damage": 256
+      },
+      {
+        "level": 14,
+        "hitpoints": 2847,
+        "damage": 281
+      },
+      {
+        "level": 15,
+        "hitpoints": 3124,
+        "damage": 308
+      }
+    ]
+  },
+  {
+    "name": "Goblin Machine",
+    "hit_speed": 1.2,
+    "range": 1.2,
+    "count": 1,
+    "target": "Buildings",
+    "levels": [
+      {
+        "level": 9,
+        "hitpoints": 1780,
+        "damage": 175
+      },
+      {
+        "level": 10,
+        "hitpoints": 1957,
+        "damage": 193
+      },
+      {
+        "level": 11,
+        "hitpoints": 2150,
+        "damage": 212
+      },
+      {
+        "level": 12,
+        "hitpoints": 2360,
+        "damage": 233
+      },
+      {
+        "level": 13,
+        "hitpoints": 2595,
+        "damage": 256
+      },
+      {
+        "level": 14,
+        "hitpoints": 2847,
+        "damage": 281
+      },
+      {
+        "level": 15,
+        "hitpoints": 3124,
+        "damage": 308
+      }
+    ]
+  },
+  {
+    "name": "Goblins",
+    "hit_speed": 1.2,
+    "range": 1.2,
+    "count": 4,
+    "target": "Ground",
+    "levels": [
+      {
+        "level": 1,
+        "hitpoints": 79,
+        "damage": 47
+      },
+      {
+        "level": 2,
+        "hitpoints": 86,
+        "damage": 51
+      },
+      {
+        "level": 3,
+        "hitpoints": 95,
+        "damage": 56
+      },
+      {
+        "level": 4,
+        "hitpoints": 105,
+        "damage": 62
+      },
+      {
+        "level": 5,
+        "hitpoints": 115,
+        "damage": 68
+      },
+      {
+        "level": 6,
+        "hitpoints": 126,
+        "damage": 75
+      },
+      {
+        "level": 7,
+        "hitpoints": 139,
+        "damage": 82
+      },
+      {
+        "level": 8,
+        "hitpoints": 152,
+        "damage": 90
+      },
+      {
+        "level": 9,
+        "hitpoints": 167,
+        "damage": 99
+      },
+      {
+        "level": 10,
+        "hitpoints": 184,
+        "damage": 109
+      },
+      {
+        "level": 11,
+        "hitpoints": 202,
+        "damage": 120
+      },
+      {
+        "level": 12,
+        "hitpoints": 221,
+        "damage": 132
+      },
+      {
+        "level": 13,
+        "hitpoints": 244,
+        "damage": 145
+      },
+      {
+        "level": 14,
+        "hitpoints": 267,
+        "damage": 159
+      },
+      {
+        "level": 15,
+        "hitpoints": 293,
+        "damage": 175
+      },
+      {
+        "level": 16,
+        "hitpoints": 323,
+        "damage": 182
+      }
+    ]
+  },
+  {
+    "name": "Goblinstein",
+    "hit_speed": 1.2,
+    "range": 1.2,
+    "count": 1,
+    "target": "Air&Ground",
+    "levels": [
+      {
+        "level": 11,
+        "hitpoints": 721,
+        "damage":92
+      },
+      {
+        "level": 12,
+        "hitpoints": 793,
+        "damage": 101
+      },
+      {
+        "level": 13,
+        "hitpoints": 872,
+        "damage": 111
+      },
+      {
+        "level": 14,
+        "hitpoints": 958,
+        "damage": 122
+      },
+      {
+        "level": 15,
+        "hitpoints": 1052,
+        "damage": 134
+      }
+    ]
+  },
+  {
+    "name": "Golden Knight",
+    "hit_speed": 1.2,
+    "range": 1.2,
+    "count": 1,
+    "target": "Ground",
+    "levels": [
+      {
+        "level": 11,
+        "hitpoints": 1799,
+        "damage": 161
+      },
+      {
+        "level": 12,
+        "hitpoints": 1975,
+        "damage": 177
+      },
+      {
+        "level": 13,
+        "hitpoints": 2172,
+        "damage": 194
+      },
+      {
+        "level": 14,
+        "hitpoints": 2383,
+        "damage": 213
+      },
+      {
+        "level": 15,
+        "hitpoints": 2615,
+        "damage": 234
+      },
+      {
+        "level": 16,
+        "hitpoints": 2875,
+        "damage": 257
+      }
+    ]
+  },
+  {
+    "name": "Golem",
+    "hit_speed": 1.2,
+    "range": 1.2,
+    "count": 1,
+    "target": "Buildings",
+    "levels": [
+      {
+        "level": 6,
+        "hitpoints": 3200,
+        "damage": 199
+      },
+      {
+        "level": 7,
+        "hitpoints": 3500,
+        "damage": 219
+      },
+      {
+        "level": 8,
+        "hitpoints": 3800,
+        "damage": 240
+      },
+      {
+        "level": 9,
+        "hitpoints": 4200,
+        "damage": 264
+      },
+      {
+        "level": 10,
+        "hitpoints": 4600,
+        "damage": 289
+      },
+      {
+        "level": 11,
+        "hitpoints": 5050,
+        "damage": 318
+      },
+      {
+        "level": 12,
+        "hitpoints": 5560,
+        "damage": 348
+      },
+      {
+        "level": 13,
+        "hitpoints": 6096,
+        "damage": 383
+      },
+      {
+        "level": 14,
+        "hitpoints": 6782,
+        "damage": 420
+      },
+      {
+        "level": 15,
+        "hitpoints": 7482,
+        "damage": 461
+      },
+      {
+        "level": 16,
+        "hitpoints": 8120,
+        "damage":507
+      }
+    ]
+  },
+  {
+    "name": "Guards",
+    "hit_speed": 1.2,
+    "range": 1.2,
+    "count": 1,
+    "target": "Ground",
+    "levels": [
+      {
+        "level": 6,
+        "hitpoints": 51,
+        "damage": 160
+      },
+      {
+        "level": 7,
+        "hitpoints": 56,
+        "damage": 176
+      },
+      {
+        "level": 8,
+        "hitpoints": 61,
+        "damage": 193
+      },
+      {
+        "level": 9,
+        "hitpoints": 67,
+        "damage": 212
+      },
+      {
+        "level": 10,
+        "hitpoints": 74,
+        "damage": 233
+      },
+      {
+        "level": 11,
+        "hitpoints": 81,
+        "damage": 256
+      },
+      {
+        "level": 12,
+        "hitpoints": 89,
+        "damage": 281
+      },
+      {
+        "level": 13,
+        "hitpoints": 98,
+        "damage": 309
+      },
+      {
+        "level": 14,
+        "hitpoints": 108,
+        "damage": 339
+      },
+      {
+        "level": 15,
+        "hitpoints": 119,
+        "damage": 372
+      },
+      {
+        "level": 16,
+        "hitpoints": 130,
+        "damage": 409
+      }
+    ]
+  },
+  {
+    "name": "Hog Rider",
+    "hit_speed": 1.2,
+    "range": 1.2,
+    "count": 1,
+    "target": "Buildings",
+    "levels": [
+      {
+        "level": 3,
+        "hitpoints": 802,
+        "damage": 150
+      },
+      {
+        "level": 4,
+        "hitpoints": 881,
+        "damage": 164
+      },
+      {
+        "level": 5,
+        "hitpoints": 967,
+        "damage": 181
+      },
+      {
+        "level": 6,
+        "hitpoints": 1060,
+        "damage": 198
+      },
+      {
+        "level": 7,
+        "hitpoints": 1166,
+        "damage": 218
+      },
+      {
+        "level": 8,
+        "hitpoints": 1279,
+        "damage": 239
+      },
+      {
+        "level": 9,
+        "hitpoints": 1405,
+        "damage": 262
+      },
+      {
+        "level": 10,
+        "hitpoints": 1544,
+        "damage": 288
+      },
+      {
+        "level": 11,
+        "hitpoints": 1697,
+        "damage": 317
+      },
+      {
+        "level": 12,
+        "hitpoints": 1863,
+        "damage": 348
+      },
+      {
+        "level": 13,
+        "hitpoints": 2048,
+        "damage": 383
+      },
+      {
+        "level": 14,
+        "hitpoints": 2247,
+        "damage": 420
+      },
+      {
+        "level": 15,
+        "hitpoints": 2466,
+        "damage": 461
+      },
+      {
+        "level": 16,
+        "hitpoints": 2711,
+        "damage": 507
+      }
+    ]
+  },
+  {
+    "name": "Hunter",
+    "hit_speed": 1.2,
+    "range": 1.2,
+    "count": 1,
+    "target": "Air&Ground",
+    "levels": [
+      {
+        "level": 6,
+        "hitpoints": 553,
+        "damage": 52
+      },
+      {
+        "level": 7,
+        "hitpoints": 608,
+        "damage": 58
+      },
+      {
+        "level": 8,
+        "hitpoints": 667,
+        "damage": 63
+      },
+      {
+        "level": 9,
+        "hitpoints": 733,
+        "damage": 69
+      },
+      {
+        "level": 10,
+        "hitpoints": 806,
+        "damage": 76
+      },
+      {
+        "level": 11,
+        "hitpoints": 885,
+        "damage": 84
+      },
+      {
+        "level": 12,
+        "hitpoints": 972,
+        "damage": 92
+      },
+      {
+        "level": 13,
+        "hitpoints": 1069,
+        "damage": 101
+      },
+      {
+        "level": 14,
+        "hitpoints": 1172,
+        "damage": 111
+      },
+      {
+        "level": 15,
+        "hitpoints": 1287,
+        "damage": 122
+      },
+      {
+        "level": 16,
+        "hitpoints": 1415,
+        "damage": 134
+      }
+    ]
+  },
+  {
+    "name": "Heal Spirit",
+    "hit_speed": 1.2,
+    "range": 1.2,
+    "count": 1,
+    "target": "Air&Ground",
+    "levels": [
+      {
+        "level": 3,
+        "hitpoints": 108,
+        "damage": 52
+      },
+      {
+        "level": 4,
+        "hitpoints": 119,
+        "damage": 57
+      },
+      {
+        "level": 5,
+        "hitpoints": 131,
+        "damage": 62
+      },
+      {
+        "level": 6,
+        "hitpoints": 144,
+        "damage": 68
+      },
+      {
+        "level": 7,
+        "hitpoints": 158,
+        "damage": 75
+      },
+      {
+        "level": 8,
+        "hitpoints": 173,
+        "damage": 82
+      },
+      {
+        "level": 9,
+        "hitpoints": 190,
+        "damage": 91
+      },
+      {
+        "level": 10,
+        "hitpoints": 209,
+        "damage": 100
+      },
+      {
+        "level": 11,
+        "hitpoints": 230,
+        "damage": 110
+      },
+      {
+        "level": 12,
+        "hitpoints": 252,
+        "damage": 120
+      },
+      {
+        "level": 13,
+        "hitpoints": 278,
+        "damage": 132
+      },
+      {
+        "level": 14,
+        "hitpoints": 305,
+        "damage": 145
+      },
+      {
+        "level": 15,
+        "hitpoints": 334,
+        "damage": 159
+      },
+      {
+        "level": 16,
+        "hitpoints": 368,
+        "damage": 175
+      }
+    ]
+  },
+  {
+    "name": "Ice Golem",
+    "hit_speed": 1.2,
+    "range": 1.2,
+    "count": 1,
+    "target": "Buildings",
+    "levels": [
+      {
+        "level": 3,
+        "hitpoints": 621,
+        "damage": 39
+      },
+      {
+        "level": 4,
+        "hitpoints": 683,
+        "damage": 43
+      },
+      {
+        "level": 5,
+        "hitpoints": 750,
+        "damage": 48
+      },
+      {
+        "level": 6,
+        "hitpoints": 822,
+        "damage": 52
+      },
+      {
+        "level": 7,
+        "hitpoints": 904,
+        "damage": 58
+      },
+      {
+        "level": 8,
+        "hitpoints": 992,
+        "damage": 63
+      },
+      {
+        "level": 9,
+        "hitpoints": 1089,
+        "damage": 69
+      },
+      {
+        "level": 10,
+        "hitpoints": 1197,
+        "damage": 76
+      },
+      {
+        "level": 11,
+        "hitpoints": 1315,
+        "damage": 84
+      },
+      {
+        "level": 12,
+        "hitpoints": 1444,
+        "damage": 92
+      },
+      {
+        "level": 13,
+        "hitpoints": 1588,
+        "damage": 101
+      },
+      {
+        "level": 14,
+        "hitpoints": 1742,
+        "damage": 111
+      },
+      {
+        "level": 15,
+        "hitpoints": 1912,
+        "damage": 122
+      },
+      {
+        "level": 16,
+        "hitpoints": 2102,
+        "damage": 134
+      }
+    ]
+  },
+  {
+    "name": "Ice Spirit",
+    "hit_speed": 1.2,
+    "range": 1.2,
+    "count": 1,
+    "target": "Air&Ground",
+    "levels": [
+      {
+        "level": 1,
+        "hitpoints": 90,
+        "damage": 43
+      },
+      {
+        "level": 2,
+        "hitpoints": 99,
+        "damage": 47
+      },
+      {
+        "level": 3,
+        "hitpoints": 108,
+        "damage": 52
+      },
+      {
+        "level": 4,
+        "hitpoints": 119,
+        "damage": 57
+      },
+      {
+        "level": 5,
+        "hitpoints": 131,
+        "damage": 62
+      },
+      {
+        "level": 6,
+        "hitpoints": 144,
+        "damage": 68
+      },
+      {
+        "level": 7,
+        "hitpoints": 158,
+        "damage": 75
+      },
+      {
+        "level": 8,
+        "hitpoints": 173,
+        "damage": 82
+      },
+      {
+        "level": 9,
+        "hitpoints": 190,
+        "damage": 91
+      },
+      {
+        "level": 10,
+        "hitpoints": 209,
+        "damage": 100
+      },
+      {
+        "level": 11,
+        "hitpoints": 230,
+        "damage": 110
+      },
+      {
+        "level": 12,
+        "hitpoints": 252,
+        "damage": 120
+      },
+      {
+        "level": 13,
+        "hitpoints": 278,
+        "damage": 132
+      },
+      {
+        "level": 14,
+        "hitpoints": 305,
+        "damage": 145
+      },
+      {
+        "level": 15,
+        "hitpoints": 334,
+        "damage": 159
+      },
+      {
+        "level": 16,
+        "hitpoints": 368,
+        "damage": 175
+      }
+    ]
+  },
+  {
+    "name": "Ice Wizard",
+    "hit_speed": 1.2,
+    "range": 1.2,
+    "count": 1,
+    "target": "Air&Ground",
+    "levels": [
+      {
+        "level": 9,
+        "hitpoints": 570,
+        "damage": 74
+      },
+      {
+        "level": 10,
+        "hitpoints": 626,
+        "damage": 81
+      },
+      {
+        "level": 11,
+        "hitpoints": 688,
+        "damage": 89
+      },
+      {
+        "level": 12,
+        "hitpoints": 755,
+        "damage": 98
+      },
+      {
+        "level": 13,
+        "hitpoints": 831,
+        "damage": 108
+      },
+      {
+        "level": 14,
+        "hitpoints": 911,
+        "damage": 118
+      },
+      {
+        "level": 15,
+        "hitpoints": 1000,
+        "damage": 130
+      }
+    ]
+  },
+  {
+    "name": "Inferno Dragon",
+    "hit_speed": 1.2,
+    "range": 1.2,
+    "count": 1,
+    "target": "Air&Ground",
+    "levels": [
+      {
+        "level": 9,
+        "hitpoints": 1072,
+        "damage": 29
+      },
+      {
+        "level": 10,
+        "hitpoints": 1178,
+        "damage": 32
+      },
+      {
+        "level": 11,
+        "hitpoints": 1295,
+        "damage": 35
+      },
+      {
+        "level": 12,
+        "hitpoints": 1421,
+        "damage": 39
+      },
+      {
+        "level": 13,
+        "hitpoints": 1563,
+        "damage": 43
+      },
+      {
+        "level": 14,
+        "hitpoints": 1715,
+        "damage": 47
+      },
+      {
+        "level": 15,
+        "hitpoints": 1882,
+        "damage": 52
+      },
+      {
+        "level": 16,
+        "hitpoints": 2069,
+        "damage": 57
+      }
+    ]
+  },
+  {
+    "name": "Knight",
+    "hit_speed": 1.2,
+    "range": 1.2,
+    "count": 1,
+    "target": "Ground",
+    "levels": [
+      {
+        "level": 1,
+        "hitpoints": 690,
+        "damage": 79
+      },
+      {
+        "level": 2,
+        "hitpoints": 759,
+        "damage": 86
+      },
+      {
+        "level": 3,
+        "hitpoints": 834,
+        "damage": 95
+      },
+      {
+        "level": 4,
+        "hitpoints": 917,
+        "damage": 105
+      },
+      {
+        "level": 5,
+        "hitpoints": 1007,
+        "damage": 115
+      },
+      {
+        "level": 6,
+        "hitpoints": 1104,
+        "damage": 126
+      },
+      {
+        "level": 7,
+        "hitpoints": 1214,
+        "damage": 139
+      },
+      {
+        "level": 8,
+        "hitpoints": 1331,
+        "damage": 152
+      },
+      {
+        "level": 9,
+        "hitpoints": 1462,
+        "damage": 167
+      },
+      {
+        "level": 10,
+        "hitpoints": 1607,
+        "damage": 184
+      },
+      {
+        "level": 11,
+        "hitpoints": 1766,
+        "damage": 202
+      },
+      {
+        "level": 12,
+        "hitpoints": 1938,
+        "damage": 221
+      },
+      {
+        "level": 13,
+        "hitpoints": 2132,
+        "damage": 244
+      },
+      {
+        "level": 14,
+        "hitpoints": 2339,
+        "damage": 267
+      },
+      {
+        "level": 15,
+        "hitpoints": 2566,
+        "damage": 293
+      },
+      {
+        "level": 16,
+        "hitpoints": 2822,
+        "damage": 323
+      }
+    ]
+  },
+  {
+    "name": "Lava Hound",
+    "hit_speed": 1.2,
+    "range": 1.2,
+    "count": 1,
+    "target": "Buildings",
+    "levels": [
+      {
+        "level": 9,
+        "hitpoints": 3000,
+        "damage": 60
+      },
+      {
+        "level": 10,
+        "hitpoints": 3300,
+        "damage": 66
+      },
+      {
+        "level": 11,
+        "hitpoints": 3630,
+        "damage": 73
+      },
+      {
+        "level": 12,
+        "hitpoints": 3993,
+        "damage": 80
+      },
+      {
+        "level": 13,
+        "hitpoints": 4383,
+        "damage": 88
+      },
+      {
+        "level": 14,
+        "hitpoints": 4820,
+        "damage": 96
+      },
+      {
+        "level": 15,
+        "hitpoints": 5288,
+        "damage": 105
+      }
+    ]
+  },
+  {
+    "name": "Little Prince",
+    "hit_speed": 1.2,
+    "range": 1.2,
+    "count": 1,
+    "target": "Air&Ground",
+    "levels": []
+  },
+  {
+    "name": "Lumberjack",
+    "hit_speed": 1.2,
+    "range": 1.2,
+    "count": 1,
+    "target": "Ground",
+    "levels": [
+      {
+        "level": 9,
+        "hitpoints": 1060,
+        "damage": 212
+      },
+      {
+        "level": 10,
+        "hitpoints": 1166,
+        "damage": 233
+      },
+      {
+        "level": 11,
+        "hitpoints": 1282,
+        "damage": 256
+      },
+      {
+        "level": 12,
+        "hitpoints": 1409,
+        "damage": 281
+      },
+      {
+        "level": 13,
+        "hitpoints": 1547,
+        "damage": 309
+      },
+      {
+        "level": 14,
+        "hitpoints": 1696,
+        "damage": 339
+      },
+      {
+        "level": 15,
+        "hitpoints": 1863,
+        "damage": 372
+      },
+      {
+        "level": 16,
+        "hitpoints": 2049,
+        "damage": 409
+      }
+    ]
+  },
+  {
+    "name": "Magic Archer",
+    "hit_speed": 1.2,
+    "range": 1.2,
+    "count": 1,
+    "target": "Air&Ground",
+    "levels": [
+      {
+        "level": 9,
+        "hitpoints": 438,
+        "damage": 110
+      },
+      {
+        "level": 10,
+        "hitpoints": 482,
+        "damage": 121
+      },
+      {
+        "level": 11,
+        "hitpoints": 529,
+        "damage": 133
+      },
+      {
+        "level": 12,
+        "hitpoints": 581,
+        "damage": 146
+      },
+      {
+        "level": 13,
+        "hitpoints": 639,
+        "damage": 160
+      },
+      {
+        "level": 14,
+        "hitpoints": 701,
+        "damage": 176
+      },
+      {
+        "level": 15,
+        "hitpoints": 770,
+        "damage": 193
+      }
+    ]
+  },
+  {
+    "name": "Mega Knight",
+    "hit_speed": 1.2,
+    "range": 1.2,
+    "count": 1,
+    "target": "Ground",
+    "levels": [
+      {
+        "level": 9,
+        "hitpoints": 3307,
+        "damage": 222
+      },
+      {
+        "level": 10,
+        "hitpoints": 3634,
+        "damage": 244
+      },
+      {
+        "level": 11,
+        "hitpoints": 3993,
+        "damage": 268
+      },
+      {
+        "level": 12,
+        "hitpoints": 4383,
+        "damage": 295
+      },
+      {
+        "level": 13,
+        "hitpoints": 4820,
+        "damage": 324
+      },
+      {
+        "level": 14,
+        "hitpoints": 5288,
+        "damage": 355
+      },
+      {
+        "level": 15,
+        "hitpoints": 5803,
+        "damage": 390
+      },
+      {
+        "level": 16,
+        "hitpoints": 6380,
+        "damage": 429
+      }
+    ]
+  },
+  {
+    "name": "Mega Minion",
+    "hit_speed": 1.2,
+    "range": 1.2,
+    "count": 1,
+    "target": "Air&Ground",
+    "levels": [
+      {
+        "level": 3,
+        "hitpoints": 395,
+        "damage": 147
+      },
+      {
+        "level": 4,
+        "hitpoints": 434,
+        "damage": 162
+      },
+      {
+        "level": 5,
+        "hitpoints": 477,
+        "damage": 178
+      },
+      {
+        "level": 6,
+        "hitpoints": 523,
+        "damage": 195
+      },
+      {
+        "level": 7,
+        "hitpoints": 575,
+        "damage": 214
+      },
+      {
+        "level": 8,
+        "hitpoints": 631,
+        "damage": 235
+      },
+      {
+        "level": 9,
+        "hitpoints": 693,
+        "damage": 258
+      },
+      {
+        "level": 10,
+        "hitpoints": 761,
+        "damage": 284
+      },
+      {
+        "level": 11,
+        "hitpoints": 837,
+        "damage": 312
+      },
+      {
+        "level": 12,
+        "hitpoints": 918,
+        "damage": 342
+      },
+      {
+        "level": 13,
+        "hitpoints": 1010,
+        "damage": 376
+      },
+      {
+        "level": 14,
+        "hitpoints": 1108,
+        "damage": 413
+      },
+      {
+        "level": 15,
+        "hitpoints": 1216,
+        "damage": 453
+      },
+      {
+        "level": 16,
+        "hitpoints": 1337,
+        "damage": 498
+      }
+    ]
+  },
+  {
+    "name": "Mighty Miner",
+    "hit_speed": 1.2,
+    "range": 1.2,
+    "count": 1,
+    "target": "Ground",
+    "levels": [
+      {
+        "level": 11,
+        "hitpoints": 2250,
+        "damage": 40
+      },
+      {
+        "level": 12,
+        "hitpoints": 2469,
+        "damage": 44
+      },
+      {
+        "level": 13,
+        "hitpoints": 2716,
+        "damage": 49
+      },
+      {
+        "level": 14,
+        "hitpoints": 2979,
+        "damage": 54
+      },
+      {
+        "level": 15,
+        "hitpoints": 3269,
+        "damage": 59
+      }
+    ]
+  },
+  {
+    "name": "Miner",
+    "hit_speed": 1.2,
+    "range": 1.2,
+    "count": 1,
+    "target": "Ground",
+    "levels": [
+      {
+        "level": 9,
+        "hitpoints": 1002,
+        "damage": 161
+      },
+      {
+        "level": 10,
+        "hitpoints": 1102,
+        "damage": 177
+      },
+      {
+        "level": 11,
+        "hitpoints": 1210,
+        "damage": 194
+      },
+      {
+        "level": 12,
+        "hitpoints": 1329,
+        "damage": 213
+      },
+      {
+        "level": 13,
+        "hitpoints": 1461,
+        "damage": 234
+      },
+      {
+        "level": 14,
+        "hitpoints": 1603,
+        "damage": 257
+      },
+      {
+        "level": 15,
+        "hitpoints": 1759,
+        "damage": 282
+      },
+      {
+        "level": 16,
+        "hitpoints": 1934,
+        "damage": 310
+      }
+    ]
+  },
+  {
+    "name": "Mini P.E.K.K.A.",
+    "hit_speed": 1.2,
+    "range": 1.2,
+    "count": 1,
+    "target": "Ground",
+    "levels": [
+      {
+        "level": 3,
+        "hitpoints": 677,
+        "damage": 355
+      },
+      {
+        "level": 4,
+        "hitpoints": 744,
+        "damage": 390
+      },
+      {
+        "level": 5,
+        "hitpoints": 817,
+        "damage": 429
+      },
+      {
+        "level": 6,
+        "hitpoints": 896,
+        "damage": 471
+      },
+      {
+        "level": 7,
+        "hitpoints": 985,
+        "damage": 518
+      },
+      {
+        "level": 8,
+        "hitpoints": 1080,
+        "damage": 569
+      },
+      {
+        "level": 9,
+        "hitpoints": 1187,
+        "damage": 625
+      },
+      {
+        "level": 10,
+        "hitpoints": 1304,
+        "damage": 687
+      },
+      {
+        "level": 11,
+        "hitpoints": 1433,
+        "damage": 755
+      },
+      {
+        "level": 12,
+        "hitpoints": 1573,
+        "damage": 828
+      },
+      {
+        "level": 13,
+        "hitpoints": 1730,
+        "damage": 909
+      },
+      {
+        "level": 14,
+        "hitpoints": 1898,
+        "damage": 1000
+      },
+      {
+        "level": 15,
+        "hitpoints": 2083,
+        "damage": 1100
+      },
+      {
+        "level": 16,
+        "hitpoints": 2290,
+        "damage": 1206
+      }
+    ]
+  },
+  {
+    "name": "Minion Horde",
+    "hit_speed": 1.2,
+    "range": 1.2,
+    "count": 5,
+    "target": "Air&Ground",
+    "levels": [
+      {
+        "level": 1,
+        "hitpoints": 90,
+        "damage": 42
+      },
+      {
+        "level": 2,
+        "hitpoints": 99,
+        "damage": 46
+      },
+      {
+        "level": 3,
+        "hitpoints": 108,
+        "damage": 50
+      },
+      {
+        "level": 4,
+        "hitpoints": 119,
+        "damage": 55
+      },
+      {
+        "level": 5,
+        "hitpoints": 131,
+        "damage": 61
+      },
+      {
+        "level": 6,
+        "hitpoints": 144,
+        "damage": 67
+      },
+      {
+        "level": 7,
+        "hitpoints": 158,
+        "damage": 73
+      },
+      {
+        "level": 8,
+        "hitpoints": 173,
+        "damage": 80
+      },
+      {
+        "level": 9,
+        "hitpoints": 190,
+        "damage": 88
+      },
+      {
+        "level": 10,
+        "hitpoints": 209,
+        "damage": 97
+      },
+      {
+        "level": 11,
+        "hitpoints": 230,
+        "damage": 107
+      },
+      {
+        "level": 12,
+        "hitpoints": 252,
+        "damage": 117
+      },
+      {
+        "level": 13,
+        "hitpoints": 278,
+        "damage": 129
+      },
+      {
+        "level": 14,
+        "hitpoints": 305,
+        "damage": 142
+      },
+      {
+        "level": 15,
+        "hitpoints": 334,
+        "damage": 156
+      },
+      {
+        "level": 16,
+        "hitpoints": 368,
+        "damage": 171
+      }
+    ]
+  },
+  {
+    "name": "Minions",
+    "hit_speed": 1.2,
+    "range": 1.2,
+    "count": 3,
+    "target": "Air&Ground",
+    "levels": [
+      {
+        "level": 1,
+        "hitpoints": 90,
+        "damage": 42
+      },
+      {
+        "level": 2,
+        "hitpoints": 99,
+        "damage": 46
+      },
+      {
+        "level": 3,
+        "hitpoints": 108,
+        "damage": 50
+      },
+      {
+        "level": 4,
+        "hitpoints": 119,
+        "damage": 55
+      },
+      {
+        "level": 5,
+        "hitpoints": 131,
+        "damage": 61
+      },
+      {
+        "level": 6,
+        "hitpoints": 144,
+        "damage": 67
+      },
+      {
+        "level": 7,
+        "hitpoints": 158,
+        "damage": 73
+      },
+      {
+        "level": 8,
+        "hitpoints": 173,
+        "damage": 81
+      },
+      {
+        "level": 9,
+        "hitpoints": 190,
+        "damage": 89
+      },
+      {
+        "level": 10,
+        "hitpoints": 209,
+        "damage": 97
+      },
+      {
+        "level": 11,
+        "hitpoints": 230,
+        "damage": 107
+      },
+      {
+        "level": 12,
+        "hitpoints": 252,
+        "damage": 118
+      },
+      {
+        "level": 13,
+        "hitpoints": 278,
+        "damage": 129
+      },
+      {
+        "level": 14,
+        "hitpoints": 305,
+        "damage": 142
+      },
+      {
+        "level": 15,
+        "hitpoints": 334,
+        "damage": 156
+      },
+      {
+        "level": 16,
+        "hitpoints": 368,
+        "damage": 171
+      }
+    ]
+  },
+  {
+    "name": "Monk",
+    "hit_speed": 1.2,
+    "range": 1.2,
+    "count": 1,
+    "target": "Ground",
+    "levels": [
+      {
+        "level": 11,
+        "hitpoints": 2150,
+        "damage": 140
+      },
+      {
+        "level": 12,
+        "hitpoints": 2360,
+        "damage": 154
+      },
+      {
+        "level": 13,
+        "hitpoints": 2595,
+        "damage": 169
+      },
+      {
+        "level": 14,
+        "hitpoints": 2847,
+        "damage": 186
+      },
+      {
+        "level": 15,
+        "hitpoints": 3124,
+        "damage": 204
+      },
+      {
+        "level": 16,
+        "hitpoints": 3537,
+        "damage": 224
+      }
+    ]
+  },
+  {
+    "name": "Mother Witch",
+    "hit_speed": 1.2,
+    "range": 1.2,
+    "count": 1,
+    "target": "Air&Ground",
+    "levels": [
+      {
+        "level": 9,
+        "hitpoints": 570,
+        "damage": 74
+      },
+      {
+        "level": 10,
+        "hitpoints": 626,
+        "damage": 81
+      },
+      {
+        "level": 11,
+        "hitpoints": 688,
+        "damage": 89
+      },
+      {
+        "level": 12,
+        "hitpoints": 755,
+        "damage": 98
+      },
+      {
+        "level": 13,
+        "hitpoints": 831,
+        "damage": 108
+      },
+      {
+        "level": 14,
+        "hitpoints": 911,
+        "damage": 118
+      },
+      {
+        "level": 15,
+        "hitpoints": 1000,
+        "damage": 130
+      }
+    ]
+  },
+  {
+    "name": "Musketeer",
+    "hit_speed": 1.2,
+    "range": 1.2,
+    "count": 1,
+    "target": "Air&Ground",
+    "levels": [
+      {
+        "level": 3,
+        "hitpoints": 341,
+        "damage": 102
+      },
+      {
+        "level": 4,
+        "hitpoints": 375,
+        "damage": 113
+      },
+      {
+        "level": 5,
+        "hitpoints": 411,
+        "damage": 124
+      },
+      {
+        "level": 6,
+        "hitpoints": 451,
+        "damage": 136
+      },
+      {
+        "level": 7,
+        "hitpoints": 496,
+        "damage": 149
+      },
+      {
+        "level": 8,
+        "hitpoints": 544,
+        "damage": 164
+      },
+      {
+        "level": 9,
+        "hitpoints": 597,
+        "damage": 180
+      },
+      {
+        "level": 10,
+        "hitpoints": 657,
+        "damage": 198
+      },
+      {
+        "level": 11,
+        "hitpoints": 721,
+        "damage": 217
+      },
+      {
+        "level": 12,
+        "hitpoints": 792,
+        "damage": 238
+      },
+      {
+        "level": 13,
+        "hitpoints": 871,
+        "damage": 262
+      },
+      {
+        "level": 14,
+        "hitpoints": 955,
+        "damage": 288
+      },
+      {
+        "level": 15,
+        "hitpoints": 1049,
+        "damage": 316
+      }
+    ]
+  },
+  {
+    "name": "Night Witch",
+    "hit_speed": 1.2,
+    "range": 1.2,
+    "count": 1,
+    "target": "Air&Ground",
+    "levels": [
+      {
+        "level": 9,
+        "hitpoints": 670,
+        "damage": 80
+      },
+      {
+        "level": 10,
+        "hitpoints": 737,
+        "damage": 88
+      },
+      {
+        "level": 11,
+        "hitpoints": 809,
+        "damage": 97
+      },
+      {
+        "level": 12,
+        "hitpoints": 888,
+        "damage": 107
+      },
+      {
+        "level": 13,
+        "hitpoints": 974,
+        "damage": 118
+      },
+      {
+        "level": 14,
+        "hitpoints": 1067,
+        "damage": 130
+      },
+      {
+        "level": 15,
+        "hitpoints": 1169,
+        "damage": 143
+      },
+      {
+        "level": 16,
+        "hitpoints": 1280,
+        "damage": 157
+      }
+    ]
+  },
+  {
+    "name": "P.E.K.K.A.",
+    "hit_speed": 1.2,
+    "range": 1.2,
+    "count": 1,
+    "target": "Ground",
+    "levels": [
+      {
+        "level": 6,
+        "hitpoints": 2350,
+        "damage": 510
+      },
+      {
+        "level": 7,
+        "hitpoints": 2585,
+        "damage": 561
+      },
+      {
+        "level": 8,
+        "hitpoints": 2835,
+        "damage": 615
+      },
+      {
+        "level": 9,
+        "hitpoints": 3114,
+        "damage": 676
+      },
+      {
+        "level": 10,
+        "hitpoints": 3422,
+        "damage": 743
+      },
+      {
+        "level": 11,
+        "hitpoints": 3760,
+        "damage": 816
+      },
+      {
+        "level": 12,
+        "hitpoints": 4127,
+        "damage": 896
+      },
+      {
+        "level": 13,
+        "hitpoints": 4539,
+        "damage": 985
+      },
+      {
+        "level": 14,
+        "hitpoints": 4979,
+        "damage": 1081
+      },
+      {
+        "level": 15,
+        "hitpoints": 5464,
+        "damage": 1186
+      },
+      {
+        "level": 16,
+        "hitpoints": 6008,
+        "damage": 1304
+      }
+    ]
+  },
+  {
+    "name": "Phoenix",
+    "hit_speed": 1.2,
+    "range": 1.2,
+    "count": 1,
+    "target": "Air&Ground",
+    "levels": [
+      {
+        "level": 9,
+        "hitpoints": 871,
+        "damage": 180
+      },
+      {
+        "level": 10,
+        "hitpoints": 957,
+        "damage": 198
+      },
+      {
+        "level": 11,
+        "hitpoints": 1052,
+        "damage": 217
+      },
+      {
+        "level": 12,
+        "hitpoints": 1154,
+        "damage": 238
+      },
+      {
+        "level": 13,
+        "hitpoints": 1269,
+        "damage": 262
+      },
+      {
+        "level": 14,
+        "hitpoints": 1393,
+        "damage": 288
+      },
+      {
+        "level": 15,
+        "hitpoints": 1528,
+        "damage": 316
+      }
+    ]
+  },
+  {
+    "name": "Prince",
+    "hit_speed": 1.2,
+    "range": 1.2,
+    "count": 1,
+    "target": "Air&Ground",
+    "levels": [
+      {
+        "level": 6,
+        "hitpoints": 1200,
+        "damage": 244
+      },
+      {
+        "level": 7,
+        "hitpoints": 1320,
+        "damage": 269
+      },
+      {
+        "level": 8,
+        "hitpoints": 1447,
+        "damage": 295
+      },
+      {
+        "level": 9,
+        "hitpoints": 1590,
+        "damage": 324
+      },
+      {
+        "level": 10,
+        "hitpoints": 1747,
+        "damage": 356
+      },
+      {
+        "level": 11,
+        "hitpoints": 1920,
+        "damage": 391
+      },
+      {
+        "level": 12,
+        "hitpoints": 2107,
+        "damage": 429
+      },
+      {
+        "level": 13,
+        "hitpoints": 2317,
+        "damage": 472
+      },
+      {
+        "level": 14,
+        "hitpoints": 2542,
+        "damage": 518
+      },
+      {
+        "level": 15,
+        "hitpoints": 2790,
+        "damage": 569
+      },
+      {
+        "level": 16,
+        "hitpoints": 3067,
+        "damage": 625
+      }
+    ]
+  },
+  {
+    "name": "Princess",
+    "hit_speed": 1.2,
+    "range": 1.2,
+    "count": 1,
+    "target": "Air&Ground",
+    "levels": [
+      {
+        "level": 9,
+        "hitpoints": 216,
+        "damage": 139
+      },
+      {
+        "level": 10,
+        "hitpoints": 237,
+        "damage": 153
+      },
+      {
+        "level": 11,
+        "hitpoints": 261,
+        "damage": 168
+      },
+      {
+        "level": 12,
+        "hitpoints": 286,
+        "damage": 185
+      },
+      {
+        "level": 13,
+        "hitpoints": 315,
+        "damage": 203
+      },
+      {
+        "level": 14,
+        "hitpoints": 345,
+        "damage": 223
+      },
+      {
+        "level": 15,
+        "hitpoints": 379,
+        "damage": 245
+      },
+      {
+        "level": 16,
+        "hitpoints": 417,
+        "damage": 269
+      }
+    ]
+  },
+  {
+    "name": "Ram Rider",
+    "hit_speed": 1.2,
+    "range": 1.2,
+    "count": 1,
+    "target": "Buildings",
+    "levels": [
+      {
+        "level": 9,
+        "hitpoints": 1405,
+        "damage": 207
+      },
+      {
+        "level": 10,
+        "hitpoints": 1544,
+        "damage": 228
+      },
+      {
+        "level": 11,
+        "hitpoints": 1697,
+        "damage": 250
+      },
+      {
+        "level": 12,
+        "hitpoints": 1863,
+        "damage": 275
+      },
+      {
+        "level": 13,
+        "hitpoints": 2048,
+        "damage": 302
+      },
+      {
+        "level": 14,
+        "hitpoints": 2247,
+        "damage": 332
+      },
+      {
+        "level": 15,
+        "hitpoints": 2466,
+        "damage": 364
+      }
+    ]
+  },
+  {
+    "name": "Royal Ghost",
+    "hit_speed": 1.2,
+    "range": 1.2,
+    "count": 1,
+    "target": "Ground",
+    "levels": [
+      {
+        "level": 9,
+        "hitpoints": 1002,
+        "damage": 216
+      },
+      {
+        "level": 10,
+        "hitpoints": 1102,
+        "damage": 237
+      },
+      {
+        "level": 11,
+        "hitpoints": 1210,
+        "damage": 261
+      },
+      {
+        "level": 12,
+        "hitpoints": 1329,
+        "damage": 287
+      },
+      {
+        "level": 13,
+        "hitpoints": 1461,
+        "damage": 315
+      },
+      {
+        "level": 14,
+        "hitpoints": 1603,
+        "damage": 345
+      },
+      {
+        "level": 15,
+        "hitpoints": 1759,
+        "damage": 380
+      },
+      {
+        "level": 16,
+        "hitpoints": 1934,
+        "damage": 417
+      }
+    ]
+  },
+  {
+    "name": "Royal Giant",
+    "hit_speed": 1.2,
+    "range": 1.2,
+    "count": 1,
+    "target": "Buildings",
+    "levels": [
+      {
+        "level": 1,
+        "hitpoints": 1236,
+        "damage": 120
+      },
+      {
+        "level": 2,
+        "hitpoints": 1359,
+        "damage": 132
+      },
+      {
+        "level": 3,
+        "hitpoints": 1495,
+        "damage": 145
+      },
+      {
+        "level": 4,
+        "hitpoints": 1643,
+        "damage": 159
+      },
+      {
+        "level": 5,
+        "hitpoints": 1804,
+        "damage": 175
+      },
+      {
+        "level": 6,
+        "hitpoints": 1977,
+        "damage": 192
+      },
+      {
+        "level": 7,
+        "hitpoints": 2175,
+        "damage": 211
+      },
+      {
+        "level": 8,
+        "hitpoints": 2385,
+        "damage": 231
+      },
+      {
+        "level": 9,
+        "hitpoints": 2620,
+        "damage": 254
+      },
+      {
+        "level": 10,
+        "hitpoints": 2879,
+        "damage": 279
+      },
+      {
+        "level": 11,
+        "hitpoints": 3164,
+        "damage": 307
+      },
+      {
+        "level": 12,
+        "hitpoints": 3473,
+        "damage": 337
+      },
+      {
+        "level": 13,
+        "hitpoints": 3819,
+        "damage": 370
+      },
+      {
+        "level": 14,
+        "hitpoints": 4190,
+        "damage": 406
+      },
+      {
+        "level": 15,
+        "hitpoints": 4597,
+        "damage": 446
+      },
+      {
+        "level": 16,
+        "hitpoints": 5055,
+        "damage": 490
+      }
+    ]
+  },
+  {
+    "name": "Royal Hogs",
+    "hit_speed": 1.2,
+    "range": 1.2,
+    "count": 1,
+    "target": "Buildings",
+    "levels": [
+      {
+        "level": 3,
+        "hitpoints": 395,
+        "damage": 35
+      },
+      {
+        "level": 4,
+        "hitpoints": 434,
+        "damage": 38
+      },
+      {
+        "level": 5,
+        "hitpoints": 477,
+        "damage": 42
+      },
+      {
+        "level": 6,
+        "hitpoints": 523,
+        "damage": 46
+      },
+      {
+        "level": 7,
+        "hitpoints": 575,
+        "damage": 51
+      },
+      {
+        "level": 8,
+        "hitpoints": 631,
+        "damage": 55
+      },
+      {
+        "level": 9,
+        "hitpoints": 693,
+        "damage": 61
+      },
+      {
+        "level": 10,
+        "hitpoints": 761,
+        "damage": 67
+      },
+      {
+        "level": 11,
+        "hitpoints": 837,
+        "damage": 74
+      },
+      {
+        "level": 12,
+        "hitpoints": 918,
+        "damage": 81
+      },
+      {
+        "level": 13,
+        "hitpoints": 1010,
+        "damage": 89
+      },
+      {
+        "level": 14,
+        "hitpoints": 1108,
+        "damage": 98
+      },
+      {
+        "level": 15,
+        "hitpoints": 1216,
+        "damage": 107
+      },
+      {
+        "level": 16,
+        "hitpoints": 1337,
+        "damage": 118
+      }
+    ]
+  },
+  {
+    "name": "Royal Recruits",
+    "hit_speed": 1.2,
+    "range": 1.2,
+    "count": 1,
+    "target": "Ground",
+    "levels": [
+      {
+        "level": 1,
+        "hitpoints": 214,
+        "damage": 94
+      },
+      {
+        "level": 2,
+        "hitpoints": 235,
+        "damage": 103
+      },
+      {
+        "level": 3,
+        "hitpoints": 258,
+        "damage": 113
+      },
+      {
+        "level": 4,
+        "hitpoints": 284,
+        "damage": 125
+      },
+      {
+        "level": 5,
+        "hitpoints": 312,
+        "damage": 137
+      },
+      {
+        "level": 6,
+        "hitpoints": 342,
+        "damage": 150
+      },
+      {
+        "level": 7,
+        "hitpoints": 376,
+        "damage": 165
+      },
+      {
+        "level": 8,
+        "hitpoints": 413,
+        "damage": 181
+      },
+      {
+        "level": 9,
+        "hitpoints": 453,
+        "damage": 199
+      },
+      {
+        "level": 10,
+        "hitpoints": 498,
+        "damage": 219
+      },
+      {
+        "level": 11,
+        "hitpoints": 547,
+        "damage": 240
+      },
+      {
+        "level": 12,
+        "hitpoints": 601,
+        "damage": 264
+      },
+      {
+        "level": 13,
+        "hitpoints": 661,
+        "damage": 290
+      },
+      {
+        "level": 14,
+        "hitpoints": 725,
+        "damage": 318
+      },
+      {
+        "level": 15,
+        "hitpoints": 796,
+        "damage": 349
+      },
+      {
+        "level": 16,
+        "hitpoints": 875,
+        "damage": 384
+      }
+    ]
+  },
+  {
+    "name": "Rascals",
+    "hit_speed": 1.2,
+    "range": 1.2,
+    "count": 1,
+    "target": "Ground",
+    "levels": [
+      {
+        "level": 1,
+        "hitpoints": 758,
+        "damage": 71
+      },
+      {
+        "level": 2,
+        "hitpoints": 833,
+        "damage": 79
+      },
+      {
+        "level": 3,
+        "hitpoints": 916,
+        "damage": 87
+      },
+      {
+        "level": 4,
+        "hitpoints": 1007,
+        "damage": 96
+      },
+      {
+        "level": 5,
+        "hitpoints": 1107,
+        "damage": 106
+      },
+      {
+        "level": 6,
+        "hitpoints": 1217,
+        "damage": 117
+      },
+      {
+        "level": 7,
+        "hitpoints": 1338,
+        "damage": 128
+      },
+      {
+        "level": 8,
+        "hitpoints": 1470,
+        "damage": 141
+      },
+      {
+        "level": 9,
+        "hitpoints": 1613,
+        "damage": 155
+      },
+      {
+        "level": 10,
+        "hitpoints": 1768,
+        "damage": 170
+      },
+      {
+        "level": 11,
+        "hitpoints": 1936,
+        "damage": 187
+      },
+      {
+        "level": 12,
+        "hitpoints": 2118,
+        "damage": 205
+      },
+      {
+        "level": 13,
+        "hitpoints": 2315,
+        "damage": 225
+      },
+      {
+        "level": 14,
+        "hitpoints": 2529,
+        "damage": 246
+      },
+      {
+        "level": 15,
+        "hitpoints": 2761,
+        "damage": 269
+      },
+      {
+        "level": 16,
+        "hitpoints": 3014,
+        "damage": 295
+      }
+    ]
+  },
+  {
+    "name": "Rune Giant",
+    "hit_speed": 1.2,
+    "range": 1.2,
+    "count": 1,
+    "target": "Buildings",
+    "levels": [
+      {
+        "level": 6,
+        "hitpoints": 1664,
+        "damage": 75
+      },
+      {
+        "level": 7,
+        "hitpoints": 1830,
+        "damage": 82
+      },
+      {
+        "level": 8,
+        "hitpoints": 2007,
+        "damage": 90
+      },
+      {
+        "level": 9,
+        "hitpoints": 2204,
+        "damage": 99
+      },
+      {
+        "level": 10,
+        "hitpoints": 2423,
+        "damage": 109
+      },
+      {
+        "level": 11,
+        "hitpoints": 2662,
+        "damage": 120
+      },
+      {
+        "level": 12,
+        "hitpoints": 2922,
+        "damage": 132
+      },
+      {
+        "level": 13,
+        "hitpoints": 3213,
+        "damage": 145
+      },
+      {
+        "level": 14,
+        "hitpoints": 3525,
+        "damage": 159
+      },
+      {
+        "level": 15,
+        "hitpoints": 3868,
+        "damage": 174
+      },
+      {
+        "level": 16,
+        "hitpoints": 4253,
+        "damage": 192
+      }
+    ]
+  },
+  {
+    "name": "Skeleton Army",
+    "hit_speed": 1.2,
+    "range": 1.2,
+    "count": 1,
+    "target": "Ground",
+    "levels": [
+      {
+        "level": 6,
+        "hitpoints": 51,
+        "damage": 51
+      },
+      {
+        "level": 7,
+        "hitpoints": 56,
+        "damage": 56
+      },
+      {
+        "level": 8,
+        "hitpoints": 61,
+        "damage": 61
+      },
+      {
+        "level": 9,
+        "hitpoints": 67,
+        "damage": 67
+      },
+      {
+        "level": 10,
+        "hitpoints": 74,
+        "damage": 74
+      },
+      {
+        "level": 11,
+        "hitpoints": 81,
+        "damage": 81
+      },
+      {
+        "level": 12,
+        "hitpoints": 89,
+        "damage": 89
+      },
+      {
+        "level": 13,
+        "hitpoints": 98,
+        "damage": 98
+      },
+      {
+        "level": 14,
+        "hitpoints": 108,
+        "damage": 108
+      },
+      {
+        "level": 15,
+        "hitpoints": 119,
+        "damage": 119
+      },
+      {
+        "level": 16,
+        "hitpoints": 130,
+        "damage": 130
+      }
+    ]
+  },
+  {
+    "name": "Skeleton Barrel",
+    "hit_speed": 1.2,
+    "range": 1.2,
+    "count": 7,
+    "target": "Buildings",
+    "levels": [
+      {
+        "level": 1,
+        "hitpoints": 208,
+        "damage": 40
+      },
+      {
+        "level": 2,
+        "hitpoints": 228,
+        "damage": 44
+      },
+      {
+        "level": 3,
+        "hitpoints": 250,
+        "damage": 48
+      },
+      {
+        "level": 4,
+        "hitpoints": 275,
+        "damage": 53
+      },
+      {
+        "level": 5,
+        "hitpoints": 302,
+        "damage": 59
+      },
+      {
+        "level": 6,
+        "hitpoints": 332,
+        "damage": 65
+      },
+      {
+        "level": 7,
+        "hitpoints": 365,
+        "damage": 72
+      },
+      {
+        "level": 8,
+        "hitpoints": 401,
+        "damage": 80
+      },
+      {
+        "level": 9,
+        "hitpoints": 441,
+        "damage": 88
+      },
+      {
+        "level": 10,
+        "hitpoints": 485,
+        "damage": 97
+      },
+      {
+        "level": 11,
+        "hitpoints": 533,
+        "damage": 107
+      },
+      {
+        "level": 12,
+        "hitpoints": 586,
+        "damage": 118
+      },
+      {
+        "level": 13,
+        "hitpoints": 644,
+        "damage": 129
+      },
+      {
+        "level": 14,
+        "hitpoints": 708,
+        "damage": 142
+      },
+      {
+        "level": 15,
+        "hitpoints": 779,
+        "damage": 156
+      },
+      {
+        "level": 16,
+        "hitpoints": 857,
+        "damage": 171
+      }
+    ]
+  },
+  {
+    "name": "Skeleton King",
+    "hit_speed": 1.2,
+    "range": 1.2,
+    "count": 1,
+    "target": "Ground",
+    "levels": [
+      {
+        "level": 11,
+        "hitpoints": 2298,
+        "damage": 204
+      },
+      {
+        "level": 12,
+        "hitpoints": 2528,
+        "damage": 224
+      },
+      {
+        "level": 13,
+        "hitpoints": 2779,
+        "damage": 246
+      },
+      {
+        "level": 14,
+        "hitpoints": 3053,
+        "damage": 270
+      },
+      {
+        "level": 15,
+        "hitpoints": 3354,
+        "damage": 297
+      },
+      {
+        "level": 16,
+        "hitpoints": 3685,
+        "damage": 327
+      }
+    ]
+  },
+  {
+    "name": "Skeletons",
+    "hit_speed": 1.2,
+    "range": 1.2,
+    "count": 4,
+    "target": "Ground",
+    "levels": [
+      {
+        "level": 1,
+        "hitpoints": 32,
+        "damage": 32
+      },
+      {
+        "level": 2,
+        "hitpoints": 35,
+        "damage": 35
+      },
+      {
+        "level": 3,
+        "hitpoints": 38,
+        "damage": 38
+      },
+      {
+        "level": 4,
+        "hitpoints": 42,
+        "damage": 42
+      },
+      {
+        "level": 5,
+        "hitpoints": 46,
+        "damage": 46
+      },
+      {
+        "level": 6,
+        "hitpoints": 51,
+        "damage": 51
+      },
+      {
+        "level": 7,
+        "hitpoints": 56,
+        "damage": 56
+      },
+      {
+        "level": 8,
+        "hitpoints": 61,
+        "damage": 61
+      },
+      {
+        "level": 9,
+        "hitpoints": 67,
+        "damage": 67
+      },
+      {
+        "level": 10,
+        "hitpoints": 74,
+        "damage": 74
+      },
+      {
+        "level": 11,
+        "hitpoints": 81,
+        "damage": 81
+      },
+      {
+        "level": 12,
+        "hitpoints": 89,
+        "damage": 89
+      },
+      {
+        "level": 13,
+        "hitpoints": 98,
+        "damage": 98
+      },
+      {
+        "level": 14,
+        "hitpoints": 108,
+        "damage": 108
+      },
+      {
+        "level": 15,
+        "hitpoints": 119,
+        "damage": 119
+      },
+      {
+        "level": 16,
+        "hitpoints": 130,
+        "damage": 130
+      }
+    ]
+  },
+  {
+    "name": "Sparky",
+    "hit_speed": 1.2,
+    "range": 1.2,
+    "count": 1,
+    "target": "Ground",
+    "levels": [
+      {
+        "level": 9,
+        "hitpoints": 1202,
+        "damage": 1102
+      },
+      {
+        "level": 10,
+        "hitpoints": 1321,
+        "damage": 1211
+      },
+      {
+        "level": 11,
+        "hitpoints": 1451,
+        "damage": 1331
+      },
+      {
+        "level": 12,
+        "hitpoints": 1593,
+        "damage": 1461
+      },
+      {
+        "level": 13,
+        "hitpoints": 1752,
+        "damage": 1606
+      },
+      {
+        "level": 14,
+        "hitpoints": 1922,
+        "damage": 1762
+      },
+      {
+        "level": 15,
+        "hitpoints": 2109,
+        "damage": 1934
+      },
+      {
+        "level": 16,
+        "hitpoints": 2319,
+        "damage": 2126
+      }
+    ]
+  },
+  {
+    "name": "Spear Goblins",
+    "hit_speed": 1.2,
+    "range": 1.2,
+    "count": 3,
+    "target": "Air&Ground",
+    "levels": [
+      {
+        "level": 1,
+        "hitpoints": 52,
+        "damage": 32
+      },
+      {
+        "level": 2,
+        "hitpoints": 57,
+        "damage": 35
+      },
+      {
+        "level": 3,
+        "hitpoints": 62,
+        "damage": 38
+      },
+      {
+        "level": 4,
+        "hitpoints": 69,
+        "damage": 42
+      },
+      {
+        "level": 5,
+        "hitpoints": 75,
+        "damage": 46
+      },
+      {
+        "level": 6,
+        "hitpoints": 83,
+        "damage": 51
+      },
+      {
+        "level": 7,
+        "hitpoints": 91,
+        "damage": 56
+      },
+      {
+        "level": 8,
+        "hitpoints": 100,
+        "damage": 61
+      },
+      {
+        "level": 9,
+        "hitpoints": 110,
+        "damage": 67
+      },
+      {
+        "level": 10,
+        "hitpoints": 121,
+        "damage": 74
+      },
+      {
+        "level": 11,
+        "hitpoints": 133,
+        "damage": 81
+      },
+      {
+        "level": 12,
+        "hitpoints": 146,
+        "damage": 89
+      },
+      {
+        "level": 13,
+        "hitpoints": 160,
+        "damage": 98
+      },
+      {
+        "level": 14,
+        "hitpoints": 176,
+        "damage": 108
+      },
+      {
+        "level": 15,
+        "hitpoints": 193,
+        "damage": 119
+      },
+      {
+        "level": 16,
+        "hitpoints": 212,
+        "damage": 130
+      }
+    ]
+  },
+  {
+    "name": "Spirit Empress",
+    "hit_speed": 1.2,
+    "range": 1.2,
+    "count": 1,
+    "target": "Air&Ground",
+    "levels": [
+      {
+        "level": 9,
+        "hitpoints": 1068,
+        "damage": 249
+      },
+      {
+        "level": 10,
+        "hitpoints": 1186,
+        "damage": 1021
+      },
+      {
+        "level": 11,
+        "hitpoints": 1315,
+        "damage": 1123
+      },
+      {
+        "level": 12,
+        "hitpoints": 1457,
+        "damage": 1236
+      },
+      {
+        "level": 13,
+        "hitpoints": 1614,
+        "damage": 1359
+      },
+      {
+        "level": 14,
+        "hitpoints": 1788,
+        "damage": 1495
+      },
+      {
+        "level": 15,
+        "hitpoints": 1982,
+        "damage": 1646
+      }
+    ]
+  },
+  {
+    "name": "Suspicious Bush",
+    "hit_speed": 1.2,
+    "range": 1.2,
+    "count": 1,
+    "target": "Buildings",
+    "levels": [
+      {
+        "level": 3,
+        "hitpoints": 38,
+        "damage": 121
+      },
+      {
+        "level": 4,
+        "hitpoints": 42,
+        "damage": 133
+      },
+      {
+        "level": 5,
+        "hitpoints": 46,
+        "damage": 146
+      },
+      {
+        "level": 6,
+        "hitpoints": 51,
+        "damage": 160
+      },
+      {
+        "level": 7,
+        "hitpoints": 56,
+        "damage": 176
+      },
+      {
+        "level": 8,
+        "hitpoints": 61,
+        "damage": 193
+      },
+      {
+        "level": 9,
+        "hitpoints": 67,
+        "damage": 212
+      },
+      {
+        "level": 10,
+        "hitpoints": 74,
+        "damage": 233
+      },
+      {
+        "level": 11,
+        "hitpoints": 81,
+        "damage": 256
+      },
+      {
+        "level": 12,
+        "hitpoints": 89,
+        "damage": 281
+      },
+      {
+        "level": 13,
+        "hitpoints": 98,
+        "damage": 309
+      },
+      {
+        "level": 14,
+        "hitpoints": 108,
+        "damage": 340
+      },
+      {
+        "level": 15,
+        "hitpoints": 119,
+        "damage": 374
+      }
+    ]
+  },
+  {
+    "name": "Three Musketeers",
+    "hit_speed": 1.2,
+    "range": 1.2,
+    "count": 3,
+    "target": "Air&Ground",
+    "levels": [
+      {
+        "level": 3,
+        "hitpoints": 341,
+        "damage": 102
+      },
+      {
+        "level": 4,
+        "hitpoints": 375,
+        "damage": 113
+      },
+      {
+        "level": 5,
+        "hitpoints": 411,
+        "damage": 124
+      },
+      {
+        "level": 6,
+        "hitpoints": 451,
+        "damage": 136
+      },
+      {
+        "level": 7,
+        "hitpoints": 496,
+        "damage": 149
+      },
+      {
+        "level": 8,
+        "hitpoints": 544,
+        "damage": 164
+      },
+      {
+        "level": 9,
+        "hitpoints": 597,
+        "damage": 180
+      },
+      {
+        "level": 10,
+        "hitpoints": 657,
+        "damage": 198
+      },
+      {
+        "level": 11,
+        "hitpoints": 721,
+        "damage": 217
+      },
+      {
+        "level": 12,
+        "hitpoints": 792,
+        "damage": 238
+      },
+      {
+        "level": 13,
+        "hitpoints": 871,
+        "damage": 262
+      },
+      {
+        "level": 14,
+        "hitpoints": 955,
+        "damage": 288
+      },
+      {
+        "level": 15,
+        "hitpoints": 1049,
+        "damage": 316
+      }
+    ]
+  },
+  {
+    "name": "Valkyrie",
+    "hit_speed": 1.2,
+    "range": 1.2,
+    "count": 1,
+    "target": "Ground",
+    "levels": [
+      {
+        "level": 3,
+        "hitpoints": 901,
+        "damage": 125
+      },
+      {
+        "level": 4,
+        "hitpoints": 990,
+        "damage": 138
+      },
+      {
+        "level": 5,
+        "hitpoints": 1087,
+        "damage": 151
+      },
+      {
+        "level": 6,
+        "hitpoints": 1192,
+        "damage": 166
+      },
+      {
+        "level": 7,
+        "hitpoints": 1311,
+        "damage": 183
+      },
+      {
+        "level": 8,
+        "hitpoints": 1437,
+        "damage": 200
+      },
+      {
+        "level": 9,
+        "hitpoints": 1579,
+        "damage": 220
+      },
+      {
+        "level": 10,
+        "hitpoints": 1735,
+        "damage": 242
+      },
+      {
+        "level": 11,
+        "hitpoints": 1907,
+        "damage": 266
+      },
+      {
+        "level": 12,
+        "hitpoints": 2093,
+        "damage": 292
+      },
+      {
+        "level": 13,
+        "hitpoints": 2302,
+        "damage": 321
+      },
+      {
+        "level": 14,
+        "hitpoints": 2525,
+        "damage": 352
+      },
+      {
+        "level": 15,
+        "hitpoints": 2771,
+        "damage": 386
+      },
+      {
+        "level": 16,
+        "hitpoints": 3047,
+        "damage": 425
+      }
+    ]
+  },
+  {
+    "name": "Wall Breakers",
+    "hit_speed": 1.2,
+    "range": 1.2,
+    "count": 2,
+    "target": "Buildings",
+    "levels": [
+      {
+        "level": 6,
+        "hitpoints": 206,
+        "damage": 244
+      },
+      {
+        "level": 7,
+        "hitpoints": 227,
+        "damage": 269
+      },
+      {
+        "level": 8,
+        "hitpoints": 248,
+        "damage": 295
+      },
+      {
+        "level": 9,
+        "hitpoints": 273,
+        "damage": 324
+      },
+      {
+        "level": 10,
+        "hitpoints": 300,
+        "damage": 356
+      },
+      {
+        "level": 11,
+        "hitpoints": 330,
+        "damage": 391
+      },
+      {
+        "level": 12,
+        "hitpoints": 362,
+        "damage": 429
+      },
+      {
+        "level": 13,
+        "hitpoints": 398,
+        "damage": 472
+      },
+      {
+        "level": 14,
+        "hitpoints": 437,
+        "damage": 518
+      },
+      {
+        "level": 15,
+        "hitpoints": 479,
+        "damage": 569
+      }
+    ]
+  },
+  {
+    "name": "Witch",
+    "hit_speed": 1.2,
+    "range": 1.2,
+    "count": 1,
+    "target": "Air&Ground",
+    "levels": [
+      {
+        "level": 6,
+        "hitpoints": 524,
+        "damage": 84
+      },
+      {
+        "level": 7,
+        "hitpoints": 577,
+        "damage": 93
+      },
+      {
+        "level": 8,
+        "hitpoints": 633,
+        "damage": 102
+      },
+      {
+        "level": 9,
+        "hitpoints": 695,
+        "damage": 112
+      },
+      {
+        "level": 10,
+        "hitpoints": 764,
+        "damage": 123
+      },
+      {
+        "level": 11,
+        "hitpoints": 839,
+        "damage": 135
+      },
+      {
+        "level": 12,
+        "hitpoints": 921,
+        "damage": 148
+      },
+      {
+        "level": 13,
+        "hitpoints": 1013,
+        "damage": 163
+      },
+      {
+        "level": 14,
+        "hitpoints": 1111,
+        "damage": 179
+      },
+      {
+        "level": 15,
+        "hitpoints": 1220,
+        "damage": 197
+      },
+      {
+        "level": 16,
+        "hitpoints": 1341,
+        "damage": 216
+      }
+    ]
+  },
+  {
+    "name": "Wizard",
+    "hit_speed": 1.2,
+    "range": 1.2,
+    "count": 1,
+    "target": "Air&Ground",
+    "levels": [
+      {
+        "level": 3,
+        "hitpoints": 356,
+        "damage": 133
+      },
+      {
+        "level": 4,
+        "hitpoints": 392,
+        "damage": 146
+      },
+      {
+        "level": 5,
+        "hitpoints": 430,
+        "damage": 160
+      },
+      {
+        "level": 6,
+        "hitpoints": 472,
+        "damage": 176
+      },
+      {
+        "level": 7,
+        "hitpoints": 519,
+        "damage": 193
+      },
+      {
+        "level": 8,
+        "hitpoints": 569,
+        "damage": 212
+      },
+      {
+        "level": 9,
+        "hitpoints": 625,
+        "damage": 233
+      },
+      {
+        "level": 10,
+        "hitpoints": 687,
+        "damage": 256
+      },
+      {
+        "level": 11,
+        "hitpoints": 755,
+        "damage": 281
+      },
+      {
+        "level": 12,
+        "hitpoints": 828,
+        "damage": 309
+      },
+      {
+        "level": 13,
+        "hitpoints": 911,
+        "damage": 339
+      },
+      {
+        "level": 14,
+        "hitpoints": 1000,
+        "damage": 372
+      },
+      {
+        "level": 15,
+        "hitpoints": 1097,
+        "damage": 409
+      },
+      {
+        "level": 16,
+        "hitpoints": 1203,
+        "damage": 450
+      }
+    ]
+  },
+  {
+    "name": "Zappies",
+    "hit_speed": 1.2,
+    "range": 1.2,
+    "count": 3,
+    "target": "Air&Ground",
+    "levels": [
+      {
+        "level": 3,
+        "hitpoints": 250,
+        "damage": 55
+      },
+      {
+        "level": 4,
+        "hitpoints": 275,
+        "damage": 61
+      },
+      {
+        "level": 5,
+        "hitpoints": 302,
+        "damage": 67
+      },
+      {
+        "level": 6,
+        "hitpoints": 331,
+        "damage": 73
+      },
+      {
+        "level": 7,
+        "hitpoints": 364,
+        "damage": 80
+      },
+      {
+        "level": 8,
+        "hitpoints": 399,
+        "damage": 88
+      },
+      {
+        "level": 9,
+        "hitpoints": 438,
+        "damage": 97
+      },
+      {
+        "level": 10,
+        "hitpoints": 482,
+        "damage": 107
+      },
+      {
+        "level": 11,
+        "hitpoints": 529,
+        "damage": 117
+      },
+      {
+        "level": 12,
+        "hitpoints": 581,
+        "damage": 129
+      },
+      {
+        "level": 13,
+        "hitpoints": 639,
+        "damage": 142
+      },
+      {
+        "level": 14,
+        "hitpoints": 701,
+        "damage": 155
+      },
+      {
+        "level": 15,
+        "hitpoints": 770,
+        "damage": 171
+      },
+      {
+        "level": 16,
+        "hitpoints": 846,
+        "damage": 188
+      }
+    ]
+  },
+  {
+    "name": "Bomb Tower",
+    "hit_speed": 1.8,
+    "range": 6,
+    "lifetime": 30,
+    "target": "Ground",
+    "levels": [
+      {
+        "level": 3,
+        "hitpoints": 640,
+        "damage": 105
+      },
+      {
+        "level": 4,
+        "hitpoints": 704,
+        "damage": 115
+      },
+      {
+        "level": 5,
+        "hitpoints": 774,
+        "damage": 126
+      },
+      {
+        "level": 6,
+        "hitpoints": 852,
+        "damage": 138
+      },
+      {
+        "level": 7,
+        "hitpoints": 937,
+        "damage": 152
+      },
+      {
+        "level": 8,
+        "hitpoints": 1030,
+        "damage": 167
+      },
+      {
+        "level": 9,
+        "hitpoints": 1131,
+        "damage": 184
+      },
+      {
+        "level": 10,
+        "hitpoints": 1241,
+        "damage": 202
+      },
+      {
+        "level": 11,
+        "hitpoints": 1359,
+        "damage": 222
+      },
+      {
+        "level": 12,
+        "hitpoints": 1486,
+        "damage": 244
+      },
+      {
+        "level": 13,
+        "hitpoints": 1622,
+        "damage": 268
+      },
+      {
+        "level": 14,
+        "hitpoints": 1768,
+        "damage": 294
+      },
+      {
+        "level": 15,
+        "hitpoints": 1924,
+        "damage": 322
+      }
+    ]
+  },
+  {
+    "name": "Cannon",
+    "hit_speed": 1,
+    "range": 5.5,
+    "lifetime": 30,
+    "target": "Ground",
+    "levels": [
+      {
+        "level": 1,
+        "hitpoints": 322,
+        "damage": 83
+      },
+      {
+        "level": 2,
+        "hitpoints": 354,
+        "damage": 91
+      },
+      {
+        "level": 3,
+        "hitpoints": 390,
+        "damage": 100
+      },
+      {
+        "level": 4,
+        "hitpoints": 429,
+        "damage": 110
+      },
+      {
+        "level": 5,
+        "hitpoints": 473,
+        "damage": 121
+      },
+      {
+        "level": 6,
+        "hitpoints": 522,
+        "damage": 133
+      },
+      {
+        "level": 7,
+        "hitpoints": 575,
+        "damage": 146
+      },
+      {
+        "level": 8,
+        "hitpoints": 631,
+        "damage": 160
+      },
+      {
+        "level": 9,
+        "hitpoints": 693,
+        "damage": 176
+      },
+      {
+        "level": 10,
+        "hitpoints": 761,
+        "damage": 193
+      },
+      {
+        "level": 11,
+        "hitpoints": 837,
+        "damage": 212
+      },
+      {
+        "level": 12,
+        "hitpoints": 918,
+        "damage": 233
+      },
+      {
+        "level": 13,
+        "hitpoints": 1010,
+        "damage": 256
+      },
+      {
+        "level": 14,
+        "hitpoints": 1108,
+        "damage": 281
+      },
+      {
+        "level": 15,
+        "hitpoints": 1216,
+        "damage": 308
+      },
+      {
+        "level": 16,
+        "hitpoints": 1332,
+        "damage": 338}
+    ]
+  },
+  {
+    "name": "Inferno Tower",
+    "hit_speed": 0.4,
+    "range": 6,
+    "lifetime": 30,
+    "target": "Ground",
+    "levels": [
+      {
+        "level": 3,
+        "hitpoints": 826,
+        "damage": 20
+      },
+      {
+        "level": 4,
+        "hitpoints": 908,
+        "damage": 22
+      },
+      {
+        "level": 5,
+        "hitpoints": 997,
+        "damage": 24
+      },
+      {
+        "level": 6,
+        "hitpoints": 1095,
+        "damage": 27
+      },
+      {
+        "level": 7,
+        "hitpoints": 1202,
+        "damage": 30
+      },
+      {
+        "level": 8,
+        "hitpoints": 1318,
+        "damage": 33
+      },
+      {
+        "level": 9,
+        "hitpoints": 1444,
+        "damage": 36
+      },
+      {
+        "level": 10,
+        "hitpoints": 1580,
+        "damage": 40
+      },
+      {
+        "level": 11,
+        "hitpoints": 1726,
+        "damage": 44
+      },
+      {
+        "level": 12,
+        "hitpoints": 1883,
+        "damage": 48
+      },
+      {
+        "level": 13,
+        "hitpoints": 2051,
+        "damage": 53
+      },
+      {
+        "level": 14,
+        "hitpoints": 2230,
+        "damage": 58
+      },
+      {
+        "level": 15,
+        "hitpoints": 2421,
+        "damage": 64
+      },
+      {
+        "level": 16,
+        "hitpoints": 2624,
+        "damage": 70
+      }
+    ]
+  },
+  {
+    "name": "Mortar",
+    "hit_speed": 5,
+    "range": 11.5,
+    "lifetime": 30,
+    "target": "Ground",
+    "levels": [
+      {
+        "level": 1,
+        "hitpoints": 535,
+        "damage": 105
+      },
+      {
+        "level": 2,
+        "hitpoints": 588,
+        "damage": 115
+      },
+      {
+        "level": 3,
+        "hitpoints": 646,
+        "damage": 126
+      },
+      {
+        "level": 4,
+        "hitpoints": 710,
+        "damage": 138
+      },
+      {
+        "level": 5,
+        "hitpoints": 780,
+        "damage": 152
+      },
+      {
+        "level": 6,
+        "hitpoints": 858,
+        "damage": 167
+      },
+      {
+        "level": 7,
+        "hitpoints": 943,
+        "damage": 184
+      },
+      {
+        "level": 8,
+        "hitpoints": 1036,
+        "damage": 202
+      },
+      {
+        "level": 9,
+        "hitpoints": 1137,
+        "damage": 222
+      },
+      {
+        "level": 10,
+        "hitpoints": 1248,
+        "damage": 244
+      },
+      {
+        "level": 11,
+        "hitpoints": 1369,
+        "damage": 268
+      },
+      {
+        "level": 12,
+        "hitpoints": 1501,
+        "damage": 295
+      },
+      {
+        "level": 13,
+        "hitpoints": 1644,
+        "damage": 324
+      },
+      {
+        "level": 14,
+        "hitpoints": 1799,
+        "damage": 356
+      },
+      {
+        "level": 15,
+        "hitpoints": 1967,
+        "damage": 391
+      },
+      {
+        "level": 16,
+        "hitpoints": 2148,
+        "damage": 430
+      }
+    ]
+  },
+  {
+    "name": "Tesla",
+    "hit_speed": 1.1,
+    "range": 5.5,
+    "lifetime": 30,
+    "target": "Air&Ground",
+    "levels": [
+      {
+        "level": 1,
+        "hitpoints": 450,
+        "damage": 86
+      },
+      {
+        "level": 2,
+        "hitpoints": 495,
+        "damage": 94
+      },
+      {
+        "level": 3,
+        "hitpoints": 545,
+        "damage": 103
+      },
+      {
+        "level": 4,
+        "hitpoints": 600,
+        "damage": 113
+      },
+      {
+        "level": 5,
+        "hitpoints": 660,
+        "damage": 124
+      },
+      {
+        "level": 6,
+        "hitpoints": 726,
+        "damage": 136
+      },
+      {
+        "level": 7,
+        "hitpoints": 798,
+        "damage": 149
+      },
+      {
+        "level": 8,
+        "hitpoints": 878,
+        "damage": 164
+      },
+      {
+        "level": 9,
+        "hitpoints": 966,
+        "damage": 180
+      },
+      {
+        "level": 10,
+        "hitpoints": 1062,
+        "damage": 198
+      },
+      {
+        "level": 11,
+        "hitpoints": 1168,
+        "damage": 218
+      },
+      {
+        "level": 12,
+        "hitpoints": 1284,
+        "damage": 239
+      },
+      {
+        "level": 13,
+        "hitpoints": 1412,
+        "damage": 263
+      },
+      {
+        "level": 14,
+        "hitpoints": 1553,
+        "damage": 288
+      },
+      {
+        "level": 15,
+        "hitpoints": 1708,
+        "damage": 316
+      },
+      {
+        "level": 16,
+        "hitpoints": 1879,
+        "damage": 347
+      }
+    ]
+  },
+  {
+    "name": "X-Bow",
+    "hit_speed": 0.3,
+    "range": 11.5,
+    "lifetime": 30,
+    "target": "Ground",
+    "levels": [
+      {
+        "level": 6,
+        "hitpoints": 1000,
+        "damage": 28
+      },
+      {
+        "level": 7,
+        "hitpoints": 1100,
+        "damage": 30
+      },
+      {
+        "level": 8,
+        "hitpoints": 1200,
+        "damage": 33
+      },
+      {
+        "level": 9,
+        "hitpoints": 1320,
+        "damage": 36
+      },
+      {
+        "level": 10,
+        "hitpoints": 1452,
+        "damage": 40
+      },
+      {
+        "level": 11,
+        "hitpoints": 1597,
+        "damage": 44
+      },
+      {
+        "level": 12,
+        "hitpoints": 1756,
+        "damage": 48
+      },
+      {
+        "level": 13,
+        "hitpoints": 1931,
+        "damage": 53
+      },
+      {
+        "level": 14,
+        "hitpoints": 2124,
+        "damage": 58
+      },
+      {
+        "level": 15,
+        "hitpoints": 2336,
+        "damage": 64
+      },
+      {
+        "level": 16,
+        "hitpoints": 2569,
+        "damage": 70
+      }
+    ]
+  },
+  {
+    "name": "Barbarian Hut",
+    "spawn_speed": 15,
+    "lifetime": 30,
+    "target": "Ground",
+    "levels": [
+      {
+        "level": 3,
+        "hitpoints": 550,
+        "damage": 90
+      },
+      {
+        "level": 4,
+        "hitpoints": 605,
+        "damage": 99
+      },
+      {
+        "level": 5,
+        "hitpoints": 665,
+        "damage": 109
+      },
+      {
+        "level": 6,
+        "hitpoints": 730,
+        "damage": 120
+      },
+      {
+        "level": 7,
+        "hitpoints": 805,
+        "damage": 132
+      },
+      {
+        "level": 8,
+        "hitpoints": 885,
+        "damage": 145
+      },
+      {
+        "level": 9,
+        "hitpoints": 975,
+        "damage": 159
+      },
+      {
+        "level": 10,
+        "hitpoints": 1070,
+        "damage": 175
+      },
+      {
+        "level": 11,
+        "hitpoints": 1175,
+        "damage": 192
+      },
+      {
+        "level": 12,
+        "hitpoints": 1285,
+        "damage": 211
+      },
+      {
+        "level": 13,
+        "hitpoints": 1405,
+        "damage": 232
+      },
+      {
+        "level": 14,
+        "hitpoints": 1535,
+        "damage": 255
+      },
+      {
+        "level": 15,
+        "hitpoints": 1675,
+        "damage": 281
+      },
+      {
+        "level": 16,
+        "hitpoints": 1825,
+        "damage": 309
+      }
+    ]
+  },
+  {
+    "name": "Elixir Collector",
+    "spawn_speed": 13,
+    "lifetime": 93,
+    "target": "Ground",
+    "levels": [
+      {
+        "level": 3,
+        "hitpoints": 505,
+        "damage": 0
+      },
+      {
+        "level": 4,
+        "hitpoints": 555,
+        "damage": 0
+      },
+      {
+        "level": 5,
+        "hitpoints": 610,
+        "damage": 0
+      },
+      {
+        "level": 6,
+        "hitpoints": 670,
+        "damage": 0
+      },
+      {
+        "level": 7,
+        "hitpoints": 735,
+        "damage": 0
+      },
+      {
+        "level": 8,
+        "hitpoints": 805,
+        "damage": 0
+      },
+      {
+        "level": 9,
+        "hitpoints": 880,
+        "damage": 0
+      },
+      {
+        "level": 10,
+        "hitpoints": 960,
+        "damage": 0
+      },
+      {
+        "level": 11,
+        "hitpoints": 1045,
+        "damage": 0
+      },
+      {
+        "level": 12,
+        "hitpoints": 1135,
+        "damage": 0
+      },
+      {
+        "level": 13,
+        "hitpoints": 1230,
+        "damage": 0
+      },
+      {
+        "level": 14,
+        "hitpoints": 1330,
+        "damage": 0
+      },
+      {
+        "level": 15,
+        "hitpoints": 1435,
+        "damage": 0
+      }
+    ]
+  },
+  {
+    "name": "Goblin Drill",
+    "spawn_speed": 1.5,
+    "lifetime": 10,
+    "target": "Ground",
+    "levels": [
+      {
+        "level": 6,
+        "hitpoints": 820,
+        "damage": 52
+      },
+      {
+        "level": 7,
+        "hitpoints": 902,
+        "damage": 58
+      },
+      {
+        "level": 8,
+        "hitpoints": 992,
+        "damage": 64
+      },
+      {
+        "level": 9,
+        "hitpoints": 1092,
+        "damage": 70
+      },
+      {
+        "level": 10,
+        "hitpoints": 1201,
+        "damage": 77
+      },
+      {
+        "level": 11,
+        "hitpoints": 1321,
+        "damage": 85
+      },
+      {
+        "level": 12,
+        "hitpoints": 1453,
+        "damage": 93
+      },
+      {
+        "level": 13,
+        "hitpoints": 1598,
+        "damage": 102
+      },
+      {
+        "level": 14,
+        "hitpoints": 1757,
+        "damage": 112
+      },
+      {
+        "level": 15,
+        "hitpoints": 1932,
+        "damage": 123
+      }
+    ]
+  },
+  {
+    "name": "Goblin Hut",
+    "spawn_speed": 1.9,
+    "lifetime": 30,
+    "target": "Air&Ground",
+    "levels": [
+      {
+        "level": 3,
+        "hitpoints": 580,
+        "damage": 38
+      },
+      {
+        "level": 4,
+        "hitpoints": 638,
+        "damage": 42
+      },
+      {
+        "level": 5,
+        "hitpoints": 702,
+        "damage": 46
+      },
+      {
+        "level": 6,
+        "hitpoints": 772,
+        "damage": 51
+      },
+      {
+        "level": 7,
+        "hitpoints": 849,
+        "damage": 56
+      },
+      {
+        "level": 8,
+        "hitpoints": 933,
+        "damage": 61
+      },
+      {
+        "level": 9,
+        "hitpoints": 1024,
+        "damage": 67
+      },
+      {
+        "level": 10,
+        "hitpoints": 1125,
+        "damage": 74
+      },
+      {
+        "level": 11,
+        "hitpoints": 1236,
+        "damage": 81
+      },
+      {
+        "level": 12,
+        "hitpoints": 1358,
+        "damage": 89
+      },
+      {
+        "level": 13,
+        "hitpoints": 1492,
+        "damage": 98
+      },
+      {
+        "level": 14,
+        "hitpoints": 1639,
+        "damage": 108
+      },
+      {
+        "level": 15,
+        "hitpoints": 1798,
+        "damage": 119
+      },
+      {
+        "level": 16,
+        "hitpoints": 1973,
+        "damage": 130
+      }
+    ]
+  },
+  {
+    "name": "Tombstone",
+    "spawn_speed": 1,
+    "lifetime": 30,
+    "target": "Ground",
+    "levels": [
+      {
+        "level": 3,
+        "hitpoints": 250,
+        "damage": 38
+      },
+      {
+        "level": 4,
+        "hitpoints": 275,
+        "damage": 42
+      },
+      {
+        "level": 5,
+        "hitpoints": 302,
+        "damage": 46
+      },
+      {
+        "level": 6,
+        "hitpoints": 331,
+        "damage": 51
+      },
+      {
+        "level": 7,
+        "hitpoints": 364,
+        "damage": 56
+      },
+      {
+        "level": 8,
+        "hitpoints": 399,
+        "damage": 61
+      },
+      {
+        "level": 9,
+        "hitpoints": 438,
+        "damage": 67
+      },
+      {
+        "level": 10,
+        "hitpoints": 482,
+        "damage": 74
+      },
+      {
+        "level": 11,
+        "hitpoints": 529,
+        "damage": 81
+      },
+      {
+        "level": 12,
+        "hitpoints": 581,
+        "damage": 89
+      },
+      {
+        "level": 13,
+        "hitpoints": 639,
+        "damage": 98
+      },
+      {
+        "level": 14,
+        "hitpoints": 701,
+        "damage": 108
+      },
+      {
+        "level": 15,
+        "hitpoints": 770,
+        "damage": 119
+      },
+      {
+        "level": 16,
+        "hitpoints": 846,
+        "damage": 130
+      }
+    ]
+  },
+  {
+    "name": "Arrows",
+    "radius": 3.5,
+    "target":"Air&Ground",
+    "levels": [
+      {
+        "level": 1,
+        "damage": 144
+      },
+      {
+        "level": 2,
+        "damage": 158
+      },
+      { 
+        "level": 3,
+        "damage": 174
+      },
+      {
+        "level": 4,
+        "damage": 191
+      },
+      {
+        "level": 5,
+        "damage": 210
+      },
+      {
+        "level": 6,
+        "damage": 231
+      },
+      {
+        "level": 7,
+        "damage": 253
+      },
+      {
+        "level": 8,
+        "damage": 278
+      },
+      {
+        "level": 9,
+        "damage": 305
+      },
+      {
+        "level": 10,
+        "damage": 335
+      },
+      {
+        "level": 11,
+        "damage": 368
+      },
+      {
+        "level": 12,
+        "damage": 404
+      },
+      {
+        "level": 13,
+        "damage": 443
+      },
+      {
+        "level": 14,
+        "damage": 487
+      },
+      {
+        "level": 15,
+        "damage": 535
+      },
+      {
+        "level": 16,
+        "damage": 587
+      }
+    ]
+  },
+   {
+    "name": "Barbarian Barrel",
+    "range": 4.5,
+    "width": 2.6,
+    "target":"Ground",
+    "levels": [
+      {
+        "level": 6,
+        "damage": 144
+      },
+      {
+        "level": 7,
+        "damage": 158
+      },
+      { 
+        "level": 8,
+        "damage": 174
+      },
+      {
+        "level": 9,
+        "damage": 191
+      },
+      {
+        "level": 10,
+        "damage": 210
+      },
+      {
+        "level": 11,
+        "damage": 231
+      },
+      {
+        "level": 12,
+        "damage": 253
+      },
+      {
+        "level": 13,
+        "damage": 278
+      },
+      {
+        "level": 14,
+        "damage": 305
+      },
+      {
+        "level": 15,
+        "damage": 335
+      },
+      {
+        "level": 16,
+        "damage": 368
+      }
+      ]
+   },
+   {
+    "name": "Earthquake",
+    "radius": 3.5,
+    "target":"Ground",
+    "levels": [
+      {
+        "level": 3,
+        "damage": 117
+      },
+      {
+        "level": 4,
+        "damage": 126
+      },
+      { 
+        "level": 5,
+        "damage": 138
+      },
+      {
+        "level": 6,
+        "damage": 151
+      },
+      {
+        "level": 7,
+        "damage": 165
+      },
+      {
+        "level": 8,
+        "damage": 181
+      },
+      {
+        "level": 9,
+        "damage": 198
+      },
+      {
+        "level": 10,
+        "damage": 218
+      },
+      {
+        "level": 11,
+        "damage": 239
+      },
+      {
+        "level": 12,
+        "damage": 263
+      },
+      {
+        "level": 13,
+        "damage": 288
+      },
+      {
+        "level": 14,
+        "damage": 317
+      },
+      {
+        "level": 15,
+        "damage": 348
+      },
+      {
+        "level": 16,
+        "damage": 383
+      }
+    ]
+   },
+   {
+    "name": "Fireball",
+    "radius": 2.5,
+    "target":"Air&Ground",
+    "levels": [
+      {
+        "level": 3,
+        "damage": 117
+      },
+      {
+        "level": 4,
+        "damage": 126
+      },
+      { 
+        "level": 5,
+        "damage": 138
+      },
+      {
+        "level": 6,
+        "damage": 151
+      },
+      {
+        "level": 7,
+        "damage": 165
+      },
+      {
+        "level": 8,
+        "damage": 181
+      },
+      {
+        "level": 9,
+        "damage": 198
+      },
+      {
+        "level": 10,
+        "damage": 218
+      },
+      {
+        "level": 11,
+        "damage": 239
+      },
+      {
+        "level": 12,
+        "damage": 263
+      },
+      {
+        "level": 13,
+        "damage": 288
+      },
+      {
+        "level": 14,
+        "damage": 317
+      },
+      {
+        "level": 15,
+        "damage": 348
+      },
+      {
+        "level": 16,
+        "damage": 383
+      }
+    ]
+   },
+   {
+    "name": "Freeze",
+    "radius": 3.5,
+    "target":"Ground",
+    "levels": [
+      {
+        "level": 3,
+        "damage": 117
+      },
+      {
+        "level": 4,
+        "damage": 126
+      },
+      { 
+        "level": 5,
+        "damage": 138
+      },
+      {
+        "level": 6,
+        "damage": 151
+      },
+      {
+        "level": 7,
+        "damage": 165
+      },
+      {
+        "level": 8,
+        "damage": 181
+      },
+      {
+        "level": 9,
+        "damage": 198
+      },
+      {
+        "level": 10,
+        "damage": 218
+      },
+      {
+        "level": 11,
+        "damage": 239
+      },
+      {
+        "level": 12,
+        "damage": 263
+      },
+      {
+        "level": 13,
+        "damage": 288
+      },
+      {
+        "level": 14,
+        "damage": 317
+      },
+      {
+        "level": 15,
+        "damage": 348
+      },
+      {
+        "level": 16,
+        "damage": 383
+      }
+    ]
+   },
+   {
+    "name": "Giant Snowball",
+    "radius": 3.5,
+    "target":"Ground",
+    "levels": [
+      {
+        "level": 3,
+        "damage": 117
+      },
+      {
+        "level": 4,
+        "damage": 126
+      },
+      { 
+        "level": 5,
+        "damage": 138
+      },
+      {
+        "level": 6,
+        "damage": 151
+      },
+      {
+        "level": 7,
+        "damage": 165
+      },
+      {
+        "level": 8,
+        "damage": 181
+      },
+      {
+        "level": 9,
+        "damage": 198
+      },
+      {
+        "level": 10,
+        "damage": 218
+      },
+      {
+        "level": 11,
+        "damage": 239
+      },
+      {
+        "level": 12,
+        "damage": 263
+      },
+      {
+        "level": 13,
+        "damage": 288
+      },
+      {
+        "level": 14,
+        "damage": 317
+      },
+      {
+        "level": 15,
+        "damage": 348
+      },
+      {
+        "level": 16,
+        "damage": 383
+      }
+    ]
+   },
+   {
+    "name": "Goblin curse",
+    "radius": 3.5,
+    "target":"Ground",
+    "levels": [
+      {
+        "level": 3,
+        "damage": 117
+      },
+      {
+        "level": 4,
+        "damage": 126
+      },
+      { 
+        "level": 5,
+        "damage": 138
+      },
+      {
+        "level": 6,
+        "damage": 151
+      },
+      {
+        "level": 7,
+        "damage": 165
+      },
+      {
+        "level": 8,
+        "damage": 181
+      },
+      {
+        "level": 9,
+        "damage": 198
+      },
+      {
+        "level": 10,
+        "damage": 218
+      },
+      {
+        "level": 11,
+        "damage": 239
+      },
+      {
+        "level": 12,
+        "damage": 263
+      },
+      {
+        "level": 13,
+        "damage": 288
+      },
+      {
+        "level": 14,
+        "damage": 317
+      },
+      {
+        "level": 15,
+        "damage": 348
+      },
+      {
+        "level": 16,
+        "damage": 383
+      }
+    ]
+   },
+   {
+    "name": "Lightning",
+    "radius": 3.5,
+    "target":"Ground",
+    "levels": [
+      {
+        "level": 3,
+        "damage": 117
+      },
+      {
+        "level": 4,
+        "damage": 126
+      },
+      { 
+        "level": 5,
+        "damage": 138
+      },
+      {
+        "level": 6,
+        "damage": 151
+      },
+      {
+        "level": 7,
+        "damage": 165
+      },
+      {
+        "level": 8,
+        "damage": 181
+      },
+      {
+        "level": 9,
+        "damage": 198
+      },
+      {
+        "level": 10,
+        "damage": 218
+      },
+      {
+        "level": 11,
+        "damage": 239
+      },
+      {
+        "level": 12,
+        "damage": 263
+      },
+      {
+        "level": 13,
+        "damage": 288
+      },
+      {
+        "level": 14,
+        "damage": 317
+      },
+      {
+        "level": 15,
+        "damage": 348
+      },
+      {
+        "level": 16,
+        "damage": 383
+      }
+    ]
+   },
+   {
+    "name": "Poison",
+    "radius": 3.5,
+    "target":"Ground",
+    "levels": [
+      {
+        "level": 3,
+        "damage": 117
+      },
+      {
+        "level": 4,
+        "damage": 126
+      },
+      { 
+        "level": 5,
+        "damage": 138
+      },
+      {
+        "level": 6,
+        "damage": 151
+      },
+      {
+        "level": 7,
+        "damage": 165
+      },
+      {
+        "level": 8,
+        "damage": 181
+      },
+      {
+        "level": 9,
+        "damage": 198
+      },
+      {
+        "level": 10,
+        "damage": 218
+      },
+      {
+        "level": 11,
+        "damage": 239
+      },
+      {
+        "level": 12,
+        "damage": 263
+      },
+      {
+        "level": 13,
+        "damage": 288
+      },
+      {
+        "level": 14,
+        "damage": 317
+      },
+      {
+        "level": 15,
+        "damage": 348
+      },
+      {
+        "level": 16,
+        "damage": 383
+      }
+    ]
+   },
+   {
+    "name": "Rage",
+    "radius": 3.5,
+    "target":"Ground",
+    "levels": [
+      {
+        "level": 3,
+        "damage": 117
+      },
+      {
+        "level": 4,
+        "damage": 126
+      },
+      { 
+        "level": 5,
+        "damage": 138
+      },
+      {
+        "level": 6,
+        "damage": 151
+      },
+      {
+        "level": 7,
+        "damage": 165
+      },
+      {
+        "level": 8,
+        "damage": 181
+      },
+      {
+        "level": 9,
+        "damage": 198
+      },
+      {
+        "level": 10,
+        "damage": 218
+      },
+      {
+        "level": 11,
+        "damage": 239
+      },
+      {
+        "level": 12,
+        "damage": 263
+      },
+      {
+        "level": 13,
+        "damage": 288
+      },
+      {
+        "level": 14,
+        "damage": 317
+      },
+      {
+        "level": 15,
+        "damage": 348
+      },
+      {
+        "level": 16,
+        "damage": 383
+      }
+    ]
+   },
+   {
+    "name": "Rocket",
+    "radius": 3.5,
+    "target":"Ground",
+    "levels": [
+      {
+        "level": 3,
+        "damage": 117
+      },
+      {
+        "level": 4,
+        "damage": 126
+      },
+      { 
+        "level": 5,
+        "damage": 138
+      },
+      {
+        "level": 6,
+        "damage": 151
+      },
+      {
+        "level": 7,
+        "damage": 165
+      },
+      {
+        "level": 8,
+        "damage": 181
+      },
+      {
+        "level": 9,
+        "damage": 198
+      },
+      {
+        "level": 10,
+        "damage": 218
+      },
+      {
+        "level": 11,
+        "damage": 239
+      },
+      {
+        "level": 12,
+        "damage": 263
+      },
+      {
+        "level": 13,
+        "damage": 288
+      },
+      {
+        "level": 14,
+        "damage": 317
+      },
+      {
+        "level": 15,
+        "damage": 348
+      },
+      {
+        "level": 16,
+        "damage": 383
+      }
+    ]
+   },
+   {
+    "name": "Royal Delivery",
+    "radius": 3.5,
+    "target":"Ground",
+    "levels": [
+      {
+        "level": 3,
+        "damage": 117
+      },
+      {
+        "level": 4,
+        "damage": 126
+      },
+      { 
+        "level": 5,
+        "damage": 138
+      },
+      {
+        "level": 6,
+        "damage": 151
+      },
+      {
+        "level": 7,
+        "damage": 165
+      },
+      {
+        "level": 8,
+        "damage": 181
+      },
+      {
+        "level": 9,
+        "damage": 198
+      },
+      {
+        "level": 10,
+        "damage": 218
+      },
+      {
+        "level": 11,
+        "damage": 239
+      },
+      {
+        "level": 12,
+        "damage": 263
+      },
+      {
+        "level": 13,
+        "damage": 288
+      },
+      {
+        "level": 14,
+        "damage": 317
+      },
+      {
+        "level": 15,
+        "damage": 348
+      },
+      {
+        "level": 16,
+        "damage": 383
+      }
+    ]
+   },
+   {
+    "name": "The Log",
+    "range": 4.5,
+    "width": 2.6,
+    "target":"Ground",
+    "levels": [
+      {
+        "level": 6,
+        "damage": 144
+      },
+      {
+        "level": 7,
+        "damage": 158
+      },
+      { 
+        "level": 8,
+        "damage": 174
+      },
+      {
+        "level": 9,
+        "damage": 191
+      },
+      {
+        "level": 10,
+        "damage": 210
+      },
+      {
+        "level": 11,
+        "damage": 231
+      },
+      {
+        "level": 12,
+        "damage": 253
+      },
+      {
+        "level": 13,
+        "damage": 278
+      },
+      {
+        "level": 14,
+        "damage": 305
+      },
+      {
+        "level": 15,
+        "damage": 335
+      },
+      {
+        "level": 16,
+        "damage": 368
+      }
+      ]
+   }
+]
+

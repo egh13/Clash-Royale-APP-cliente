@@ -1,6 +1,14 @@
-import { Component, OnInit, signal } from '@angular/core';
+import { Component, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CardCatalogService } from '../../services/card-catalog.service';
+import { MatPaginatorModule, PageEvent } from '@angular/material/paginator';
+import { MatDialog } from '@angular/material/dialog';
+import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
+import { MatTooltipModule } from '@angular/material/tooltip';
+import { CardDialogComponent } from '../card-dialog/card-dialog.component';
+import { CardDialogData } from '../../interfaces/card-stats.interface';
+
 
 type SortField = 'name' | 'elixir' | 'rarity';
 type SortDir = 'asc' | 'desc';
@@ -8,20 +16,31 @@ type SortDir = 'asc' | 'desc';
 @Component({
   selector: 'app-card-catalog',
   standalone: true,
-  imports: [CommonModule],
+  imports: [
+    CommonModule, 
+    MatPaginatorModule, 
+    MatButtonModule, 
+    MatIconModule,
+    MatTooltipModule
+  ],
   templateUrl: './card-catalog.component.html',
   styleUrls: ['./card-catalog.component.css']
 })
-export class CardCatalogComponent implements OnInit {
+export class CardCatalogComponent {
 
-  /* =========================
-     RAW DATA
-  ========================= */
+
+
+pageIndex = signal(0);
+pageSize = signal(10);
+length = signal(0);
+pageSizeOptions = [5, 10, 20, 50];
+
+
+  
   private cardsRaw: any[] = [];
 
-  /* =========================
-     STATE (SIGNALS)
-  ========================= */
+  
+  
   cards = signal<any[]>([]);
   loading = signal(true);
   error = signal('');
@@ -29,14 +48,13 @@ export class CardCatalogComponent implements OnInit {
   sortField = signal<SortField>('name');
   sortDir = signal<SortDir>('asc');
 
-  searchTerm = signal(''); // 🔍 búsqueda por nombre
+  searchTerm = signal(''); 
 
-  constructor(private cardService: CardCatalogService) {}
-
-  /* =========================
-     LIFECYCLE
-  ========================= */
-  ngOnInit(): void {
+  constructor(
+    private cardService: CardCatalogService,
+    private dialog: MatDialog
+  ) {
+    // Cargar cartas al inicializar
     this.cardService.getAllCards().subscribe({
       next: (data: { items: any[] }) => {
 
@@ -65,9 +83,13 @@ export class CardCatalogComponent implements OnInit {
     });
   }
 
-  /* =========================
-     EVENTS
-  ========================= */
+  
+  onPageChange(event: PageEvent): void {
+  this.pageIndex.set(event.pageIndex);
+  this.pageSize.set(event.pageSize);
+  this.applyFiltersAndSort();
+}
+
   onSearch(event: Event): void {
     const value = (event.target as HTMLInputElement).value;
     this.searchTerm.set(value);
@@ -85,44 +107,73 @@ export class CardCatalogComponent implements OnInit {
     this.applyFiltersAndSort();
   }
 
-  /* =========================
-     FILTER + SORT
-  ========================= */
+  
   private applyFiltersAndSort(): void {
-    const dir = this.sortDir() === 'asc' ? 1 : -1;
-    const field = this.sortField();
-    const term = this.searchTerm().toLowerCase();
 
-    const rarityOrder: Record<string, number> = {
-      common: 1,
-      rare: 2,
-      epic: 3,
-      legendary: 4,
-      champion: 5
-    };
+  const dir = this.sortDir() === 'asc' ? 1 : -1;
+  const field = this.sortField();
+  const term = this.searchTerm().toLowerCase();
 
-    const filtered = this.cardsRaw.filter(card =>
-      card.name.toLowerCase().includes(term)
-    );
+  const rarityOrder: Record<string, number> = {
+    common: 1,
+    rare: 2,
+    epic: 3,
+    legendary: 4,
+    champion: 5
+  };
 
-    const sorted = filtered.sort((a, b) => {
-      let result = 0;
+  const filtered = this.cardsRaw.filter(card =>
+    card.name.toLowerCase().includes(term)
+  );
 
-      if (field === 'name') {
-        result = a.name.localeCompare(b.name);
-      }
+  const sorted = filtered.sort((a, b) => {
+    let result = 0;
 
-      if (field === 'elixir') {
-        result = a.elixirCost - b.elixirCost;
-      }
+    if (field === 'name') {
+      result = a.name.localeCompare(b.name);
+    }
 
-      if (field === 'rarity') {
-        result = rarityOrder[a.rarity] - rarityOrder[b.rarity];
-      }
+    if (field === 'elixir') {
+      result = a.elixirCost - b.elixirCost;
+    }
 
-      return result * dir;
-    });
+    if (field === 'rarity') {
+      result = rarityOrder[a.rarity] - rarityOrder[b.rarity];
+    }
 
-    this.cards.set(sorted);
-  }
+    return result * dir;
+  });
+
+  
+  this.length.set(sorted.length);
+
+ 
+  const start = this.pageIndex() * this.pageSize();
+  const end = start + this.pageSize();
+
+  this.cards.set(sorted.slice(start, end));
+}
+
+/**
+ * Abre el diálogo con información detallada de la carta
+ */
+openCardDetails(card: any): void {
+  const dialogData: CardDialogData = {
+    id: card.id,
+    name: card.name,
+    rarity: card.rarity,
+    elixirCost: card.elixirCost,
+    images: card.images || [],
+    hasEvolution: card.hasEvolution,
+    hasHero: card.hasHero
+  };
+
+  this.dialog.open(CardDialogComponent, {
+    data: dialogData,
+    panelClass: 'card-dialog-container',
+    autoFocus: false,
+    restoreFocus: true
+  });
+}
+
 }
