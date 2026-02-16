@@ -244,3 +244,19 @@ button {
   from { opacity: 0; }
   to { opacity: 1; }
 }
+
+/* =========================
+   MATERIAL DIALOG OVERRIDES
+========================= */
+
+/* Estilos para el panel del diálogo de cartas */
+.card-dialog-container {
+  width: 90vw !important;
+  max-width: 900px !important;
+  height: auto !important;
+  max-height: 90vh !important;
+}
+
+.card-dialog-container .mat-mdc-dialog-container {
+  padding: 0 !important;
+}
