@@ -51,10 +51,10 @@ export class AuthService {
     return !!this.getToken();
   }
 
-  register(username: string, password: string): Observable<{ id: number }>{
+  register(username: string, password: string, email?: string, birthDate?: string, userType?: string, newsletter?: boolean): Observable<{ id: number }>{
     return this.http.post<{ id: number}>(
       `${this.BASE_URL}/register`,
-      { username, password }
+      { username, password, email, birthDate, userType, newsletter }
     );
   }
 

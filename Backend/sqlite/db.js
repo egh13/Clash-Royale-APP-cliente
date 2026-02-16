@@ -11,8 +11,13 @@ db.prepare(`
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     username TEXT UNIQUE NOT NULL,
     password TEXT NOT NULL,
+    email TEXT UNIQUE NOT NULL,
+    birth_date TEXT,
+    user_type TEXT,
+    newsletter INTEGER DEFAULT 0,
     role TEXT NOT NULL CHECK(role IN ('usuario', 'admin')),
-    clashRoyaleId TEXT
+    clashRoyaleId TEXT,
+    created_at DATETIME DEFAULT CURRENT_TIMESTAMP
   )
 `).run();
 

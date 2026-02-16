@@ -8,11 +8,11 @@ const saltRounds = 4;
 
 // Registrar usuario
 router.post("/register", async (req, res) => {
-  const { username, password } = req.body;
+  const { username, password, email, birthDate, userType, newsletter } = req.body;
   const role = "usuario";
 
-  if (!username || !password) {
-    return res.status(400).json({ error: "Faltan datos" });
+  if (!username || !password || !email) {
+    return res.status(400).json({ error: "Faltan datos requeridos" });
   }
 
   if (username.length < 3) {
@@ -29,14 +29,17 @@ router.post("/register", async (req, res) => {
   try {
     const hashedPassword = await bcrypt.hash(password, saltRounds);
     const stmt = db.prepare(
-      "INSERT INTO users (username, password, role) VALUES (?, ?, ?)"
+      "INSERT INTO users (username, password, email, birth_date, user_type, newsletter, role) VALUES (?, ?, ?, ?, ?, ?, ?)"
     );
-    const result = stmt.run(username, hashedPassword, role);
+    const result = stmt.run(username, hashedPassword, email, birthDate || null, userType || null, newsletter ? 1 : 0, role);
     res.json({ id: result.lastInsertRowid }); // Devuelve el id del usuario
   } catch (err) {
     // Manejar error de UNIQUE constraint
     if (err.message.includes("UNIQUE constraint failed: users.username")) {
       return res.status(400).json({ error: "El usuario ya existe" });
+    }
+    if (err.message.includes("UNIQUE constraint failed: users.email")) {
+      return res.status(400).json({ error: "El email ya está registrado" });
     }
     res.status(500).json({ error: "Error del servidor" });
   }

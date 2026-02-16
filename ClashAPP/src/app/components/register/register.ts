@@ -47,11 +47,10 @@ export class Register {
     return;
   }
 
-  // register funcional con username y password, los demas valores solo son para el front
-  
-  const { username, password } = this.registerForm.value;
+  // register con todos los datos del formulario
+  const { username, password, email, birthDate, userType, newsletter } = this.registerForm.value;
 
-  this.authService.register(username, password).subscribe({
+  this.authService.register(username, password, email, birthDate, userType, newsletter).subscribe({
     next: (res) => {
       this.toast.success(`Usuario registrado con ID: ${res.id}`);
       this.router.navigate(['/']);
